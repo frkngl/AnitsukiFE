@@ -4,6 +4,31 @@
   padding: 0;
   box-sizing: border-box;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  scrollbar-color: #ff7f00 #000000;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 5px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff7f00;
+  border-radius: 5px;
+}
+
+::-moz-selection {
+  background-color: #ff7f00;
+  color: #000000;
+}
+
+::selection {
+  background-color: #ff7f00;
+  color: #000000;
 }
 
 body {
@@ -64,11 +89,236 @@ header .others button {
 header .others button:hover {
   color: #ffffff;
 }
-header .modal .modal-content .modal-body .search input {
+header .others .dropdown {
+  margin: 0px -5px 0px 5px;
+}
+header .others .dropdown .dropdown-toggle {
+  padding: 0;
+  margin: 0;
+  color: #ff7f00;
+  transition: all 0.3s ease-out;
+}
+header .others .dropdown .dropdown-toggle:hover {
+  color: #ffffff;
+}
+header .others .dropdown .dropdown-toggle img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+header .others .dropdown .dropdown-menu {
+  background-color: #252525;
+}
+header .others .dropdown .dropdown-menu li .dropdown-item {
+  color: #ffffff;
+  transition: all 0.3s ease-out;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+  padding: 5px 10px;
+}
+header .others .dropdown .dropdown-menu li .dropdown-item .bi-person-fill {
+  margin-bottom: 6px;
+  margin-right: 4px;
+  margin-left: -3px;
+}
+header .others .dropdown .dropdown-menu li .dropdown-item .bi-box-arrow-right {
+  margin-bottom: 4px;
+  margin-right: 4px;
+}
+header .others .dropdown .dropdown-menu li .dropdown-item:hover {
+  color: #000000;
+}
+header .modal.show .modal-dialog {
+  transform: translateY(0);
+  opacity: 1;
+}
+header .modal .modal-dialog {
+  transition: transform 0.3s ease-out, opacity 0.3s ease;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+header .modal .modal-dialog .modal-content .modal-body .search {
+  position: relative;
+  width: 100%;
+  margin: 10px 0px;
+}
+header .modal .modal-dialog .modal-content .modal-body .search .bi-search {
+  position: absolute;
+  color: #ffffff;
+  top: 7px;
+  left: 5px;
+}
+header .modal .modal-dialog .modal-content .modal-body .search input {
   background-color: #252525;
   outline: none;
   border: none;
-  padding: 5px;
+  padding: 7px 7px 7px 35px;
+  color: #ffffff;
+  width: 100%;
+  border-radius: 5px;
+}
+header .modal .modal-dialog .modal-content .modal-body .animeler {
+  height: 445px;
+  width: 100%;
+  color: #ffffff;
+  margin: 10px 0px;
+}
+header .modal .modal-dialog .modal-content .modal-body .animeler .anime {
+  text-decoration: none;
+  margin: 0px 0px 15px 0px;
+}
+header .modal .modal-dialog .modal-content .modal-body .animeler .anime img {
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+header .modal .modal-dialog .modal-content .modal-body .animeler .anime .text {
+  padding: 0px 6px;
+}
+header .modal .modal-dialog .modal-content .modal-body .animeler .anime .text .title {
+  color: #ff7f00;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+}
+header .modal .modal-dialog .modal-content .modal-body .animeler .anime .text .des {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #ccc;
+  line-height: 1;
+}
+header .user-modal.show .modal-dialog {
+  transform: translateY(0);
+  opacity: 1;
+}
+header .user-modal .modal-dialog {
+  transition: transform 0.3s ease-out, opacity 0.3s ease;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+header .user-modal .modal-dialog .modal-content .modal-body .search {
+  position: relative;
+  width: 100%;
+  margin: 10px 0px;
+}
+header .user-modal .modal-dialog .modal-content .modal-body .search .bi-search {
+  position: absolute;
+  color: #ffffff;
+  top: 7px;
+  left: 5px;
+}
+header .user-modal .modal-dialog .modal-content .modal-body .search input {
+  background-color: #252525;
+  outline: none;
+  border: none;
+  padding: 7px 7px 7px 35px;
+  color: #ffffff;
+  width: 100%;
+  border-radius: 5px;
+}
+header .user-modal .modal-dialog .modal-content .modal-body .users {
+  height: 435px;
+  width: 100%;
+  color: #ffffff;
+  margin: 15px 0px;
+}
+header .user-modal .modal-dialog .modal-content .modal-body .users .user {
+  text-decoration: none;
+  margin: 10px 0px;
+  width: 100%;
+  position: relative;
+}
+header .user-modal .modal-dialog .modal-content .modal-body .users .user img {
+  height: 50px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+header .user-modal .modal-dialog .modal-content .modal-body .users .user .text {
+  padding: 0px 6px;
+}
+header .user-modal .modal-dialog .modal-content .modal-body .users .user .text .title {
+  color: #ff7f00;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+}
+header .user-modal .modal-dialog .modal-content .modal-body .users .user .text .des {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #ccc;
+}
+header .user-modal .modal-dialog .modal-content .modal-body .users .user .userfollow {
+  position: absolute;
+  right: 10px;
+}
+header .user-modal .modal-dialog .modal-content .modal-body .users .user .userfollow .bi-person-fill-add {
+  margin-top: 50%;
+  transform: translateY(-35%);
+  color: #ff7f00;
+}
+header .notication-modal.show .modal-dialog {
+  transform: translateY(0);
+  opacity: 1;
+}
+header .notication-modal .modal-dialog {
+  transition: transform 0.3s ease-out, opacity 0.3s ease;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+header .notication-modal .modal-dialog .modal-content .modal-body .users {
+  height: 455px;
+  width: 100%;
+  color: #ffffff;
+  margin: 10px 0px;
+}
+header .notication-modal .modal-dialog .modal-content .modal-body .users .user {
+  text-decoration: none;
+  margin: 15px 0px;
+  width: 98%;
+}
+header .notication-modal .modal-dialog .modal-content .modal-body .users .user img {
+  height: 50px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+header .notication-modal .modal-dialog .modal-content .modal-body .users .user .text {
+  padding: 0px 6px;
+}
+header .notication-modal .modal-dialog .modal-content .modal-body .users .user .text .title {
+  color: #ff7f00;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+}
+header .notication-modal .modal-dialog .modal-content .modal-body .users .user .text .date {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #ccc;
+}
+header .notication-modal .modal-dialog .modal-content .modal-body .users .user .text .des {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #ccc;
+}
+header .notication-modal .modal-dialog .modal-content .modal-body .clear {
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ff7f00;
+  border-radius: 6px;
+  padding: 2px;
+  transition: all 0.3s ease-out;
+}
+header .notication-modal .modal-dialog .modal-content .modal-body .clear:hover {
+  background-color: #ff7f00;
+  color: #101010;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -87,11 +337,12 @@ header .modal .modal-content .modal-body .search input {
     flex-direction: column;
     align-items: start;
     background-color: #101010;
-    width: 300px;
+    width: 225px;
     height: 100vh;
-    right: -300px;
+    right: -225px;
     padding: 50px 16px 16px 16px;
     transition: all 0.3s ease-out;
+    z-index: 9;
   }
   header nav a {
     margin: 5px 0px;
@@ -101,7 +352,7 @@ header .modal .modal-content .modal-body .search input {
     width: 25px;
     height: 15px;
     right: 5px;
-    top: 23px;
+    top: 20px;
     z-index: 99;
     position: absolute;
   }

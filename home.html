@@ -47,31 +47,46 @@
     </nav>
     <div class="others d-flex align-items-center">
       <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" className="bi bi-search"
+        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-search"
           viewBox="0 0 16 16">
           <path
             d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
         </svg>
       </button>
-      <button>
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-people-fill"
-          viewBox="0 0 16 16">
-          <path
-            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+      <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+          <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
         </svg></button>
-      <button>
-        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" className="bi bi-bell"
+        <button type="button" class="position-relative" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-bell"
           viewBox="0 0 16 16">
           <path
             d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
-        </svg></button>
-      <button>Hesap</button>
+        </svg>
+          <span class="position-absolute top-0 start-100 translate-middle bg-danger p-1 rounded-circle">
+            <span class="visually-hidden">New alerts</span>
+          </span>
+        </button>
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="webimg/sukunavsgojo.gif">
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+            </svg>Profil</a></li>
+            <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+              <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+            </svg>Çıkış</a></li>
+          </ul>
+        </div>
     </div>
-    <div class="modal fade" style="backdrop-filter: blur(3px);" id="exampleModal" tabindex="-1"
+    <div class="modal" style="backdrop-filter: blur(3px);" id="exampleModal" tabindex="-1"
       aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div style="margin-top: 60px" class="modal-dialog">
         <div style="background-color: #151515;" class="modal-content">
-          <div style="width: 100%; height: 500px;" class="modal-body">
+          <div style="width: 100%; height: 550px;" class="modal-body">
             <div style="height: 25px; width: 100%;" class="d-flex justify-content-between">
               <div style="color: #ffffff; font-size: 1.1rem; font-weight: 500; font-style: normal;">
                 Anime Ara
@@ -83,8 +98,233 @@
             </div>
             <div style="height: 443px; width: 100%;">
               <div class="search">
-                <input type="text" placeholder="Aniem ara..."/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+                <input type="text" placeholder="Anime ara..." />
               </div>
+              <div class="animeler overflow-auto">
+                <a class="anime d-flex" href="#">
+                  <img src="webimg/sololevelingbanner.jpg" />
+                  <div class="text">
+                    <div class="title text-break">
+                      Solo Leveling
+                    </div>
+                    <div class="des text-break">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde illo quasi itaque ut numquam non facilis illum veniam recusandae, ipsum laudantium dolorem! Facere tempora quis alias? Quas, error et?
+                    </div>
+                  </div>
+                </a>
+                <a class="anime d-flex" href="#">
+                  <img src="webimg/sololevelingbanner.jpg" />
+                  <div class="text">
+                    <div class="title text-break">
+                      Solo Leveling
+                    </div>
+                    <div class="des text-break">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde illo quasi itaque ut numquam non facilis illum veniam recusandae, ipsum laudantium dolorem! Facere tempora quis alias? Quas, error et?
+                    </div>
+                  </div>
+                </a>
+                <a class="anime d-flex" href="#">
+                  <img src="webimg/sololevelingbanner.jpg" />
+                  <div class="text">
+                    <div class="title text-break">
+                      Solo Leveling
+                    </div>
+                    <div class="des text-break">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde illo quasi itaque ut numquam non facilis illum veniam recusandae, ipsum laudantium dolorem! Facere tempora quis alias? Quas, error et?
+                    </div>
+                  </div>
+                </a>
+                <a class="anime d-flex" href="#">
+                  <img src="webimg/sololevelingbanner.jpg" />
+                  <div class="text">
+                    <div class="title text-break">
+                      Solo Leveling
+                    </div>
+                    <div class="des text-break">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde illo quasi itaque ut numquam non facilis illum veniam recusandae, ipsum laudantium dolorem! Facere tempora quis alias? Quas, error et?
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal user-modal" style="backdrop-filter: blur(3px);" id="exampleModal1" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div style="margin-top: 60px" class="modal-dialog">
+        <div style="background-color: #151515;" class="modal-content">
+          <div style="width: 100%; height: 550px;" class="modal-body">
+            <div style="height: 25px; width: 100%;" class="d-flex justify-content-between">
+              <div style="color: #ffffff; font-size: 1.1rem; font-weight: 500; font-style: normal;">
+                Kullanıcı Ara
+              </div>
+              <div>
+                <button style="filter: invert(100%);" type="button" class="btn-close" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+            </div>
+            <div style="height: 443px; width: 100%;">
+              <div class="search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+                <input type="text" placeholder="Kullanıcı ara..." />
+              </div>
+              <div class="users overflow-auto">
+                <a class="user d-flex" href="#">
+                  <img src="webimg/sukunavsgojo.gif" />
+                  <div class="text">
+                    <div class="title text-break">
+                      Sukuna
+                    </div>
+                    <div class="des text-break">
+                      Takipçi: 8
+                    </div>
+                  </div>
+                  <div class="userfollow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-fill-add" viewBox="0 0 16 16">
+                      <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                      <path d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4"/>
+                    </svg>
+                  </div>
+                </a>
+                <a class="user d-flex" href="#">
+                  <img src="webimg/sukunavsgojo.gif" />
+                  <div class="text">
+                    <div class="title text-break">
+                      Sukuna
+                    </div>
+                    <div class="des text-break">
+                      Takipçi: 8
+                    </div>
+                  </div>
+                  <div class="userfollow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-fill-add" viewBox="0 0 16 16">
+                      <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                      <path d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4"/>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal notication-modal" style="backdrop-filter: blur(3px);" id="exampleModal2" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div style="margin-top: 60px" class="modal-dialog">
+        <div style="background-color: #151515;" class="modal-content">
+          <div style="width: 100%; height: 550px;" class="modal-body">
+            <div style="height: 25px; width: 100%;" class="d-flex justify-content-between">
+              <div style="color: #ffffff; font-size: 1.1rem; font-weight: 500; font-style: normal;">
+                Bildirimler
+              </div>
+              <div>
+                <button style="filter: invert(100%);" type="button" class="btn-close" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+            </div>
+            <div style="height: 463px; width: 100%;">
+              <div class="users overflow-auto">
+                <a class="user d-flex align-items-center position-relative" href="#">
+                  <img src="webimg/sukunavsgojo.gif" />
+                  <div class="text">
+                    <div class="title text-break">
+                      Sukuna
+                    </div>
+                    <div class="des text-break">
+                      Bu hesap sizi takip ediyor.
+                    </div>
+                    <div class="date">
+                      12-12-2025
+                    </div>
+                  </div>
+                  <span class="position-absolute top-0 end-0 p-1 bg-danger rounded-circle">
+                    <span class="visually-hidden">New alerts</span>
+                  </span>
+                </a>
+                <a class="user d-flex align-items-center position-relative" href="#">
+                  <img src="webimg/sukunavsgojo.gif" />
+                  <div class="text">
+                    <div class="title text-break">
+                      Sukuna
+                    </div>
+                    <div class="des text-break">
+                      Naruto animesinde yorumunuza cevap verdi.
+                    </div>
+                    <div class="date">
+                      12-12-2025
+                    </div>
+                  </div>
+                  <span class="position-absolute top-0 end-0 p-1 bg-danger rounded-circle">
+                    <span class="visually-hidden">New alerts</span>
+                  </span>
+                </a>
+                <a class="user d-flex align-items-center position-relative" href="#">
+                  <img src="webimg/sukunavsgojo.gif" />
+                  <div class="text">
+                    <div class="title text-break">
+                      Sukuna
+                    </div>
+                    <div class="des text-break">
+                      Naruto S1 B-1 yorumunuza cevap verdi.
+                    </div>
+                    <div class="date">
+                      12-12-2025
+                    </div>
+                  </div>
+                  <span class="position-absolute top-0 end-0 p-1 bg-danger rounded-circle">
+                    <span class="visually-hidden">New alerts</span>
+                  </span>
+                </a>
+                <a class="user d-flex align-items-center position-relative" href="#">
+                  <img src="webimg/sukunavsgojo.gif" />
+                  <div class="text">
+                    <div class="title text-break">
+                      Sukuna
+                    </div>
+                    <div class="des text-break">
+                      Shingeki no Kyojin animesinde yorumunuza cevap verdi
+                    </div>
+                    <div class="date">
+                      12-12-2025
+                    </div>
+                  </div>
+                  <span class="position-absolute top-0 end-0 p-1 bg-danger rounded-circle">
+                    <span class="visually-hidden">New alerts</span>
+                  </span>
+                </a>
+                <a class="user d-flex align-items-center position-relative" href="#">
+                  <img src="webimg/sukunavsgojo.gif" />
+                  <div class="text">
+                    <div class="title text-break">
+                      Sukuna
+                    </div>
+                    <div class="des text-break">
+                      Shingeki no Kyojin S-1 B-1 yorumunuza cevap verdi
+                    </div>
+                    <div class="date">
+                      12-12-2025
+                    </div>
+                  </div>
+                  <span class="position-absolute top-0 end-0 p-1 bg-danger rounded-circle">
+                    <span class="visually-hidden">New alerts</span>
+                  </span>
+                </a>
+              </div>
+              <button class="clear w-100">
+                  Bildirimleri Temizle
+              </button>
             </div>
           </div>
         </div>
