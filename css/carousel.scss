@@ -1,6 +1,6 @@
     .progress-container {
         position: absolute;
-        bottom: 10px;
+        bottom: 32%;
         right: 10px;
         width: 60px;
         height: 60px;
@@ -20,7 +20,7 @@
         stroke: transparent;
         cx: 30;
         cy: 30;
-        r: 18;
+        r: 15;
     }
 
     .progress-circle .progress-bar {
@@ -51,46 +51,209 @@
         opacity: 0;
     }
 
-    .carousel-indicators button {
-        width: 10px !important; /* Yuvarlak çap */
-        height: 10px !important; /* Yuvarlak çap */
-        border-radius: 50%; /* Tam yuvarlak yapmak için */
-        background-color: #bbb; /* Varsayılan renk (pasif durum) */
-        border: none; /* Varsayılan kenarlığı kaldır */
-        margin: 0 5px; /* Butonlar arası boşluk */
-        padding: 0; /* Varsayılan dolguyu sıfırla */
-        transition: background-color 0.3s ease; /* Renk değişim animasyonu */
+    .carousel-indicators {
+        position: absolute;
+        bottom: 32%;
+        left: 100px;
+        margin: 0 !important;
+        display: flex;
+        justify-content: start;
     }
-    
+
+    .carousel-indicators button {
+        width: 10px !important;
+        height: 10px !important;
+        border-radius: 50%;
+        background-color: #bbb;
+        border: none;
+        margin: 0 5px;
+        padding: 0;
+        transition: background-color 0.3s ease;
+    }
+
     .carousel-indicators .active {
-        background-color: #ff7f00; /* Aktif durum rengi (Bootstrap mavi) */
-        opacity: 1; /* Aktif durumda tam opaklık */
+        background-color: #ff7f00;
+        opacity: 1;
     }
 
     .carousel-fade {
-        img {
-            height: calc(90vh - 60px);
+        .desktop {
             width: 100%;
+            height: 100%;
+            max-width: 4196px;
+            max-height: 2160px;
             object-fit: cover;
+        }
+
+        .mobile {
+            display: none;
         }
     }
 
+    .carousel-item {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, #000000 100%);
+        }
+
+        .carousel-caption {
+            z-index: 9;
+            position: absolute;
+            left: 100px;
+            bottom: 32%;
+        }
+    }
+
+    .carousel-fade {
+
+        .carousel-control-prev {
+            width: 100px;
+            z-index: 9;
+            max-height: calc(100vh - 60px);
+            height: auto;
+        }
+
+        .carousel-control-next {
+            width: 100px;
+            z-index: 9;
+            max-height: calc(100vh - 60px);
+            height: auto;
+        }
+    }
+
+    @media only screen and (max-width:1500px) {
+        .progress-container {
+            position: absolute;
+            bottom: 20%;
+            right: 10px;
+            width: 60px;
+            height: 60px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 20%;
+            left: 100px;
+            margin: 0 !important;
+            display: flex;
+            justify-content: start;
+        }
+
         .carousel-item {
-            position: relative;
-    
-            &::after {
-                position: absolute;
-                content: "";
-                display: block;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 1;
-                background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, #000000 100%);
-            }
-            
+
             .carousel-caption {
-                z-index: 9;
+                bottom: 20%;
             }
         }
+    }
+
+    @media only screen and (max-width:1100px) {
+        .progress-container {
+            position: absolute;
+            bottom: 5%;
+            right: 10px;
+            width: 60px;
+            height: 60px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 5%;
+            left: 100px;
+            margin: 0 !important;
+            display: flex;
+            justify-content: start;
+        }
+
+        .carousel-item {
+
+            .carousel-caption {
+                bottom: 5%;
+            }
+        }
+    }
+
+    @media only screen and (max-width:800px) {
+        .carousel-fade {
+            .desktop {
+                width: 100%;
+                /* Resim kapsayıcının genişliğine uyum sağlar */
+                height: 100%;
+                /* Resim yüksekliği 1080px'i aşamaz */
+                object-fit: cover;
+                /* Resim kapsayıcıyı kaplar, gerekirse kırpılır */
+                display: none;
+            }
+
+            .mobile {
+                display: block;
+                width: 100%;
+                height: calc(100vh - 60px);
+                object-fit: cover;
+            }
+        }
+    }
+
+    @media only screen and (max-width:460px) {
+        .carousel-fade {
+            .desktop {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: none;
+            }
+
+            .mobile {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    @media only screen and (max-width:700px) {
+        .carousel-fade {
+
+            .carousel-control-prev {
+                width: 60px;
+                z-index: 9;
+            }
+
+            .carousel-control-next {
+                width: 60px;
+                z-index: 9;
+            }
+
+            .carousel-item {
+
+                .carousel-caption {
+                    z-index: 9;
+                    position: absolute;
+                    left: 60px;
+                }
+            }
+
+            .carousel-indicators {
+                position: absolute;
+                left: 60px;
+            }
+        }
+    }

@@ -54,6 +54,7 @@ header {
         height: 100%;
         display: flex;
         align-items: center;
+        z-index: 99 !important;
 
         a {
             text-decoration: none;
@@ -433,7 +434,7 @@ header {
             height: 15px;
             right: 5px;
             top: 20px;
-            z-index: 99;
+            z-index: 999 !important;
             position: absolute;
 
             span {

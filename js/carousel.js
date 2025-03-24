@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Progress bar ve timer animasyonu
     function startProgress() {
-        const circumference = 2 * Math.PI * 18;
+        const circumference = 2 * Math.PI * 15;
         progressBar.setAttribute('stroke-dasharray', circumference);
         progressBar.setAttribute('stroke-dashoffset', circumference);
 
