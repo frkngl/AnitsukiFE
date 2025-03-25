@@ -1,0 +1,133 @@
+footer {
+    position: relative;
+    width: 100%;
+    height: 200px;
+
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, #313131 100%);
+    }
+
+    .content {
+        position: absolute;
+        padding: 0 10rem;
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+        display: flex;
+        justify-content: space-between;
+
+        .box,
+        .box2 {
+            display: flex;
+            width: 50%;
+            justify-content: space-around;
+        }
+
+        .logo {
+            height: 60px;
+            display: flex;
+            flex-direction: column;
+
+            img {
+                height: 60px;
+            }
+
+            .text {
+                color: #fff;
+                font-size: 1rem;
+                font-weight: 500;
+                font-style: normal;
+            }
+
+            .des {
+                color: #ccc;
+                font-size: 0.9rem;
+                font-weight: 400;
+                font-style: normal;
+            }
+        }
+
+        .link {
+            display: flex;
+            flex-direction: column;
+
+            .title {
+                color: #fff;
+                font-size: 1.1rem;
+                font-weight: 500;
+                font-style: normal;
+
+                .bi-award {
+                    margin-bottom: 5px;
+                    margin-left: -3px;
+                }
+
+                .bi-shuffle {
+                    margin-bottom: 5px;
+                    margin-right: 2px;
+                }
+            }
+
+            .links {
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    text-decoration: none;
+                    color: #ccc;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    transition: all 0.3s ease-out;
+
+                    &:hover {
+                        color: #ff7f00;
+                    }
+
+                    svg {
+                        margin-bottom: 3px;
+                        margin-right: 3px;
+                    }
+
+                }
+
+                .long{
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 180px;
+                }
+
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width:1400px) {
+    footer {
+
+        .content {
+            padding: 0px 16px;
+        }
+    }
+}
+
+@media only screen and (max-width:700px) {
+    footer {
+        height: 180px;
+
+        .content {
+            padding: 0px 16px;
+            justify-content: space-around;
+
+            #mobile {
+                display: none;
+            }
+        }
+    }
+}
