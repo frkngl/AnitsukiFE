@@ -1,6 +1,6 @@
     .progress-container {
         position: absolute;
-        bottom: 32%;
+        bottom: 31%;
         right: 10px;
         width: 60px;
         height: 60px;
@@ -83,10 +83,7 @@
             max-width: 4196px;
             max-height: 2160px;
             object-fit: cover;
-        }
-
-        .mobile {
-            display: none;
+            filter: brightness(0.5);
         }
     }
 
@@ -110,6 +107,23 @@
             position: absolute;
             left: 100px;
             bottom: 32%;
+            width: 750px;
+            line-height: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            text-align: start;
+            
+            .title{
+                font-size: 1.5rem;
+                color: #ff7f00;
+            }
+
+            .des{
+                font-size: 1rem;
+                color: #ccc;
+                margin-bottom: 50px;
+            }
         }
     }
 
@@ -129,6 +143,37 @@
             height: auto;
         }
     }
+
+    .button-container {
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+        display: flex;
+        gap: 5px;
+      }
+      
+      .btn-detail, .btn-watch {
+        background-color: #ff7f00;
+        color: #000000;
+        border: none;
+        padding: 6px;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: background-color 0.3s;
+        text-decoration: none;
+      }
+      
+      .btn-detail:hover, .btn-watch:hover {
+        background-color: #151515;
+        color: #ff7f00;
+      }
+
+      .bi-info-circle,
+      .bi-play-circle{
+        margin-bottom: 2px;
+        margin-right: 2px;
+      }
 
     @media only screen and (max-width:1500px) {
         .progress-container {
@@ -190,41 +235,86 @@
         }
     }
 
-    @media only screen and (max-width:800px) {
-        .carousel-fade {
-            .desktop {
-                width: 100%;
-                /* Resim kapsayıcının genişliğine uyum sağlar */
-                height: 100%;
-                /* Resim yüksekliği 1080px'i aşamaz */
-                object-fit: cover;
-                /* Resim kapsayıcıyı kaplar, gerekirse kırpılır */
-                display: none;
-            }
+    @media only screen and (max-width:1000px) {
+        .carousel-item {
+    
+            .carousel-caption {
+                z-index: 9;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 10%;
+                width: 350px;
+                max-height: 500px;
+                height: auto;
+                line-height: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                
+                .title{
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    color: #fff;
+                    margin-bottom: 50px;
+                }
+    
+                .des{
+                    display: none;
+                }
 
-            .mobile {
-                display: block;
-                width: 100%;
-                height: calc(100vh - 60px);
-                object-fit: cover;
+                .button-container {
+                    position: absolute;
+                    bottom: 30px;
+                    right: 50px;
+                    display: flex;
+                    gap: 5px;
+                  }
+                  
+                  .btn-detail, .btn-watch {
+                    background-color: #ff7f00;
+                    color: #000000;
+                    border: none;
+                    padding: 6px;
+                    border-radius: 5px;
+                    font-size: 0.9rem;
+                    transition: background-color 0.3s;
+                    text-decoration: none;
+                  }
+                  
+                  .btn-detail:hover, .btn-watch:hover {
+                    background-color: #151515;
+                    color: #ff7f00;
+                  }
+            
+                  .bi-info-circle,
+                  .bi-play-circle{
+                    margin-bottom: 2px;
+                    margin-right: 2px;
+                  }
             }
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 8%;
+            left: 0px;
+            margin: 0 !important;
+            display: flex;
+            justify-content: center;
         }
     }
 
-    @media only screen and (max-width:460px) {
+    @media only screen and (max-width:800px) {
         .carousel-fade {
+
             .desktop {
                 width: 100%;
                 height: 100%;
+                max-height: calc(100vh - 60px);
                 object-fit: cover;
-                display: none;
-            }
-
-            .mobile {
-                display: block;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
+                filter: brightness(0.5);
             }
         }
     }
@@ -241,19 +331,17 @@
                 width: 60px;
                 z-index: 9;
             }
+        }
+    }
 
-            .carousel-item {
+    @media only screen and (max-width:350px) {
+        .carousel-item {
+            .carousel-caption {
+                width: 300px;
 
-                .carousel-caption {
-                    z-index: 9;
-                    position: absolute;
-                    left: 60px;
-                }
-            }
-
-            .carousel-indicators {
-                position: absolute;
-                left: 60px;
+                .button-container {
+                    right: 25px;
+                  }
             }
         }
     }
