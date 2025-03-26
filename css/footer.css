@@ -1,7 +1,47 @@
 footer {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+}
+footer .modal.show .modal-dialog {
+  transform: translateY(0);
+  opacity: 1;
+}
+footer .modal .modal-dialog {
+  transition: transform 0.3s ease-out, opacity 0.3s ease;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+footer .modal .modal-dialog .buttons button {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  margin: 0px 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+footer .modal .modal-dialog .buttons button:hover {
+  border-bottom: 2px solid #ff7f00;
+}
+footer .modal .modal-dialog .buttons button.active {
+  border-bottom: 2px solid #ff7f00;
+  color: #ff7f00;
+}
+footer .modal .modal-dialog .content-text {
+  display: none;
+}
+footer .modal .modal-dialog .content-text .title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-style: normal;
+}
+footer .modal .modal-dialog .content-text.active {
+  display: block;
+  color: #fff;
 }
 footer::after {
   position: absolute;
@@ -15,16 +55,10 @@ footer .content {
   position: absolute;
   padding: 0 10rem;
   width: 100%;
-  height: 100%;
+  height: 150px;
   z-index: 9;
   display: flex;
   justify-content: space-between;
-}
-footer .content .box,
-footer .content .box2 {
-  display: flex;
-  width: 50%;
-  justify-content: space-around;
 }
 footer .content .logo {
   height: 60px;
@@ -45,6 +79,23 @@ footer .content .logo .des {
   font-size: 0.9rem;
   font-weight: 400;
   font-style: normal;
+  margin: 2.5px 0px;
+}
+footer .content .logo button {
+  background-color: #ff7f00;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease-out;
+}
+footer .content .logo button svg {
+  margin-right: 3px;
+}
+footer .content .logo button:hover {
+  background-color: #000;
+  color: #ff7f00;
 }
 footer .content .link {
   display: flex;
@@ -96,7 +147,7 @@ footer .content .link .links .long {
 }
 @media only screen and (max-width: 700px) {
   footer {
-    height: 180px;
+    height: 200px;
   }
   footer .content {
     padding: 0px 16px;

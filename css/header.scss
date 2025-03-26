@@ -20,10 +20,10 @@
     border-radius: 5px;
 }
 
-::selection{
+::selection {
     background-color: #ff7f00;
     color: #000000;
-  }
+}
 
 body {
     background-color: #000000;
@@ -37,12 +37,21 @@ header {
     .logo {
         height: 100%;
 
-        .desktop {
+        a {
+            display: block;
+            width: 150px;
             height: 60px;
+            background-image: url("../webimg/logo.png");
+            background-size: contain;
+            background-repeat: no-repeat;
         }
 
-        .mobile {
-            height: 60px;
+        @media (max-width: 576px) {
+            a {
+                width: 60px;
+                height: 60px;
+                background-image: url("../webimg/aylogo.png");
+            }
         }
     }
 
@@ -85,7 +94,7 @@ header {
             border: none;
             background-color: transparent;
             color: #ff7f00;
-            margin: 0px 4px;
+            margin: 0px 6px;
             cursor: pointer;
             transition: all 0.3s ease-out;
 
@@ -95,7 +104,7 @@ header {
         }
 
         .dropdown {
-            margin: 0px -5px 0px 5px;
+            margin: 0px -5px 0px 6px;
 
             .dropdown-toggle {
                 padding: 0;
@@ -103,7 +112,7 @@ header {
                 color: #ff7f00;
                 transition: all 0.3s ease-out;
 
-                &:hover{
+                &:hover {
                     color: #ffffff;
                 }
 
@@ -115,12 +124,12 @@ header {
                 }
             }
 
-            .dropdown-menu{
+            .dropdown-menu {
                 background-color: #252525;
 
-                li{
+                li {
 
-                    .dropdown-item{
+                    .dropdown-item {
                         color: #ffffff;
                         transition: all 0.3s ease-out;
                         font-size: 1rem;
@@ -128,18 +137,18 @@ header {
                         font-style: normal;
                         padding: 5px 10px;
 
-                        .bi-person-fill{
+                        .bi-person-fill {
                             margin-bottom: 6px;
                             margin-right: 4px;
                             margin-left: -3px;
                         }
 
-                        .bi-box-arrow-right{
+                        .bi-box-arrow-right {
                             margin-bottom: 4px;
                             margin-right: 4px;
                         }
 
-                        &:hover{
+                        &:hover {
                             color: #000000;
                         }
                     }
@@ -228,7 +237,7 @@ header {
         }
     }
 
-    .user-modal{
+    .user-modal {
 
         &.show .modal-dialog {
             transform: translateY(0);
@@ -303,11 +312,11 @@ header {
                                 }
                             }
 
-                            .userfollow{
+                            .userfollow {
                                 position: absolute;
                                 right: 10px;
 
-                                .bi-person-fill-add{
+                                .bi-person-fill-add {
                                     margin-top: 50%;
                                     transform: translateY(-35%);
                                     color: #ff7f00;
@@ -322,7 +331,7 @@ header {
     }
 
 
-    .notication-modal{
+    .notication-modal {
 
         &.show .modal-dialog {
             transform: translateY(0);
@@ -366,7 +375,7 @@ header {
                                     font-style: normal;
                                 }
 
-                                .date{
+                                .date {
                                     font-size: 0.8rem;
                                     font-weight: 400;
                                     color: #ccc;
@@ -380,7 +389,8 @@ header {
                             }
                         }
                     }
-                    .clear{
+
+                    .clear {
                         color: #ffffff;
                         background-color: transparent;
                         border: 1px solid #ff7f00;
@@ -388,7 +398,7 @@ header {
                         padding: 2px;
                         transition: all 0.3s ease-out;
 
-                        &:hover{
+                        &:hover {
                             background-color: #ff7f00;
                             color: #101010;
                         }
@@ -500,7 +510,7 @@ header {
                 border: none;
                 background-color: transparent;
                 color: #ff7f00;
-                margin: 0px 4px;
+                margin: 0px 6px;
                 cursor: pointer;
                 transition: all 0.3s ease-out;
 

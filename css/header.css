@@ -43,11 +43,20 @@ header {
 header .logo {
   height: 100%;
 }
-header .logo .desktop {
+header .logo a {
+  display: block;
+  width: 150px;
   height: 60px;
+  background-image: url("../webimg/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-header .logo .mobile {
-  height: 60px;
+@media (max-width: 576px) {
+  header .logo a {
+    width: 60px;
+    height: 60px;
+    background-image: url("../webimg/aylogo.png");
+  }
 }
 header .hamburger-btn {
   display: none;
@@ -83,7 +92,7 @@ header .others button {
   border: none;
   background-color: transparent;
   color: #ff7f00;
-  margin: 0px 4px;
+  margin: 0px 6px;
   cursor: pointer;
   transition: all 0.3s ease-out;
 }
@@ -91,7 +100,7 @@ header .others button:hover {
   color: #ffffff;
 }
 header .others .dropdown {
-  margin: 0px -5px 0px 5px;
+  margin: 0px -5px 0px 6px;
 }
 header .others .dropdown .dropdown-toggle {
   padding: 0;
@@ -411,7 +420,7 @@ header .notication-modal .modal-dialog .modal-content .modal-body .clear:hover {
     border: none;
     background-color: transparent;
     color: #ff7f00;
-    margin: 0px 4px;
+    margin: 0px 6px;
     cursor: pointer;
     transition: all 0.3s ease-out;
   }
