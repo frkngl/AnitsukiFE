@@ -1,0 +1,369 @@
+.content-anime {
+    width: 100%;
+    height: auto;
+
+    .filtre {
+        margin-top: 25px;
+        width: 1050px;
+        height: 140px;
+
+        .titleanddropdown {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 38px;
+
+            .title {
+                font-size: 1.5rem;
+                font-weight: 500;
+                font-style: normal;
+                color: #ffffff;
+            }
+
+            .dropdowns {
+                display: flex;
+
+                .arrangement,
+                .category {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .dropdown-toggle {
+                        color: #ccc;
+                        font-size: 1rem;
+                        font-weight: 600;
+                        background-color: transparent;
+                        border: none;
+                        transition: all 0.1s ease-out;
+
+                        &:hover {
+                            color: #ff7f00;
+                        }
+                    }
+
+                    .dropdown-menu {
+                        background-color: #252525;
+                        z-index: 99 !important;
+
+                        .dropdown-item {
+                            color: #ffffff;
+                            transition: all 0.2s ease-out;
+
+                            &:hover {
+                                color: #252525;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .letter {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 102px;
+
+            .letter-list {
+                display: flex;
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                height: 35px;
+                overflow-x: auto;
+
+                .letter-item {
+                    color: #ccc;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    font-style: normal;
+                    width: 28px;
+                    height: 20px;
+                    transition: all 0.1s ease-in-out; // Yumuşak animasyon
+                    margin: 0px 2px;
+                    padding: 0px 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:hover {
+                        color: #ffffff;
+                        font-size: 1.1rem;
+                    }
+
+                    &.active {
+                        color: #ff7f00;
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .animeler {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        .anime {
+            width: 250px; // Yeni genişlik
+            height: 375px; // 2:3 oranına uygun yükseklik
+            position: relative;
+            text-decoration: none;
+            border-radius: 10px;
+            margin: 8px;
+
+            img {
+                width: 250px; // Yeni genişlik
+                height: 375px; // 2:3 oranına uygun yükseklik
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+            .text {
+                display: none;
+            }
+
+            .score {
+                display: none;
+            }
+
+            .detail {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: #313131dd;
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                padding: 5px 8px;
+                opacity: 0;
+                overflow: auto;
+                transition: all 0.3s ease-out;
+
+                .title {
+                    color: #ff7f00;
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    font-style: normal;
+                }
+
+                .sezon {
+                    margin-top: 5px;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: #fff;
+                }
+
+                .bolum,
+                .date {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: #fff;
+                }
+
+                .kategori {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: #fff;
+                    margin-bottom: 10px;
+                }
+
+                .malandimdb {
+                    display: flex;
+                    margin-bottom: 10px;
+
+                    .mal {
+                        background-color: #2e51a2;
+                        color: #ffffff;
+                        font-size: 0.9rem;
+                        font-weight: 600;
+                        font-style: normal;
+                        padding: 2px 4px;
+                        border-radius: 5px;
+                        margin-right: 5px;
+                    }
+
+                    .imdb {
+                        background-color: #F5C518;
+                        color: #000000;
+                        font-size: 0.9rem;
+                        font-weight: 600;
+                        font-style: normal;
+                        padding: 2px 4px;
+                        border-radius: 5px;
+                    }
+                }
+
+                .des {
+                    color: #fff;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 1rem;
+                }
+            }
+
+            &:hover .detail {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1400px) {
+    .content-anime {
+
+        .animeler {
+            padding: 0px 16px;
+
+
+            .anime {
+                width: 150px; // Yeni genişlik
+                height: 250px; // 2:3 oranına uygun yükseklik
+                position: relative;
+                text-decoration: none;
+                border-radius: 10px;
+                margin: 0px;
+
+                img {
+                    width: 150px; // Yeni genişlik
+                    height: 225px; // 2:3 oranına uygun yükseklik
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+
+                .text {
+                    width: 150px;
+                    height: 25px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .title {
+                        color: #ffffff;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        font-style: normal;
+                        width: 115px;
+                        text-align: start;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .year {
+                        color: #ffffff;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        font-style: normal;
+                        width: 35px;
+                        text-align: end;
+                    }
+                }
+
+                .score {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+
+                    .mal {
+                        background-color: #2e51a2;
+                        color: #ffffff;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        font-style: normal;
+                        padding: 2px;
+                        border-top-left-radius: 10px;
+                    }
+
+                    .imdb {
+                        background-color: #F5C518;
+                        color: #000000;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        font-style: normal;
+                        padding: 2px;
+                    }
+                }
+
+                .detail {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .content-anime {
+
+        .animeler {
+            padding: 0px;
+            gap: 0px;
+
+            .anime{
+                margin: 5px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:1080px) {
+    .filtre {
+        padding: 0px 18px 0px 25px;
+    }
+}
+
+@media only screen and (max-width:910px) {
+    .filtre {
+        width: 100%;
+        height: 120px !important;
+
+        .letter {
+            height: 82px !important;
+
+            .letter-list {
+                display: flex;
+                overflow-x: auto;
+                width: 700px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:750px) {
+    .filtre {
+        height: 100px !important;
+
+        .letter {
+            height: 62px !important;
+
+            .letter-list {
+                display: flex;
+                overflow-x: auto;
+                width: 500px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:550px) {
+    .filtre {
+
+        .letter {
+
+            .letter-list {
+                width: 300px;
+            }
+        }
+    }
+}

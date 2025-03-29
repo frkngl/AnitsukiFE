@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   scrollbar-color: #ff7f00 #000000;
   scrollbar-width: thin;
 }
@@ -39,6 +39,11 @@ header {
   height: 60px;
   width: 100%;
   padding: 0 10rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999 !important;
+  background-color: #000000;
 }
 header .logo {
   height: 100%;
@@ -77,10 +82,13 @@ header nav a {
   transition: all 0.3s ease-out;
 }
 header nav a:hover {
+  color: #ffffff;
+}
+header nav a.active {
   color: #ff7f00;
 }
 header nav a .bi-house-door-fill,
-header nav a .bi-tv-fill,
+header nav a .bi-compass,
 header nav a .bi-broadcast,
 header nav a .bi-discord {
   margin-bottom: 5px;
@@ -100,7 +108,7 @@ header .others button:hover {
   color: #ffffff;
 }
 header .others .dropdown {
-  margin: 0px -5px 0px 6px;
+  margin: 0px 0px 0px 6px;
 }
 header .others .dropdown .dropdown-toggle {
   padding: 0;
@@ -123,7 +131,7 @@ header .others .dropdown .dropdown-menu {
 }
 header .others .dropdown .dropdown-menu li .dropdown-item {
   color: #ffffff;
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-out;
   font-size: 1rem;
   font-weight: 500;
   font-style: normal;
@@ -141,27 +149,28 @@ header .others .dropdown .dropdown-menu li .dropdown-item .bi-box-arrow-right {
 header .others .dropdown .dropdown-menu li .dropdown-item:hover {
   color: #000000;
 }
-header .modal.show .modal-dialog {
+
+.modal.show .modal-dialog {
   transform: translateY(0);
   opacity: 1;
 }
-header .modal .modal-dialog {
+.modal .modal-dialog {
   transition: transform 0.3s ease-out, opacity 0.3s ease;
   transform: translateY(-20px);
   opacity: 0;
 }
-header .modal .modal-dialog .modal-content .modal-body .search {
+.modal .modal-dialog .modal-content .modal-body .search {
   position: relative;
   width: 100%;
   margin: 10px 0px;
 }
-header .modal .modal-dialog .modal-content .modal-body .search .bi-search {
+.modal .modal-dialog .modal-content .modal-body .search .bi-search {
   position: absolute;
   color: #ffffff;
   top: 7px;
   left: 5px;
 }
-header .modal .modal-dialog .modal-content .modal-body .search input {
+.modal .modal-dialog .modal-content .modal-body .search input {
   background-color: #252525;
   outline: none;
   border: none;
@@ -170,58 +179,59 @@ header .modal .modal-dialog .modal-content .modal-body .search input {
   width: 100%;
   border-radius: 5px;
 }
-header .modal .modal-dialog .modal-content .modal-body .animeler {
+.modal .modal-dialog .modal-content .modal-body .animeler {
   height: 445px;
   width: 100%;
   color: #ffffff;
   margin: 10px 0px;
 }
-header .modal .modal-dialog .modal-content .modal-body .animeler .anime {
+.modal .modal-dialog .modal-content .modal-body .animeler .anime {
   text-decoration: none;
   margin: 0px 0px 15px 0px;
 }
-header .modal .modal-dialog .modal-content .modal-body .animeler .anime img {
+.modal .modal-dialog .modal-content .modal-body .animeler .anime img {
   height: 120px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
 }
-header .modal .modal-dialog .modal-content .modal-body .animeler .anime .text {
+.modal .modal-dialog .modal-content .modal-body .animeler .anime .text {
   padding: 0px 6px;
 }
-header .modal .modal-dialog .modal-content .modal-body .animeler .anime .text .title {
+.modal .modal-dialog .modal-content .modal-body .animeler .anime .text .title {
   color: #ff7f00;
   font-size: 1rem;
   font-weight: 500;
   font-style: normal;
 }
-header .modal .modal-dialog .modal-content .modal-body .animeler .anime .text .des {
+.modal .modal-dialog .modal-content .modal-body .animeler .anime .text .des {
   font-size: 0.9rem;
   font-weight: 400;
   color: #ccc;
   line-height: 1;
 }
-header .user-modal.show .modal-dialog {
+
+.user-modal.show .modal-dialog {
   transform: translateY(0);
   opacity: 1;
 }
-header .user-modal .modal-dialog {
+.user-modal .modal-dialog {
   transition: transform 0.3s ease-out, opacity 0.3s ease;
   transform: translateY(-20px);
   opacity: 0;
 }
-header .user-modal .modal-dialog .modal-content .modal-body .search {
+.user-modal .modal-dialog .modal-content .modal-body .search {
   position: relative;
   width: 100%;
   margin: 10px 0px;
 }
-header .user-modal .modal-dialog .modal-content .modal-body .search .bi-search {
+.user-modal .modal-dialog .modal-content .modal-body .search .bi-search {
   position: absolute;
   color: #ffffff;
   top: 7px;
   left: 5px;
 }
-header .user-modal .modal-dialog .modal-content .modal-body .search input {
+.user-modal .modal-dialog .modal-content .modal-body .search input {
   background-color: #252525;
   outline: none;
   border: none;
@@ -230,95 +240,96 @@ header .user-modal .modal-dialog .modal-content .modal-body .search input {
   width: 100%;
   border-radius: 5px;
 }
-header .user-modal .modal-dialog .modal-content .modal-body .users {
+.user-modal .modal-dialog .modal-content .modal-body .users {
   height: 435px;
   width: 100%;
   color: #ffffff;
   margin: 15px 0px;
 }
-header .user-modal .modal-dialog .modal-content .modal-body .users .user {
+.user-modal .modal-dialog .modal-content .modal-body .users .user {
   text-decoration: none;
   margin: 10px 0px;
   width: 100%;
   position: relative;
 }
-header .user-modal .modal-dialog .modal-content .modal-body .users .user img {
+.user-modal .modal-dialog .modal-content .modal-body .users .user img {
   height: 50px;
   width: 50px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
 }
-header .user-modal .modal-dialog .modal-content .modal-body .users .user .text {
+.user-modal .modal-dialog .modal-content .modal-body .users .user .text {
   padding: 0px 6px;
 }
-header .user-modal .modal-dialog .modal-content .modal-body .users .user .text .title {
+.user-modal .modal-dialog .modal-content .modal-body .users .user .text .title {
   color: #ff7f00;
   font-size: 1rem;
   font-weight: 500;
   font-style: normal;
 }
-header .user-modal .modal-dialog .modal-content .modal-body .users .user .text .des {
+.user-modal .modal-dialog .modal-content .modal-body .users .user .text .des {
   font-size: 0.9rem;
   font-weight: 400;
   color: #ccc;
 }
-header .user-modal .modal-dialog .modal-content .modal-body .users .user .userfollow {
+.user-modal .modal-dialog .modal-content .modal-body .users .user .userfollow {
   position: absolute;
   right: 10px;
 }
-header .user-modal .modal-dialog .modal-content .modal-body .users .user .userfollow .bi-person-fill-add {
+.user-modal .modal-dialog .modal-content .modal-body .users .user .userfollow .bi-person-fill-add {
   margin-top: 50%;
   transform: translateY(-35%);
   color: #ff7f00;
 }
-header .notication-modal.show .modal-dialog {
+
+.notication-modal.show .modal-dialog {
   transform: translateY(0);
   opacity: 1;
 }
-header .notication-modal .modal-dialog {
+.notication-modal .modal-dialog {
   transition: transform 0.3s ease-out, opacity 0.3s ease;
   transform: translateY(-20px);
   opacity: 0;
 }
-header .notication-modal .modal-dialog .modal-content .modal-body .users {
+.notication-modal .modal-dialog .modal-content .modal-body .users {
   height: 455px;
   width: 100%;
   color: #ffffff;
   margin: 10px 0px;
 }
-header .notication-modal .modal-dialog .modal-content .modal-body .users .user {
+.notication-modal .modal-dialog .modal-content .modal-body .users .user {
   text-decoration: none;
   margin: 15px 0px;
   width: 98%;
 }
-header .notication-modal .modal-dialog .modal-content .modal-body .users .user img {
+.notication-modal .modal-dialog .modal-content .modal-body .users .user img {
   height: 50px;
   width: 50px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
 }
-header .notication-modal .modal-dialog .modal-content .modal-body .users .user .text {
+.notication-modal .modal-dialog .modal-content .modal-body .users .user .text {
   padding: 0px 6px;
 }
-header .notication-modal .modal-dialog .modal-content .modal-body .users .user .text .title {
+.notication-modal .modal-dialog .modal-content .modal-body .users .user .text .title {
   color: #ff7f00;
   font-size: 1rem;
   font-weight: 500;
   font-style: normal;
 }
-header .notication-modal .modal-dialog .modal-content .modal-body .users .user .text .date {
+.notication-modal .modal-dialog .modal-content .modal-body .users .user .text .date {
   font-size: 0.8rem;
   font-weight: 400;
   color: #ccc;
 }
-header .notication-modal .modal-dialog .modal-content .modal-body .users .user .text .des {
+.notication-modal .modal-dialog .modal-content .modal-body .users .user .text .des {
   font-size: 0.9rem;
   font-weight: 400;
   color: #ccc;
 }
-header .notication-modal .modal-dialog .modal-content .modal-body .clear {
+.notication-modal .modal-dialog .modal-content .modal-body .clear {
   color: #ffffff;
   background-color: transparent;
   border: 1px solid #ff7f00;
@@ -326,7 +337,7 @@ header .notication-modal .modal-dialog .modal-content .modal-body .clear {
   padding: 2px;
   transition: all 0.3s ease-out;
 }
-header .notication-modal .modal-dialog .modal-content .modal-body .clear:hover {
+.notication-modal .modal-dialog .modal-content .modal-body .clear:hover {
   background-color: #ff7f00;
   color: #101010;
 }
@@ -339,7 +350,6 @@ header .notication-modal .modal-dialog .modal-content .modal-body .clear:hover {
 @media only screen and (max-width: 900px) {
   header {
     padding: 0px 16px;
-    position: relative;
     /*CHECK İŞLEMLERİ HAMBURGER-MENU*/
   }
   header nav {
@@ -352,7 +362,7 @@ header .notication-modal .modal-dialog .modal-content .modal-body .clear:hover {
     right: -225px;
     padding: 50px 16px 16px 16px;
     transition: all 0.3s ease-out;
-    z-index: 9;
+    z-index: 99 !important;
   }
   header nav a {
     margin: 5px 0px;
@@ -361,7 +371,7 @@ header .notication-modal .modal-dialog .modal-content .modal-body .clear:hover {
     display: block;
     width: 25px;
     height: 15px;
-    right: 5px;
+    right: 16px;
     top: 20px;
     z-index: 999 !important;
     position: absolute;
@@ -426,5 +436,8 @@ header .notication-modal .modal-dialog .modal-content .modal-body .clear:hover {
   }
   header .others button:hover {
     color: #ffffff;
+  }
+  header .others .dropdown {
+    margin-right: 10px;
   }
 }/*# sourceMappingURL=header.css.map */

@@ -91,7 +91,8 @@ footer .content .logo button {
   transition: all 0.3s ease-out;
 }
 footer .content .logo button svg {
-  margin-right: 3px;
+  margin-right: 4px;
+  margin-bottom: 4px;
 }
 footer .content .logo button:hover {
   background-color: #000;
