@@ -1,0 +1,290 @@
+@charset "UTF-8";
+.detail .banner {
+  width: 100%;
+  height: calc(80vh - 60px);
+  position: relative;
+}
+.detail .banner::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: calc(80vh - 60px);
+  background: linear-gradient(to top, rgba(255, 255, 255, 0) 1%, #000000 100%);
+}
+.detail .banner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: calc(80vh - 60px);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, #000000 100%);
+}
+.detail .banner img {
+  width: 100%;
+  height: calc(80vh - 60px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.detail .banner .box {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  width: 340px;
+  height: 510px;
+  z-index: 9;
+}
+.detail .banner .box .videoimg {
+  position: relative;
+}
+.detail .banner .box .videoimg .box2 {
+  position: absolute;
+}
+.detail .banner .box .videoimg .box2 .posterbtn {
+  position: relative;
+  width: 340px;
+  height: 510px;
+  cursor: pointer;
+  z-index: 9;
+}
+.detail .banner .box .videoimg .box2 .posterbtn .poster {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(1);
+  border-radius: 10px;
+}
+.detail .banner .box .videoimg .box2 .posterbtn .playbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background-color: #ff7f00;
+  transition: all 0.3s ease-out;
+}
+.detail .banner .box .videoimg .box2 .posterbtn:hover .playbutton {
+  color: #ff7f00;
+  background-color: #000000;
+}
+.detail .banner .box .videoimg .videocontainer {
+  position: relative;
+  width: 340px;
+  height: 510px;
+}
+.detail .banner .box .videoimg .videocontainer .video {
+  width: 340px;
+  height: 510px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.detail .banner .box .videoimg .videocontainer .controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 4px;
+}
+.detail .banner .box .videoimg .videocontainer .controls .play-pause {
+  border: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 5px;
+  border-radius: 50%;
+  z-index: 9;
+}
+.detail .banner .box .videoimg .videocontainer .controls .mute {
+  background-color: transparent;
+  border: none;
+  color: white;
+  margin-left: 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 5px;
+  border-radius: 50%;
+  z-index: 9;
+}
+.detail .animetext {
+  padding: 0 10rem;
+  position: relative;
+  line-height: 1.2;
+}
+.detail .animetext .title {
+  font-size: 2rem;
+  font-weight: 500;
+  font-style: normal;
+  color: #ff7f00;
+  width: 80%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1;
+}
+.detail .animetext .favoriteandwatch {
+  width: 20%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.detail .animetext .favoriteandwatch .bi-clock {
+  color: #ffffff;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.detail .animetext .favoriteandwatch .bi-heart {
+  color: #ffffff;
+  cursor: pointer;
+}
+.detail .animetext .season {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+}
+.detail .animetext .episode {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+}
+.detail .animetext .year {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+}
+.detail .animetext .tur {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 5px;
+}
+.detail .animetext svg {
+  margin-bottom: 2px;
+}
+.detail .animetext .des {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 10px !important;
+}
+.detail .animetext .malandimdb {
+  display: flex;
+}
+.detail .animetext .malandimdb .mal {
+  color: #ffffff;
+  background-color: #2e51a2;
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+}
+.detail .animetext .malandimdb .imdb {
+  color: #000000;
+  background-color: #F5C518;
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-left: 8px;
+}
+
+@media only screen and (max-width: 1500px) {
+  .detail .animetext {
+    padding: 0px 16px;
+    position: relative;
+    line-height: 1.2;
+  }
+  .detail .animetext .des {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 10px !important;
+    height: 150px;
+    padding: 0px 7px 0px 0px;
+    overflow-y: auto;
+  }
+  .detail .animetext .malandimdb {
+    display: flex;
+  }
+  .detail .animetext .malandimdb .mal {
+    color: #ffffff;
+    background-color: #2e51a2;
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+  }
+  .detail .animetext .malandimdb .imdb {
+    color: #000000;
+    background-color: #F5C518;
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-left: 8px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .detail .animetext {
+    padding: 0px 16px;
+    position: relative;
+    line-height: 1.2;
+  }
+  .detail .animetext .title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: normal;
+    color: #ff7f00;
+    width: 80%;
+    word-wrap: break-word; /* Eski tarayıcılar için */
+    overflow-wrap: break-word; /* Modern tarayıcılar için */
+    line-height: 1.1;
+  }
+  .detail .animetext .favoriteandwatch {
+    width: 20%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  .detail .animetext .favoriteandwatch .bi-clock {
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  .detail .animetext .favoriteandwatch .bi-heart {
+    color: #ffffff;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .detail .banner .box {
+    width: 250px;
+    height: 375px;
+  }
+  .detail .banner .box .videoimg .box2 .posterbtn {
+    width: 250px;
+    height: 375px;
+  }
+  .detail .banner .box .videoimg .videocontainer {
+    width: 250px;
+    height: 375px;
+  }
+  .detail .banner .box .videoimg .videocontainer .video {
+    width: 250px;
+    height: 375px;
+  }
+}/*# sourceMappingURL=detail.css.map */

@@ -203,8 +203,10 @@ header .others .dropdown .dropdown-menu li .dropdown-item:hover {
   font-size: 1rem;
   font-weight: 500;
   font-style: normal;
+  line-height: 1.1;
 }
 .modal .modal-dialog .modal-content .modal-body .animeler .anime .text .des {
+  margin-top: 5px;
   font-size: 0.9rem;
   font-weight: 400;
   color: #ccc;
@@ -251,6 +253,7 @@ header .others .dropdown .dropdown-menu li .dropdown-item:hover {
   margin: 10px 0px;
   width: 100%;
   position: relative;
+  align-items: center;
 }
 .user-modal .modal-dialog .modal-content .modal-body .users .user img {
   height: 50px;
@@ -261,12 +264,14 @@ header .others .dropdown .dropdown-menu li .dropdown-item:hover {
 }
 .user-modal .modal-dialog .modal-content .modal-body .users .user .text {
   padding: 0px 6px;
+  width: 70%;
 }
 .user-modal .modal-dialog .modal-content .modal-body .users .user .text .title {
   color: #ff7f00;
   font-size: 1rem;
   font-weight: 500;
   font-style: normal;
+  line-height: 1;
 }
 .user-modal .modal-dialog .modal-content .modal-body .users .user .text .des {
   font-size: 0.9rem;
@@ -318,6 +323,7 @@ header .others .dropdown .dropdown-menu li .dropdown-item:hover {
   font-size: 1rem;
   font-weight: 500;
   font-style: normal;
+  line-height: 1;
 }
 .notication-modal .modal-dialog .modal-content .modal-body .users .user .text .date {
   font-size: 0.8rem;
@@ -328,6 +334,7 @@ header .others .dropdown .dropdown-menu li .dropdown-item:hover {
   font-size: 0.9rem;
   font-weight: 400;
   color: #ccc;
+  line-height: 1;
 }
 .notication-modal .modal-dialog .modal-content .modal-body .clear {
   color: #ffffff;
@@ -342,8 +349,156 @@ header .others .dropdown .dropdown-menu li .dropdown-item:hover {
   color: #101010;
 }
 
-@media only screen and (max-width: 1400px) {
+footer {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+}
+footer .modal.show .modal-dialog {
+  transform: translateY(0);
+  opacity: 1;
+}
+footer .modal .modal-dialog {
+  transition: transform 0.3s ease-out, opacity 0.3s ease;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+footer .modal .modal-dialog .buttons button {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  margin: 0px 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+footer .modal .modal-dialog .buttons button:hover {
+  border-bottom: 2px solid #ff7f00;
+}
+footer .modal .modal-dialog .buttons button.active {
+  border-bottom: 2px solid #ff7f00;
+  color: #ff7f00;
+}
+footer .modal .modal-dialog .content-text {
+  display: none;
+}
+footer .modal .modal-dialog .content-text .title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-style: normal;
+}
+footer .modal .modal-dialog .content-text.active {
+  display: block;
+  color: #fff;
+}
+footer::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, #313131 100%);
+}
+footer .content {
+  position: absolute;
+  padding: 0 10rem;
+  width: 100%;
+  height: 150px;
+  z-index: 9;
+  display: flex;
+  justify-content: space-between;
+}
+footer .content .logo {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+}
+footer .content .logo img {
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+footer .content .logo .text {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+}
+footer .content .logo .des {
+  color: #ccc;
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-style: normal;
+  margin: 2.5px 0px;
+}
+footer .content .logo button {
+  background-color: #ff7f00;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease-out;
+}
+footer .content .logo button svg {
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+footer .content .logo button:hover {
+  background-color: #000;
+  color: #ff7f00;
+}
+footer .content .link {
+  display: flex;
+  flex-direction: column;
+}
+footer .content .link .title {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-style: normal;
+}
+footer .content .link .title .bi-award {
+  margin-bottom: 5px;
+  margin-left: -3px;
+}
+footer .content .link .title .bi-shuffle {
+  margin-bottom: 5px;
+  margin-right: 2px;
+}
+footer .content .link .links {
+  display: flex;
+  flex-direction: column;
+}
+footer .content .link .links a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease-out;
+}
+footer .content .link .links a:hover {
+  color: #ff7f00;
+}
+footer .content .link .links a svg {
+  margin-bottom: 3px;
+  margin-right: 3px;
+}
+footer .content .link .links .long {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 180px;
+}
+
+@media only screen and (max-width: 1500px) {
   header {
+    padding: 0px 16px;
+  }
+  footer .content {
     padding: 0px 16px;
   }
 }
@@ -440,4 +595,25 @@ header .others .dropdown .dropdown-menu li .dropdown-item:hover {
   header .others .dropdown {
     margin-right: 10px;
   }
-}/*# sourceMappingURL=header.css.map */
+}
+@media only screen and (max-width: 700px) {
+  footer {
+    height: 200px;
+  }
+  footer .content {
+    padding: 0px 16px;
+    justify-content: space-around;
+  }
+  footer .content #mobile {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  footer {
+    height: 200px;
+  }
+  footer .content {
+    padding: 0px 16px;
+    justify-content: space-between;
+  }
+}/*# sourceMappingURL=global.css.map */

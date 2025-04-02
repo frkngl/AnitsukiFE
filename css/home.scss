@@ -113,13 +113,13 @@
             flex-direction: column;
             align-items: start;
             text-align: start;
-            
-            .title{
+
+            .title {
                 font-size: 1.5rem;
                 color: #ff7f00;
             }
 
-            .des{
+            .des {
                 font-size: 1rem;
                 color: #ccc;
                 margin-bottom: 50px;
@@ -150,9 +150,10 @@
         right: 20px;
         display: flex;
         gap: 5px;
-      }
-      
-      .btn-detail, .btn-watch {
+    }
+
+    .btn-detail,
+    .btn-watch {
         background-color: #ff7f00;
         color: #000000;
         border: none;
@@ -162,18 +163,100 @@
         font-weight: 500;
         transition: background-color 0.3s;
         text-decoration: none;
-      }
-      
-      .btn-detail:hover, .btn-watch:hover {
+    }
+
+    .btn-detail:hover,
+    .btn-watch:hover {
         background-color: #151515;
         color: #ff7f00;
-      }
+    }
 
-      .bi-info-circle,
-      .bi-play-circle{
+    .bi-info-circle,
+    .bi-play-circle {
         margin-bottom: 2px;
         margin-right: 2px;
-      }
+    }
+
+    .watchtitle {
+        font-size: 1.3rem;
+        font-weight: 500;
+        font-style: normal;
+        color: #fff;
+        padding: 0px 16px;
+        display: flex;
+        align-items: center;
+        margin-top: -15%;
+        position: relative;
+        z-index: 99;
+        margin-bottom: 5px;
+
+        svg {
+            margin-bottom: 1px;
+        }
+    }
+
+    .splide {
+        position: relative;
+        z-index: 99;
+
+        .splide__list {
+            transition: all 0.3s ease-out;
+
+            .splide__slide {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+
+                .anime {
+                    text-decoration: none;
+                    position: relative;
+                    width: 95%;
+                    height: 180px;
+                    border-radius: 10px;
+
+                    &:hover img{
+                        filter: brightness(0.7);
+                    }
+
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 180px;
+                        filter: brightness(0.5);
+                        border-radius: 10px;
+                        transition: all 0.3s ease-out;
+                    }
+
+                    .text {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        color: #fff;
+                        padding: 0px 5px 5px 5px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .title {
+                            font-size: 1rem;
+                            font-weight: 500;
+                            font-style: normal;
+                            width: 70%;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+
+                        .seasonandepisode {
+                            font-size: 1rem;
+                            font-weight: 500;
+                            font-style: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     @media only screen and (max-width:1500px) {
         .progress-container {
@@ -202,6 +285,10 @@
             .carousel-caption {
                 bottom: 20%;
             }
+        }
+
+        .watchtitle {
+            margin-top: -8%;
         }
     }
 
@@ -233,11 +320,15 @@
                 bottom: 5%;
             }
         }
+
+        .watchtitle {
+            margin-top: 0%;
+        }
     }
 
     @media only screen and (max-width:1000px) {
         .carousel-item {
-    
+
             .carousel-caption {
                 z-index: 9;
                 position: absolute;
@@ -252,15 +343,15 @@
                 align-items: center;
                 justify-content: center;
                 text-align: center;
-                
-                .title{
+
+                .title {
                     font-size: 1.2rem;
                     font-weight: 500;
                     color: #fff;
                     margin-bottom: 50px;
                 }
-    
-                .des{
+
+                .des {
                     display: none;
                 }
 
@@ -270,9 +361,10 @@
                     right: 50px;
                     display: flex;
                     gap: 5px;
-                  }
-                  
-                  .btn-detail, .btn-watch {
+                }
+
+                .btn-detail,
+                .btn-watch {
                     background-color: #ff7f00;
                     color: #000000;
                     border: none;
@@ -281,18 +373,19 @@
                     font-size: 0.9rem;
                     transition: background-color 0.3s;
                     text-decoration: none;
-                  }
-                  
-                  .btn-detail:hover, .btn-watch:hover {
+                }
+
+                .btn-detail:hover,
+                .btn-watch:hover {
                     background-color: #151515;
                     color: #ff7f00;
-                  }
-            
-                  .bi-info-circle,
-                  .bi-play-circle{
+                }
+
+                .bi-info-circle,
+                .bi-play-circle {
                     margin-bottom: 2px;
                     margin-right: 2px;
-                  }
+                }
             }
         }
 
@@ -303,6 +396,10 @@
             margin: 0 !important;
             display: flex;
             justify-content: center;
+        }
+
+        .watchtitle {
+            font-size: 1.1rem;
         }
     }
 
@@ -316,6 +413,10 @@
                 object-fit: cover;
                 filter: brightness(0.6);
             }
+        }
+
+        .watchtitle {
+            margin-top: -7%;
         }
     }
 
@@ -341,7 +442,7 @@
 
                 .button-container {
                     right: 25px;
-                  }
+                }
             }
         }
     }
