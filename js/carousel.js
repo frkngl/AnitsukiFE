@@ -160,3 +160,106 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+
+new Splide('#splide1', {
+    type: 'slide',
+    perPage  : 8,
+    perMove: 1,
+    pagination: false,
+
+    breakpoints: {
+      2560: {
+        perPage: 7,
+      },
+      1700: {
+        perPage: 6,
+      },
+      1400: {
+        perPage: 5,
+      },
+      1200: {
+        perPage: 4,
+      },
+      700: {
+        perPage: 3,
+      },
+      450: {
+        perPage: 2,
+      },
+    },
+  }).mount();
+
+  new Splide('#splide2', {
+    type: 'slide',
+    perPage  : 12,
+    perMove: 1,
+    pagination: false,
+
+    breakpoints: {
+      2300: {
+        perPage: 10,
+      },
+      1860: {
+        perPage: 9,
+      },
+      1700: {
+        perPage: 8,
+      },
+      1400: {
+        perPage: 7,
+      },
+      1300: {
+        perPage: 6,
+      },
+      1100: {
+        perPage: 5,
+      },
+      930: {
+        perPage: 4,
+      },
+      700: {
+        perPage: 3,
+      },
+      450: {
+        perPage: 2,
+      },
+    },
+  }).mount();
+
+  new Splide('#splide3', {
+    type: 'slide',
+    perPage  : 8,
+    perMove: 1,
+    pagination: false,
+
+    breakpoints: {
+        2300: {
+          perPage: 10,
+        },
+        1860: {
+          perPage: 9,
+        },
+        1700: {
+          perPage: 8,
+        },
+        1400: {
+          perPage: 7,
+        },
+        1300: {
+          perPage: 6,
+        },
+        1100: {
+          perPage: 5,
+        },
+        930: {
+          perPage: 4,
+        },
+        700: {
+          perPage: 3,
+        },
+        450: {
+          perPage: 2,
+        },
+      },
+  }).mount();

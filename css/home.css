@@ -1,6 +1,6 @@
 .progress-container {
   position: absolute;
-  bottom: 31%;
+  bottom: 28%;
   right: 10px;
   width: 60px;
   height: 60px;
@@ -53,7 +53,7 @@
 
 .carousel-indicators {
   position: absolute;
-  bottom: 32%;
+  bottom: 29%;
   left: 100px;
   margin: 0 !important;
   display: flex;
@@ -104,7 +104,7 @@
   z-index: 9;
   position: absolute;
   left: 100px;
-  bottom: 32%;
+  bottom: 29%;
   width: 750px;
   line-height: 1;
   display: flex;
@@ -182,7 +182,7 @@
   margin-bottom: 5px;
 }
 .watchtitle svg {
-  margin-bottom: 1px;
+  margin-right: 5px;
 }
 
 .splide {
@@ -241,55 +241,106 @@
   font-style: normal;
 }
 
+.watchtitle1 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-style: normal;
+  color: #fff;
+  padding: 0px 16px;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  position: relative;
+  z-index: 99;
+  margin-bottom: 5px;
+}
+.watchtitle1 svg {
+  margin-right: 5px;
+}
+
+.splide1 {
+  position: relative;
+  z-index: 99;
+}
+.splide1 .splide__list {
+  transition: all 0.3s ease-out;
+}
+.splide1 .splide__list .splide__slide {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.splide1 .splide__list .splide__slide .anime {
+  text-decoration: none;
+  position: relative;
+  width: 95%;
+  height: 300px;
+  border-radius: 10px;
+}
+.splide1 .splide__list .splide__slide .anime:hover img {
+  filter: brightness(0.7);
+}
+.splide1 .splide__list .splide__slide .anime img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 300px;
+  filter: brightness(0.5);
+  border-radius: 10px;
+  transition: all 0.3s ease-out;
+}
+.splide1 .splide__list .splide__slide .anime .text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #fff;
+  padding: 0px 5px 5px 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.splide1 .splide__list .splide__slide .anime .text .title {
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.splide1 .splide__list .splide__slide .anime .text .seasonandepisode {
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @media only screen and (max-width: 1500px) {
   .progress-container {
-    position: absolute;
     bottom: 20%;
-    right: 10px;
-    width: 60px;
-    height: 60px;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   .carousel-indicators {
-    position: absolute;
     bottom: 20%;
-    left: 100px;
-    margin: 0 !important;
-    display: flex;
-    justify-content: start;
   }
   .carousel-item .carousel-caption {
     bottom: 20%;
   }
   .watchtitle {
-    margin-top: -8%;
+    margin-top: -10%;
   }
 }
 @media only screen and (max-width: 1100px) {
   .progress-container {
-    position: absolute;
-    bottom: 5%;
-    right: 10px;
-    width: 60px;
-    height: 60px;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    bottom: 1%;
   }
   .carousel-indicators {
-    position: absolute;
-    bottom: 5%;
-    left: 100px;
-    margin: 0 !important;
-    display: flex;
-    justify-content: start;
+    bottom: 3%;
   }
   .carousel-item .carousel-caption {
-    bottom: 5%;
+    bottom: 3%;
   }
   .watchtitle {
     margin-top: 0%;
@@ -297,14 +348,11 @@
 }
 @media only screen and (max-width: 1000px) {
   .carousel-item .carousel-caption {
-    z-index: 9;
-    position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 10%;
+    bottom: 5%;
     width: 350px;
     max-height: 500px;
-    height: auto;
     line-height: 1;
     display: flex;
     align-items: center;
@@ -338,19 +386,9 @@
     transition: background-color 0.3s;
     text-decoration: none;
   }
-  .carousel-item .carousel-caption .btn-detail:hover,
-  .carousel-item .carousel-caption .btn-watch:hover {
-    background-color: #151515;
-    color: #ff7f00;
-  }
-  .carousel-item .carousel-caption .bi-info-circle,
-  .carousel-item .carousel-caption .bi-play-circle {
-    margin-bottom: 2px;
-    margin-right: 2px;
-  }
   .carousel-indicators {
     position: absolute;
-    bottom: 8%;
+    bottom: 3%;
     left: 0px;
     margin: 0 !important;
     display: flex;
@@ -359,8 +397,45 @@
   .watchtitle {
     font-size: 1.1rem;
   }
+  .watchtitle1 {
+    font-size: 1.1rem;
+  }
+  .watchtitle1 svg {
+    margin-right: 5px;
+  }
+}
+@media only screen and (max-width: 930px) {
+  .splide .splide__list .splide__slide .anime {
+    width: 95%;
+    height: 300px;
+  }
+  .splide .splide__list .splide__slide .anime .splidedesktop {
+    width: 100%;
+    height: 300px;
+  }
+  .splide .splide__list .splide__slide .anime .text {
+    display: flex;
+    flex-direction: column;
+  }
+  .splide .splide__list .splide__slide .anime .text .title {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  .splide .splide__list .splide__slide .anime .text .seasonandepisode {
+    font-size: 0.9rem;
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 800px) {
+  .carousel-fade .carousel-item .carousel-caption {
+    bottom: 10%;
+  }
+  .carousel-fade .carousel-indicators {
+    bottom: 8%;
+  }
+  .carousel-fade .progress-container {
+    bottom: 7%;
+  }
   .carousel-fade .desktop {
     width: 100%;
     height: 100%;
@@ -370,7 +445,7 @@
     filter: brightness(0.6);
   }
   .watchtitle {
-    margin-top: -7%;
+    margin-top: -8%;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -381,6 +456,48 @@
   .carousel-fade .carousel-control-next {
     width: 60px;
     z-index: 9;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .splide .splide__list .splide__slide .anime {
+    width: 95%;
+    height: 250px;
+  }
+  .splide .splide__list .splide__slide .anime .splidedesktop {
+    width: 100%;
+    height: 250px;
+  }
+  .splide .splide__list .splide__slide .anime .text {
+    display: flex;
+    flex-direction: column;
+  }
+  .splide .splide__list .splide__slide .anime .text .title {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  .splide .splide__list .splide__slide .anime .text .seasonandepisode {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  .splide .splide__list .splide__slide .anime {
+    width: 95%;
+    height: 250px;
+  }
+  .splide .splide__list .splide__slide .anime img {
+    width: 100%;
+    height: 250px;
+  }
+  .splide .splide__list .splide__slide .anime .text {
+    display: flex;
+    flex-direction: column;
+  }
+  .splide .splide__list .splide__slide .anime .text .title {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  .splide .splide__list .splide__slide .anime .text .seasonandepisode {
+    font-size: 0.9rem;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 350px) {
