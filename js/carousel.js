@@ -167,6 +167,7 @@ new Splide('#splide1', {
   perPage: 7,
   perMove: 1,
   pagination: false,
+  padding: { left: '10px', right: '10px' },
 
   breakpoints: {
     2200: {
@@ -195,6 +196,7 @@ new Splide('#splide2', {
   perPage: 9,
   perMove: 1,
   pagination: false,
+  padding: { left: '10px', right: '10px' },
 
   breakpoints: {
     2300: {
@@ -227,6 +229,7 @@ new Splide('#splide3', {
   perPage: 9,
   perMove: 1,
   pagination: false,
+  padding: { left: '10px', right: '10px' },
 
   breakpoints: {
     2300: {

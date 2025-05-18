@@ -193,6 +193,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 1rem;
+  line-height: 1.1;
 }
 .content-anime .animeler .anime:hover .detail {
   opacity: 1;

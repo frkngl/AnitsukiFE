@@ -83,7 +83,7 @@
   max-height: 2160px;
   -o-object-fit: cover;
      object-fit: cover;
-  filter: brightness(0.6);
+  filter: brightness(0.7);
 }
 
 .carousel-item {
@@ -205,14 +205,14 @@
   border-radius: 10px;
 }
 .splide .splide__list .splide__slide .anime:hover img {
-  filter: brightness(0.7);
+  filter: brightness(1);
 }
 .splide .splide__list .splide__slide .anime img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: auto;
-  filter: brightness(0.5);
+  filter: brightness(0.7);
   border-radius: 10px;
   transition: all 0.3s ease-out;
 }
@@ -278,14 +278,14 @@
   border-radius: 10px;
 }
 .splide1 .splide__list .splide__slide .anime:hover img {
-  filter: brightness(0.7);
+  filter: brightness(1);
 }
 .splide1 .splide__list .splide__slide .anime img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: auto;
-  filter: brightness(0.5);
+  filter: brightness(0.7);
   border-radius: 10px;
   transition: all 0.3s ease-out;
 }
@@ -442,7 +442,7 @@
     max-height: calc(100vh - 60px);
     -o-object-fit: cover;
        object-fit: cover;
-    filter: brightness(0.6);
+    filter: brightness(0.7);
   }
   .watchtitle {
     margin-top: -8%;

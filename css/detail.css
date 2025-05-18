@@ -200,7 +200,91 @@
   border-radius: 5px;
   margin-left: 8px;
 }
+.detail .seasonandedipsode {
+  padding: 1.5rem 10rem;
+}
+.detail .seasonandedipsode .season {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.detail .seasonandedipsode .season .dropdown .dropdown-toggle {
+  width: 125px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+}
+.detail .seasonandedipsode .season .dropdown .dropdown-menu {
+  width: 125px;
+  background-color: #313131;
+  border-radius: 20px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+.detail .seasonandedipsode .season .dropdown .dropdown-menu li a {
+  color: #ffffff;
+}
+.detail .seasonandedipsode .season .dropdown .dropdown-menu li a:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+.detail .seasonandedipsode .episode {
+  padding-right: 16px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+.detail .seasonandedipsode .episode a {
+  display: block;
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.detail .seasonandedipsode .episode a:hover img {
+  transform: scale(1.05);
+}
+.detail .seasonandedipsode .episode a .box {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.detail .seasonandedipsode .episode a .box img {
+  width: 100%;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s ease;
+  filter: brightness(0.6);
+  display: block;
+}
+.detail .seasonandedipsode .episode a .box .episodename {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 8px 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  word-break: break-word;
+}
 
+@media only screen and (max-width: 1665px) {
+  .detail .seasonandedipsode .episode a {
+    flex: 1 1 230px;
+    max-width: 300px;
+  }
+}
 @media only screen and (max-width: 1500px) {
   .detail .animetext {
     padding: 0px 16px;
@@ -237,6 +321,25 @@
     border-radius: 5px;
     margin-left: 8px;
   }
+  .detail .seasonandedipsode {
+    padding: 24px 16px;
+  }
+  .detail .seasonandedipsode .episode {
+    gap: 10px;
+  }
+  .detail .seasonandedipsode .episode a {
+    flex: 1 1 240px;
+    max-width: 300px;
+  }
+}
+@media only screen and (max-width: 1038px) {
+  .detail .seasonandedipsode .episode a {
+    flex: 1 1 230px;
+    max-width: 350px;
+  }
+  .detail .seasonandedipsode .episode a .box img {
+    height: 150px;
+  }
 }
 @media only screen and (max-width: 800px) {
   .detail .animetext {
@@ -250,8 +353,10 @@
     font-style: normal;
     color: #ff7f00;
     width: 80%;
-    word-wrap: break-word; /* Eski tarayıcılar için */
-    overflow-wrap: break-word; /* Modern tarayıcılar için */
+    word-wrap: break-word;
+    /* Eski tarayıcılar için */
+    overflow-wrap: break-word;
+    /* Modern tarayıcılar için */
     line-height: 1.1;
   }
   .detail .animetext .favoriteandwatch {
@@ -270,6 +375,12 @@
     cursor: pointer;
   }
 }
+@media only screen and (max-width: 720px) {
+  .detail .seasonandedipsode .episode a {
+    flex: 1 1 220px;
+    max-width: 350px;
+  }
+}
 @media only screen and (max-width: 600px) {
   .detail .banner .box {
     width: 250px;
@@ -286,5 +397,33 @@
   .detail .banner .box .videoimg .videocontainer .video {
     width: 250px;
     height: 375px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .detail .seasonandedipsode .episode a {
+    flex: 1 1 150px;
+    max-width: 250px;
+  }
+  .detail .seasonandedipsode .episode a .box img {
+    height: 125px;
+    filter: brightness(0.5);
+  }
+  .detail .seasonandedipsode .episode a .box .episodename {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .detail .seasonandedipsode .episode a {
+    flex: 1 1 150px;
+    max-width: 300px;
+  }
+  .detail .seasonandedipsode .episode a .box img {
+    height: 125px;
+    filter: brightness(0.5);
+  }
+  .detail .seasonandedipsode .episode a .box .episodename {
+    font-size: 14px;
+    font-weight: 500;
   }
 }/*# sourceMappingURL=detail.css.map */
