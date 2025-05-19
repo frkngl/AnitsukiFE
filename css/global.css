@@ -82,7 +82,7 @@ header nav a {
   transition: all 0.3s ease-out;
 }
 header nav a:hover {
-  color: #ffffff;
+  color: #ff7f00;
 }
 header nav a.active {
   color: #ff7f00;

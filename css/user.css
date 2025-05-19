@@ -1,0 +1,172 @@
+.usercontent {
+  padding: 1.5rem 10rem;
+}
+.usercontent .user .usernameandoption {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.usercontent .user .usernameandoption .username {
+  color: #ff7f00;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 0.9;
+  display: flex;
+  align-items: end;
+}
+.usercontent .user .usernameandoption .username .bi-person-circle {
+  margin-right: 3px;
+}
+.usercontent .user .usernameandoption .option {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-style: normal;
+}
+.usercontent .user .usernameandoption .option a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  line-height: 0.8;
+  display: flex;
+  align-items: end;
+}
+.usercontent .user .usernameandoption .option a:hover {
+  color: #ff7f00;
+}
+.usercontent .user .usernameandoption .option a .bi-gear {
+  margin-right: 3px;
+}
+.usercontent .user .userdetail {
+  margin-top: 20px;
+  display: flex;
+}
+.usercontent .user .userdetail .image {
+  min-width: 180px;
+  min-height: 180px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.usercontent .user .userdetail .image img {
+  width: 140px;
+  height: 140px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.usercontent .user .userdetail .image .addfriend {
+  position: absolute;
+  top: 110px;
+  left: 115px;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  background-color: #313131;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+.usercontent .user .userdetail .image .addfriend .bi-person-fill-add {
+  color: #ff7f00;
+}
+.usercontent .user .userdetail .image .addfriend:hover .bi-person-fill-add {
+  color: #313131;
+}
+.usercontent .user .userdetail .image .addfriend:hover {
+  background-color: #ff7f00;
+}
+.usercontent .user .userdetail .about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+}
+.usercontent .user .userdetail .about .title {
+  display: flex;
+  align-items: end;
+  color: #ffffff;
+  line-height: 1.1;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.usercontent .user .userdetail .about .title .bi-info-circle {
+  margin-right: 5px;
+}
+.usercontent .user .userdetail .about .des {
+  color: #ffffff;
+  width: 100%;
+  min-height: 100px;
+  max-height: 130px;
+  overflow: auto;
+  word-break: break-word;
+  line-height: 1.2;
+  margin: 8px 0px;
+}
+.usercontent .user .userdetail .about .other {
+  width: 100%;
+  display: flex;
+  height: 18px;
+  align-items: center;
+  color: #ffffff;
+}
+.usercontent .user .userdetail .about .other .date,
+.usercontent .user .userdetail .about .other .favorite,
+.usercontent .user .userdetail .about .other .watchlater,
+.usercontent .user .userdetail .about .other .takipci {
+  display: flex;
+  align-items: end;
+  line-height: 1;
+  margin-right: 8px;
+}
+.usercontent .user .userdetail .about .other .takipci {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  transition: all 0.3;
+  display: flex;
+  align-items: end;
+  line-height: 1;
+  transition: all 0.3s ease-in-out;
+}
+.usercontent .user .userdetail .about .other .takipci:hover {
+  color: #ff7f00;
+}
+
+@media only screen and (max-width: 1500px) {
+  .usercontent {
+    padding: 24px 16px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .usercontent .user .usernameandoption {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .usercontent .user .usernameandoption .username {
+    font-size: 1rem;
+    line-height: 1;
+  }
+  .usercontent .user .usernameandoption .option {
+    font-size: 1rem;
+  }
+  .usercontent .user .usernameandoption .option a {
+    line-height: 1;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .usercontent .user .userdetail {
+    display: flex;
+    flex-direction: column;
+  }
+  .usercontent .user .userdetail .image {
+    width: 100%;
+  }
+  .usercontent .user .userdetail .image .addfriend {
+    left: 57%;
+  }
+}/*# sourceMappingURL=user.css.map */

@@ -223,6 +223,7 @@
 }
 .detail .seasonandedipsode .season .dropdown .dropdown-menu li a {
   color: #ffffff;
+  transition: all 0.3s ease-in-out;
 }
 .detail .seasonandedipsode .season .dropdown .dropdown-menu li a:hover {
   color: #000000;
