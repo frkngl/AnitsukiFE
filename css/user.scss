@@ -143,7 +143,7 @@
                         line-height: 1;
                         margin-right: 8px;
 
-                        svg{
+                        svg {
                             margin-right: 2px;
                         }
                     }
@@ -301,6 +301,108 @@
                 }
             }
         }
+
+        .favoriteandwatch {
+            margin: 25px 0px 50px 0px;
+
+            .head {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                .title {
+                    color: #ffffff;
+                    display: flex;
+                    align-items: center;
+                    line-height: 1.1;
+                    font-size: 1.1rem;
+                    font-weight: 500;
+
+                    svg {
+                        margin-right: 3px;
+                    }
+                }
+
+                .search {
+                    position: relative;
+                    color: #ffffff;
+                    width: 170px;
+                    height: 35px;
+
+                    input {
+                        background-color: #313131;
+                        border: none;
+                        outline: none;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 20px;
+                        color: #ffffff;
+                        padding: 1rem 0.6rem 1rem 2rem;
+                        font-size: 1rem;
+                    }
+
+                    .bi-search {
+                        position: absolute;
+                        top: 50%;
+                        left: 6px;
+                        transform: translateY(-50%);
+
+                    }
+                }
+            }
+
+            .animes {
+                width: 100%;
+                max-height: 450px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                overflow-y: auto;
+                padding-right: 10px; 
+                box-sizing: border-box; 
+                margin-top: 10px;
+
+                a {
+                    display: block;
+                    flex: 1 1 200px;
+                    max-width: 250px;
+                    overflow: hidden;
+
+                    &:hover img {
+                        transform: scale(1.05);
+                    }
+
+                    .box {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            filter: brightness(0.5);
+                            border-radius: 10px;
+                            transition: all 0.3s ease;
+                        }
+                    }
+
+                    .text {
+                        position: absolute;
+                        bottom: 0px;
+                        left: 5px;
+                        color: #ffffff;
+                        font-size: 1rem;
+                        font-weight: 500;
+                        width: 95%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                }
+            }
+        }
     }
 }
 
@@ -338,6 +440,29 @@
     }
 }
 
+@media only screen and (max-width:880px) {
+    .usercontent {
+
+        .user {
+
+            .favoriteandwatch {
+
+                .animes {
+                    width: 100%;
+                    max-height: 300px;
+                    gap: 8px;
+
+                    a {
+                        flex: 1 1 140px;
+                        max-width: 180px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (max-width:650px) {
     .usercontent {
 
@@ -352,6 +477,66 @@
 
                     .addfriend {
                         left: 57%;
+                    }
+                }
+            }
+
+            .favoriteandwatch {
+
+                .animes {
+
+                    a {
+                        flex: 1 1 150px;
+                        max-width: 200px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:510px) {
+    .usercontent {
+
+        .user {
+
+            .favoriteandwatch {
+
+                .animes {
+
+                    a {
+                        flex: 1 1 130px;
+                        max-width: 160px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:450px) {
+    .usercontent {
+
+        .user {
+
+            .favoriteandwatch {
+
+                .head {
+
+                    .title {
+                        font-size: 1rem;
+                        line-height: 1;
+                    }
+                }
+
+                .animes {
+
+                    a {
+                        flex: 1 1 120px;
+                        max-width: 200px;
+
                     }
                 }
             }
