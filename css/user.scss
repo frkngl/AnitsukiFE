@@ -142,6 +142,10 @@
                         align-items: end;
                         line-height: 1;
                         margin-right: 8px;
+
+                        svg{
+                            margin-right: 2px;
+                        }
                     }
 
                     .takipci {
@@ -156,6 +160,142 @@
 
                         &:hover {
                             color: #ff7f00;
+                        }
+                    }
+                }
+            }
+
+
+            .takipci-modal {
+
+                &.show .modal-dialog {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+
+                .modal-dialog {
+                    transition: transform 0.3s ease-out, opacity 0.3s ease;
+                    transform: translateY(-20px);
+                    opacity: 0;
+
+                    .buttons {
+
+                        button {
+                            background: transparent;
+                            border: none;
+                            border-bottom: 2px solid white;
+                            color: white;
+                            margin: 0px 5px;
+                            font-size: 16px;
+                            cursor: pointer;
+                            transition: border-color 0.3s ease, color 0.3s ease;
+
+                            &:hover {
+                                border-bottom: 2px solid #ff7f00;
+                            }
+
+                            &.active {
+                                border-bottom: 2px solid #ff7f00;
+                                color: #ff7f00;
+                            }
+                        }
+
+                    }
+
+                    .content-textt {
+                        display: none;
+
+                        .title {
+                            font-size: 1.1rem;
+                            font-weight: 500;
+                            font-style: normal;
+                        }
+
+                        &.active {
+                            display: block;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .modal-content {
+
+                    .modal-body {
+
+                        .search {
+                            position: relative;
+                            width: 100%;
+                            margin: 10px 0px;
+
+                            .bi-search {
+                                position: absolute;
+                                color: #ffffff;
+                                top: 7px;
+                                left: 5px;
+                            }
+
+                            input {
+                                background-color: #252525;
+                                outline: none;
+                                border: none;
+                                padding: 7px 7px 7px 35px;
+                                color: #ffffff;
+                                width: 100%;
+                                border-radius: 5px;
+                            }
+                        }
+
+                        .users {
+                            height: 435px;
+                            width: 100%;
+                            color: #ffffff;
+                            margin: 15px 0px;
+
+                            .user {
+                                text-decoration: none;
+                                margin: 10px 0px;
+                                width: 100%;
+                                position: relative;
+                                align-items: center;
+
+                                img {
+                                    height: 50px;
+                                    width: 50px;
+                                    object-fit: cover;
+                                    border-radius: 50%;
+                                }
+
+                                .text {
+                                    padding: 0px 6px;
+                                    width: 70%;
+
+                                    .title {
+                                        color: #ff7f00;
+                                        font-size: 1rem;
+                                        font-weight: 500;
+                                        font-style: normal;
+                                        line-height: 1;
+                                    }
+
+                                    .dess {
+                                        font-size: 0.9rem;
+                                        font-weight: 400;
+                                        color: #ccc;
+                                    }
+                                }
+
+                                .userfollow {
+                                    position: absolute;
+                                    right: 10px;
+
+                                    .bi-person-fill-add {
+                                        margin-top: 50%;
+                                        transform: translateY(-35%);
+                                        color: #ff7f00;
+                                    }
+                                }
+                            }
+
                         }
                     }
                 }

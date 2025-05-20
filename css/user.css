@@ -122,6 +122,12 @@
   line-height: 1;
   margin-right: 8px;
 }
+.usercontent .user .userdetail .about .other .date svg,
+.usercontent .user .userdetail .about .other .favorite svg,
+.usercontent .user .userdetail .about .other .watchlater svg,
+.usercontent .user .userdetail .about .other .takipci svg {
+  margin-right: 2px;
+}
 .usercontent .user .userdetail .about .other .takipci {
   background-color: transparent;
   border: none;
@@ -133,6 +139,109 @@
   transition: all 0.3s ease-in-out;
 }
 .usercontent .user .userdetail .about .other .takipci:hover {
+  color: #ff7f00;
+}
+.usercontent .user .userdetail .takipci-modal.show .modal-dialog {
+  transform: translateY(0);
+  opacity: 1;
+}
+.usercontent .user .userdetail .takipci-modal .modal-dialog {
+  transition: transform 0.3s ease-out, opacity 0.3s ease;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+.usercontent .user .userdetail .takipci-modal .modal-dialog .buttons button {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  margin: 0px 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+.usercontent .user .userdetail .takipci-modal .modal-dialog .buttons button:hover {
+  border-bottom: 2px solid #ff7f00;
+}
+.usercontent .user .userdetail .takipci-modal .modal-dialog .buttons button.active {
+  border-bottom: 2px solid #ff7f00;
+  color: #ff7f00;
+}
+.usercontent .user .userdetail .takipci-modal .modal-dialog .content-textt {
+  display: none;
+}
+.usercontent .user .userdetail .takipci-modal .modal-dialog .content-textt .title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-style: normal;
+}
+.usercontent .user .userdetail .takipci-modal .modal-dialog .content-textt.active {
+  display: block;
+  color: #fff;
+}
+.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .search {
+  position: relative;
+  width: 100%;
+  margin: 10px 0px;
+}
+.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .search .bi-search {
+  position: absolute;
+  color: #ffffff;
+  top: 7px;
+  left: 5px;
+}
+.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .search input {
+  background-color: #252525;
+  outline: none;
+  border: none;
+  padding: 7px 7px 7px 35px;
+  color: #ffffff;
+  width: 100%;
+  border-radius: 5px;
+}
+.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users {
+  height: 435px;
+  width: 100%;
+  color: #ffffff;
+  margin: 15px 0px;
+}
+.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user {
+  text-decoration: none;
+  margin: 10px 0px;
+  width: 100%;
+  position: relative;
+  align-items: center;
+}
+.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user img {
+  height: 50px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user .text {
+  padding: 0px 6px;
+  width: 70%;
+}
+.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user .text .title {
+  color: #ff7f00;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1;
+}
+.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user .text .dess {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #ccc;
+}
+.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user .userfollow {
+  position: absolute;
+  right: 10px;
+}
+.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user .userfollow .bi-person-fill-add {
+  margin-top: 50%;
+  transform: translateY(-35%);
   color: #ff7f00;
 }
 
