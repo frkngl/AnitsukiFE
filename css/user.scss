@@ -303,19 +303,22 @@
         }
 
         .favoriteandwatch {
-            margin: 25px 0px 50px 0px;
+            width: 100%;
+            margin-top: 50px;
 
             .head {
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
+                padding: 0px 8px;
+                margin-bottom: 10px;
 
                 .title {
                     color: #ffffff;
                     display: flex;
                     align-items: center;
-                    line-height: 1.1;
-                    font-size: 1.1rem;
+                    font-size: 1rem;
+                    font-style: normal;
                     font-weight: 500;
 
                     svg {
@@ -323,83 +326,168 @@
                     }
                 }
 
-                .search {
-                    position: relative;
-                    color: #ffffff;
-                    width: 170px;
-                    height: 35px;
+                .all {
 
-                    input {
-                        background-color: #313131;
+                    .allbtn {
+                        display: flex;
+                        align-items: center;
+                        background-color: transparent;
                         border: none;
                         outline: none;
-                        width: 100%;
-                        height: 100%;
-                        border-radius: 20px;
                         color: #ffffff;
-                        padding: 1rem 0.6rem 1rem 2rem;
+                        transition: all 0.3s ease-in-out;
                         font-size: 1rem;
-                    }
+                        font-weight: 500;
+                        font-style: normal;
 
-                    .bi-search {
-                        position: absolute;
-                        top: 50%;
-                        left: 6px;
-                        transform: translateY(-50%);
+                        &:hover {
+                            color: #ff7f00;
+                        }
 
+                        svg {
+                            margin-right: 3px;
+                        }
                     }
                 }
             }
 
-            .animes {
-                width: 100%;
-                max-height: 450px;
-                display: flex;
-                flex-wrap: wrap;
-                gap: 12px;
-                overflow-y: auto;
-                padding-right: 10px; 
-                box-sizing: border-box; 
-                margin-top: 10px;
+            .splide {
+                position: relative;
+                z-index: 99;
 
-                a {
-                    display: block;
-                    flex: 1 1 200px;
-                    max-width: 250px;
-                    overflow: hidden;
+                .splide__list {
+                    transition: all 0.3s ease-out;
 
-                    &:hover img {
-                        transform: scale(1.05);
-                    }
-
-                    .box {
+                    .splide__slide {
+                        display: flex;
+                        justify-content: center;
                         width: 100%;
-                        height: 100%;
-                        position: relative;
 
-                        img {
+                        .anime {
+                            text-decoration: none;
+                            position: relative;
                             width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                            filter: brightness(0.5);
+                            height: auto;
                             border-radius: 10px;
-                            transition: all 0.3s ease;
+                            margin: 0px 8px;
+
+                            &:hover img {
+                                filter: brightness(1);
+                            }
+
+                            img {
+                                object-fit: cover;
+                                width: 100%;
+                                height: auto;
+                                filter: brightness(0.6);
+                                border-radius: 10px;
+                                transition: all 0.3s ease-out;
+                            }
+
+                            .text {
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                color: #fff;
+                                padding: 0px 5px 5px 5px;
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+
+                                .title {
+                                    font-size: 1rem;
+                                    font-weight: 500;
+                                    font-style: normal;
+                                    width: 100%;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
                         }
                     }
+                }
+            }
 
-                    .text {
-                        position: absolute;
-                        bottom: 0px;
-                        left: 5px;
-                        color: #ffffff;
-                        font-size: 1rem;
-                        font-weight: 500;
-                        width: 95%;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
+            .modal-favoriteandwatch {
+
+                &.show .modal-dialog {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+
+                .modal-dialog {
+                    transition: transform 0.3s ease-out, opacity 0.3s ease;
+                    transform: translateY(-20px);
+                    opacity: 0;
+
+                    .modal-content {
+
+                        .modal-body {
+
+                            .search {
+                                position: relative;
+                                width: 100%;
+                                margin: 10px 0px;
+
+                                .bi-search {
+                                    position: absolute;
+                                    color: #ffffff;
+                                    top: 7px;
+                                    left: 5px;
+                                }
+
+                                input {
+                                    background-color: #252525;
+                                    outline: none;
+                                    border: none;
+                                    padding: 7px 7px 7px 35px;
+                                    color: #ffffff;
+                                    width: 100%;
+                                    border-radius: 5px;
+                                }
+                            }
+
+                            .animeler {
+                                height: 445px;
+                                width: 100%;
+                                color: #ffffff;
+                                margin: 10px 0px;
+
+                                .anime {
+                                    text-decoration: none;
+                                    margin: 0px 0px 15px 0px;
+
+                                    img {
+                                        height: 120px;
+                                        object-fit: cover;
+                                        border-radius: 5px;
+                                    }
+
+                                    .text {
+                                        padding: 0px 6px;
+
+                                        .title {
+                                            color: #ff7f00;
+                                            font-size: 1rem;
+                                            font-weight: 500;
+                                            font-style: normal;
+                                            line-height: 1.1;
+                                        }
+
+                                        .des {
+                                            margin-top: 5px;
+                                            font-size: 0.9rem;
+                                            font-weight: 400;
+                                            color: #ccc;
+                                            line-height: 1;
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
                     }
-
                 }
             }
         }
@@ -440,29 +528,6 @@
     }
 }
 
-@media only screen and (max-width:880px) {
-    .usercontent {
-
-        .user {
-
-            .favoriteandwatch {
-
-                .animes {
-                    width: 100%;
-                    max-height: 300px;
-                    gap: 8px;
-
-                    a {
-                        flex: 1 1 140px;
-                        max-width: 180px;
-
-                    }
-                }
-            }
-        }
-    }
-}
-
 @media only screen and (max-width:650px) {
     .usercontent {
 
@@ -477,66 +542,6 @@
 
                     .addfriend {
                         left: 57%;
-                    }
-                }
-            }
-
-            .favoriteandwatch {
-
-                .animes {
-
-                    a {
-                        flex: 1 1 150px;
-                        max-width: 200px;
-
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media only screen and (max-width:510px) {
-    .usercontent {
-
-        .user {
-
-            .favoriteandwatch {
-
-                .animes {
-
-                    a {
-                        flex: 1 1 130px;
-                        max-width: 160px;
-
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media only screen and (max-width:450px) {
-    .usercontent {
-
-        .user {
-
-            .favoriteandwatch {
-
-                .head {
-
-                    .title {
-                        font-size: 1rem;
-                        line-height: 1;
-                    }
-                }
-
-                .animes {
-
-                    a {
-                        flex: 1 1 120px;
-                        max-width: 200px;
-
                     }
                 }
             }
