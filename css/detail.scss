@@ -271,8 +271,8 @@
         }
 
         .episode {
-            padding-right: 16px; 
-            box-sizing: border-box; 
+            padding-right: 16px;
+            box-sizing: border-box;
             margin-top: 20px;
             display: flex;
             flex-wrap: wrap;
@@ -477,6 +477,16 @@
     }
 }
 
+@media only screen and (max-height:720px) {
+    .detail {
+        .banner {
+            .box {
+                display: none;
+            }
+        }
+    }
+}
+
 
 @media only screen and (max-width:600px) {
     .detail {
@@ -518,6 +528,7 @@
 
             .episode {
                 gap: 5px;
+
                 a {
                     flex: 1 1 150px;
                     max-width: 250px;
@@ -539,6 +550,7 @@
         }
     }
 }
+
 @media only screen and (max-width:360px) {
     .detail {
         .seasonandedipsode {

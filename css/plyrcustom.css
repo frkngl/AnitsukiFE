@@ -1,0 +1,279 @@
+:root {
+    --plyr-color-main: #ff7f00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scrollbar-color: #ff7f00 #000000;
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: 5px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff7f00;
+    border-radius: 5px;
+}
+
+::selection {
+    background-color: #ff7f00;
+    color: #000000;
+}
+
+body,
+html {
+    height: 100%;
+    background-color: black;
+}
+
+.player-wrapper {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.player-header {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, black 0%, transparent 100%);
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+
+.animedes {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    flex-direction: row;
+    opacity: 1;
+    pointer-events: none;
+
+}
+
+.player-header.hidden {
+    opacity: 0;
+}
+
+.player-header img {
+    height: 80px;
+}
+
+#back-button {
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    color: white;
+    padding: 6px 6px 2px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    pointer-events: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+#back-button:hover {
+    background-color: #ff7f00;
+}
+
+.video-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    line-height: 1;
+}
+
+.anime-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text,
+.subs {
+    display: flex;
+    font-size: 14px;
+    color: #ffffff;
+    width: 220px;
+}
+
+#player {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.plyr__menu,
+.plyr__menu * {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+.plyr__captions {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+
+@media only screen and (max-width: 600px) {
+    .plyr__volume {
+        display: none !important;
+    }
+
+    .player-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+}
+
+/* Bölümler butonu sağ üstte */
+.episodes-toggle-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    z-index: 10000;
+    background-color: transparent;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.episodes-toggle-btn:hover {
+    background-color: #e67300;
+}
+
+.episodes-panel {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    box-sizing: border-box;
+    transition: right 0.3s ease;
+    z-index: 15000;
+    display: flex;
+    flex-direction: column;
+}
+
+.episodes-panel.open {
+    right: 0;
+    background-color: #101010;
+}
+
+.episodes-panel .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+}
+
+.episodes-panel .head .close {
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    padding: 5px 5px 2px 5px;
+}
+
+.episodes-panel .head .close:hover {
+    background-color: #ff7f00;
+}
+
+.episodes-panel h3 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    border-bottom: 2px solid #ff7f00;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.episodes-list {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+.episodes-list a {
+    background: transparent;
+    color: white;
+    width: 100%;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 12px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.episodes-list a .box {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.episodes-list a .box .text {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 1.1rem;
+}
+
+.episodes-list a .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+    filter: brightness(0.6);
+}
+
+.episodes-list a .box:hover img {
+    transform: scale(1.05);
+}
+
+
+.episodes-list button:hover {
+    background-color: var(--plyr-color-main);
+    color: black;
+}
+
+@media only screen and (max-width: 480px) {
+    .episodes-toggle-btn {
+        display: none;
+    }
+}
