@@ -1,0 +1,275 @@
+.settingcontent {
+  padding: 1.5rem 10rem;
+}
+.settingcontent .user .usernameandoption {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.settingcontent .user .usernameandoption .username {
+  color: #ff7f00;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 0.9;
+  display: flex;
+  align-items: end;
+}
+.settingcontent .user .usernameandoption .username .bi-person-circle {
+  margin-right: 3px;
+}
+.settingcontent .user .usernameandoption .option {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-style: normal;
+}
+.settingcontent .user .usernameandoption .option a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  line-height: 0.8;
+  display: flex;
+  align-items: end;
+}
+.settingcontent .user .usernameandoption .option a:hover {
+  color: #ff7f00;
+}
+.settingcontent .user .usernameandoption .option a .bi-arrow-left {
+  margin-right: 3px;
+  margin-bottom: -2px;
+}
+.settingcontent .user .pictureandabout {
+  width: 100%;
+  display: flex;
+  margin-top: 16px;
+}
+.settingcontent .user .pictureandabout .picture {
+  display: flex;
+  flex-direction: column;
+}
+.settingcontent .user .pictureandabout .picture .image {
+  width: 220px;
+  height: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ff7f00;
+}
+.settingcontent .user .pictureandabout .picture .buttons {
+  margin: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.settingcontent .user .pictureandabout .picture .buttons .updatebtn {
+  padding: 5px;
+  border: 2px solid #ff7f00;
+  background: transparent;
+  border-radius: 10px;
+  width: 108px;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+.settingcontent .user .pictureandabout .picture .buttons .updatebtn:hover {
+  background-color: #ff7f00;
+  color: #000000;
+}
+.settingcontent .user .pictureandabout .picture .buttons .deletebtn {
+  padding: 5px;
+  border: 2px solid #ff7f00;
+  background: transparent;
+  border-radius: 10px;
+  width: 108px;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+.settingcontent .user .pictureandabout .picture .buttons .deletebtn:hover {
+  background-color: #ff7f00;
+  color: #000000;
+}
+.settingcontent .user .pictureandabout .picture input[type=file] {
+  border: 2px solid #ff7f00;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #ffffff;
+  width: 220px;
+}
+.settingcontent .user .pictureandabout .picture input[type=file]::file-selector-button {
+  background-color: #ff7f00;
+  color: #000000;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+.settingcontent .user .pictureandabout .text {
+  margin-left: 16px;
+  width: 100%;
+}
+.settingcontent .user .pictureandabout .text textarea {
+  background-color: transparent;
+  border: 2px solid #ff7f00;
+  border-radius: 10px;
+  color: #ffffff;
+  outline: none;
+  padding: 5px;
+  width: 100%;
+  height: 315px;
+  resize: vertical;
+}
+.settingcontent .user .otherdata {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10px;
+}
+.settingcontent .user .otherdata .box {
+  width: 100%;
+  margin: 10px 0px;
+}
+.settingcontent .user .otherdata .box .title {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+}
+.settingcontent .user .otherdata .box input {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid #ff7f00;
+  padding: 5px;
+  border-radius: 10px;
+  color: #ffffff;
+  outline: none;
+}
+.settingcontent .user .otherdata .box .password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.settingcontent .user .otherdata .box .password-wrapper input {
+  flex: 1;
+  padding-right: 40px;
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid #ff7f00;
+  padding: 5px;
+  border-radius: 10px;
+  color: #ffffff;
+  outline: none;
+}
+.settingcontent .user .otherdata .box .password-wrapper .toggle-password {
+  position: absolute;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ff7f00;
+  font-size: 18px;
+}
+.settingcontent .user .toggle {
+  margin-top: 5px;
+  /* From Uiverse.io by Muaz-Aldalil */
+}
+.settingcontent .user .toggle .title {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+}
+.settingcontent .user .toggle .toggle-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: none;
+}
+.settingcontent .user .toggle .toggle-switch {
+  background-color: gray;
+  width: 78px;
+  height: 32px;
+  border-radius: 16px;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.settingcontent .user .toggle .toggle-switch::before {
+  content: "";
+  font-weight: 900;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ddd;
+  transition: 0.3s;
+}
+.settingcontent .user .toggle .toggle-checkbox:checked + .toggle-switch {
+  background-color: #0075ff;
+}
+.settingcontent .user .toggle .toggle-checkbox:checked + .toggle-switch::before {
+  content: "";
+  left: 50px;
+  color: #0075ff;
+}
+.settingcontent .user .buttons {
+  margin-top: 10px;
+}
+.settingcontent .user .buttons .save {
+  padding: 5px;
+  border: 2px solid #ff7f00;
+  background-color: transparent;
+  color: #ffffff;
+  border-radius: 10px;
+  width: 100px;
+  transition: all 0.2s ease-in-out;
+}
+.settingcontent .user .buttons .save:hover {
+  background-color: #ff7f00;
+  color: #000000;
+}
+
+@media only screen and (max-width: 1500px) {
+  .settingcontent {
+    padding: 25px 16px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .settingcontent .user .usernameandoption {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .settingcontent .user .usernameandoption .username {
+    font-size: 1rem;
+    line-height: 1;
+  }
+  .settingcontent .user .usernameandoption .option {
+    font-size: 1rem;
+  }
+  .settingcontent .user .usernameandoption .option a {
+    line-height: 1;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .settingcontent .user .pictureandabout {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+  }
+  .settingcontent .user .pictureandabout .picture {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .settingcontent .user .pictureandabout .text {
+    margin-left: 0px;
+    margin-top: 16px;
+    width: 100%;
+  }
+  .settingcontent .user .pictureandabout .text textarea {
+    height: 200px;
+  }
+}/*# sourceMappingURL=setting.css.map */

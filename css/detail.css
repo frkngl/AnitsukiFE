@@ -382,7 +382,7 @@
     max-width: 350px;
   }
 }
-@media only screen and (max-height: 720px) {
+@media only screen and (max-height: 719px) {
   .detail .banner .box {
     display: none;
   }
