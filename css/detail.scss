@@ -442,7 +442,7 @@
 
         .comments {
             width: 100%;
-            margin: 16px 0px;
+            margin: 24px 0px;
 
             .title {
                 display: flex;
@@ -453,6 +453,188 @@
 
                 svg {
                     margin-right: 5px;
+                }
+            }
+
+            .comment-section {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+                max-width: 100%;
+                margin: 10px 0px;
+                font-family: Arial, sans-serif;
+
+                .comment-box,
+                .reply-box {
+                    display: flex;
+                    align-items: flex-start;
+                    background-color: #1e1e1e;
+                    border-radius: 10px;
+                    padding: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    line-height: 1;
+                    word-break: break-all;
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        margin-right: 15px;
+                    }
+
+                    .comment-content {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+
+                        .username {
+                            color: #ff7f00;
+                            font-weight: bold;
+                            font-size: 1rem;
+                            text-decoration: none;
+                            margin-bottom: 4px;
+                        }
+
+                        .date {
+                            color: #999;
+                            font-size: 0.8rem;
+                            margin-bottom: 8px;
+                        }
+
+                        .reply-to {
+                            color: #ffae42;
+                            font-size: 0.85rem;
+                            margin-bottom: 8px;
+                        }
+
+                        .comment-text {
+                            color: #eee;
+                            margin-bottom: 10px;
+                            line-height: 1.5;
+                        }
+
+                        .buttonandlike {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+
+                            .reply-btn {
+                                align-self: flex-start;
+                                background-color: transparent;
+                                border: 1px solid #ff7f00;
+                                color: #ffffff;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                font-size: 0.9rem;
+                                cursor: pointer;
+                                transition: all 0.3s ease;
+
+                                &:hover {
+                                    background-color: #ff7f00;
+                                    color: #000;
+                                }
+                            }
+
+                            .likeandunlike {
+                                display: flex;
+
+                                .like,
+                                .unlike {
+                                    display: flex;
+                                    align-items: center;
+                                    color: #ffffff;
+                                    text-decoration: none;
+                                    transition: all 0.3s ease-in-out;
+
+                                    &:hover {
+                                        color: #ff7f00;
+                                    }
+                                }
+
+                                .like {
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                .reply-box {
+                    margin-left: 30px;
+                    background-color: #2a2a2a;
+                }
+            }
+
+        }
+
+        .modal {
+
+            .replycontent {
+                display: flex;
+                flex-direction: column;
+                margin: 10px 0px;
+
+                .username {
+
+                    .title {
+                        color: #ffffff;
+                        font-style: normal;
+                    }
+
+                    input {
+                        background-color: transparent;
+                        border: 2px solid #ff7f00;
+                        border-radius: 10px;
+                        padding: 5px;
+                        width: 100%;
+                        color: #ffffff;
+                        outline: none;
+                    }
+                }
+
+                .message {
+                    margin-top: 10px;
+
+                    .title {
+                        color: #ffffff;
+                        font-style: normal;
+                    }
+
+                    textarea {
+                        width: 100%;
+                        height: 150px;
+                        background-color: transparent;
+                        border: 2px solid #ff7f00;
+                        outline: none;
+                        border-radius: 10px;
+                        color: #ffffff;
+                        padding: 5px;
+                    }
+                }
+
+                .button {
+                    margin-top: 10px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+
+                    button {
+                        width: 100px;
+                        padding: 5px;
+                        border: 2px solid #ff7f00;
+                        background-color: transparent;
+                        border-radius: 10px;
+                        color: #ffffff;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            background-color: #ff7f00;
+                            color: #000000;
+                        }
+                    }
                 }
             }
         }
@@ -571,9 +753,7 @@
                 color: #ff7f00;
                 width: 80%;
                 word-wrap: break-word;
-                /* Eski tarayıcılar için */
                 overflow-wrap: break-word;
-                /* Modern tarayıcılar için */
                 line-height: 1.1;
             }
 

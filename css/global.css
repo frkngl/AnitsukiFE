@@ -49,18 +49,22 @@ header .logo {
   height: 100%;
 }
 header .logo a {
+  display: flex;
+  align-items: center;
+}
+header .logo a picture,
+header .logo a img {
   display: block;
   width: 150px;
   height: 60px;
-  background-image: url("../webimg/logo.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
-@media (max-width: 576px) {
-  header .logo a {
+@media only screen and (max-width: 576px) {
+  header .logo a picture,
+  header .logo a img {
     width: 60px;
     height: 60px;
-    background-image: url("../webimg/aylogo.png");
   }
 }
 header .hamburger-btn {

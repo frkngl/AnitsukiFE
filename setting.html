@@ -13,7 +13,12 @@
 <body>
     <header class="d-flex justify-content-between">
         <div class="logo">
-            <a href="index.html"></a>
+            <a href="index.html">
+                <picture>
+                    <source media="(max-width: 576px)" srcset="webimg/aylogo.png">
+                    <img src="webimg/logo.png" width="150" height="60" loading="lazy">
+                </picture>
+            </a>
         </div>
         <input style="display: none;" type="checkbox" id="check" />
         <label for="check" class="hamburger-btn">

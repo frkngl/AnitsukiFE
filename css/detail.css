@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .detail .banner {
   width: 100%;
   height: calc(80vh - 60px);
@@ -380,7 +379,7 @@
 }
 .detail .commentcontent .comments {
   width: 100%;
-  margin: 16px 0px;
+  margin: 24px 0px;
 }
 .detail .commentcontent .comments .title {
   display: flex;
@@ -391,6 +390,172 @@
 }
 .detail .commentcontent .comments .title svg {
   margin-right: 5px;
+}
+.detail .commentcontent .comments .comment-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 100%;
+  margin: 10px 0px;
+  font-family: Arial, sans-serif;
+}
+.detail .commentcontent .comments .comment-section .comment-box,
+.detail .commentcontent .comments .comment-section .reply-box {
+  display: flex;
+  align-items: flex-start;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  line-height: 1;
+  word-break: break-all;
+}
+.detail .commentcontent .comments .comment-section .comment-box img,
+.detail .commentcontent .comments .comment-section .reply-box img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 15px;
+}
+.detail .commentcontent .comments .comment-section .comment-box .comment-content,
+.detail .commentcontent .comments .comment-section .reply-box .comment-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.detail .commentcontent .comments .comment-section .comment-box .comment-content .username,
+.detail .commentcontent .comments .comment-section .reply-box .comment-content .username {
+  color: #ff7f00;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+.detail .commentcontent .comments .comment-section .comment-box .comment-content .date,
+.detail .commentcontent .comments .comment-section .reply-box .comment-content .date {
+  color: #999;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+.detail .commentcontent .comments .comment-section .comment-box .comment-content .reply-to,
+.detail .commentcontent .comments .comment-section .reply-box .comment-content .reply-to {
+  color: #ffae42;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+.detail .commentcontent .comments .comment-section .comment-box .comment-content .comment-text,
+.detail .commentcontent .comments .comment-section .reply-box .comment-content .comment-text {
+  color: #eee;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.detail .commentcontent .comments .comment-section .comment-box .comment-content .buttonandlike,
+.detail .commentcontent .comments .comment-section .reply-box .comment-content .buttonandlike {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.detail .commentcontent .comments .comment-section .comment-box .comment-content .buttonandlike .reply-btn,
+.detail .commentcontent .comments .comment-section .reply-box .comment-content .buttonandlike .reply-btn {
+  align-self: flex-start;
+  background-color: transparent;
+  border: 1px solid #ff7f00;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.detail .commentcontent .comments .comment-section .comment-box .comment-content .buttonandlike .reply-btn:hover,
+.detail .commentcontent .comments .comment-section .reply-box .comment-content .buttonandlike .reply-btn:hover {
+  background-color: #ff7f00;
+  color: #000;
+}
+.detail .commentcontent .comments .comment-section .comment-box .comment-content .buttonandlike .likeandunlike,
+.detail .commentcontent .comments .comment-section .reply-box .comment-content .buttonandlike .likeandunlike {
+  display: flex;
+}
+.detail .commentcontent .comments .comment-section .comment-box .comment-content .buttonandlike .likeandunlike .like,
+.detail .commentcontent .comments .comment-section .comment-box .comment-content .buttonandlike .likeandunlike .unlike,
+.detail .commentcontent .comments .comment-section .reply-box .comment-content .buttonandlike .likeandunlike .like,
+.detail .commentcontent .comments .comment-section .reply-box .comment-content .buttonandlike .likeandunlike .unlike {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.detail .commentcontent .comments .comment-section .comment-box .comment-content .buttonandlike .likeandunlike .like:hover,
+.detail .commentcontent .comments .comment-section .comment-box .comment-content .buttonandlike .likeandunlike .unlike:hover,
+.detail .commentcontent .comments .comment-section .reply-box .comment-content .buttonandlike .likeandunlike .like:hover,
+.detail .commentcontent .comments .comment-section .reply-box .comment-content .buttonandlike .likeandunlike .unlike:hover {
+  color: #ff7f00;
+}
+.detail .commentcontent .comments .comment-section .comment-box .comment-content .buttonandlike .likeandunlike .like,
+.detail .commentcontent .comments .comment-section .reply-box .comment-content .buttonandlike .likeandunlike .like {
+  margin-right: 10px;
+}
+.detail .commentcontent .comments .comment-section .reply-box {
+  margin-left: 30px;
+  background-color: #2a2a2a;
+}
+.detail .commentcontent .modal .replycontent {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+.detail .commentcontent .modal .replycontent .username .title {
+  color: #ffffff;
+  font-style: normal;
+}
+.detail .commentcontent .modal .replycontent .username input {
+  background-color: transparent;
+  border: 2px solid #ff7f00;
+  border-radius: 10px;
+  padding: 5px;
+  width: 100%;
+  color: #ffffff;
+  outline: none;
+}
+.detail .commentcontent .modal .replycontent .message {
+  margin-top: 10px;
+}
+.detail .commentcontent .modal .replycontent .message .title {
+  color: #ffffff;
+  font-style: normal;
+}
+.detail .commentcontent .modal .replycontent .message textarea {
+  width: 100%;
+  height: 150px;
+  background-color: transparent;
+  border: 2px solid #ff7f00;
+  outline: none;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 5px;
+}
+.detail .commentcontent .modal .replycontent .button {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.detail .commentcontent .modal .replycontent .button button {
+  width: 100px;
+  padding: 5px;
+  border: 2px solid #ff7f00;
+  background-color: transparent;
+  border-radius: 10px;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+.detail .commentcontent .modal .replycontent .button button:hover {
+  background-color: #ff7f00;
+  color: #000000;
 }
 
 @media only screen and (max-width: 1665px) {
@@ -471,9 +636,7 @@
     color: #ff7f00;
     width: 80%;
     word-wrap: break-word;
-    /* Eski tarayıcılar için */
     overflow-wrap: break-word;
-    /* Modern tarayıcılar için */
     line-height: 1.1;
   }
   .detail .animetext .favoriteandwatch {

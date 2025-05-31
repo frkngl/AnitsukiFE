@@ -43,19 +43,24 @@ header {
         height: 100%;
 
         a {
-            display: block;
-            width: 150px;
-            height: 60px;
-            background-image: url("../webimg/logo.png");
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
+            display: flex;
+            align-items: center;
 
-        @media (max-width: 576px) {
-            a {
-                width: 60px;
+            picture,
+            img {
+                display: block;
+                width: 150px;
                 height: 60px;
-                background-image: url("../webimg/aylogo.png");
+                object-fit: contain;
+            }
+
+            @media only screen and (max-width: 576px) {
+
+                picture,
+                img {
+                    width: 60px;
+                    height: 60px;
+                }
             }
         }
     }
@@ -83,7 +88,7 @@ header {
                 color: #ff7f00;
             }
 
-            &.active{
+            &.active {
                 color: #ff7f00;
             }
 
@@ -431,7 +436,7 @@ footer {
     height: 300px;
     display: flex;
     align-items: center;
-    
+
 
     .modal {
 
@@ -461,7 +466,7 @@ footer {
                         border-bottom: 2px solid #ff7f00;
                     }
 
-                    &.active{
+                    &.active {
                         border-bottom: 2px solid #ff7f00;
                         color: #ff7f00;
                     }
@@ -469,16 +474,16 @@ footer {
 
             }
 
-            .content-text{
+            .content-text {
                 display: none;
 
-                .title{
+                .title {
                     font-size: 1.1rem;
                     font-weight: 500;
                     font-style: normal;
                 }
 
-                &.active{
+                &.active {
                     display: block;
                     color: #fff;
                 }
