@@ -848,14 +848,14 @@
     </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/app.js"></script>
+    <script>
+        function togglePassword(inputId, button) {
+            const input = document.getElementById(inputId);
+            const isPassword = input.type === "password";
+            input.type = isPassword ? "text" : "password";
+            button.textContent = isPassword ? "🙈" : "👁️";
+        }
+    </script>
 </body>
-<script>
-    function togglePassword(inputId, button) {
-        const input = document.getElementById(inputId);
-        const isPassword = input.type === "password";
-        input.type = isPassword ? "text" : "password";
-        button.textContent = isPassword ? "🙈" : "👁️";
-    }
-</script>
 
 </html>

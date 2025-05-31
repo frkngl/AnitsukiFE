@@ -325,6 +325,138 @@
             }
         }
     }
+
+    .commentcontent {
+        padding: 0 10rem;
+
+        .messagebox {
+            width: 100%;
+
+            .title {
+                color: #ffffff;
+                display: flex;
+                align-items: center;
+                font-size: 1.1rem;
+
+                svg {
+                    margin-right: 5px;
+                }
+            }
+
+            textarea {
+                width: 100%;
+                height: 200px;
+                border-radius: 15px;
+                padding: 8px;
+                border: 2px solid #ff7f00;
+                outline: none;
+                background-color: transparent;
+                color: #ffffff;
+            }
+
+            .other {
+                display: flex;
+
+                .toggle {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 16px;
+
+                    .title {
+                        color: #ffffff;
+                        font-size: 1.1rem;
+                        font-style: normal;
+                        margin-right: 5px;
+                    }
+
+                    /* From Uiverse.io by Muaz-Aldalil */
+                    .toggle-checkbox {
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        display: none;
+                    }
+
+                    .toggle-switch {
+                        background-color: gray;
+                        width: 50px;
+                        height: 25px;
+                        border-radius: 16px;
+                        position: relative;
+                        transition: 0.3s;
+                        cursor: pointer;
+                    }
+
+                    .toggle-switch::before {
+                        content: "";
+                        font-weight: 900;
+                        background-color: white;
+                        width: 16px;
+                        height: 16px;
+                        position: absolute;
+                        border-radius: 50%;
+                        top: 4px;
+                        left: 4px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #ddd;
+                        transition: 0.3s;
+                    }
+
+                    .toggle-checkbox:checked+.toggle-switch {
+                        background-color: #ff7f00;
+                    }
+
+                    .toggle-checkbox:checked+.toggle-switch::before {
+                        content: "";
+                        left: 30px;
+                        color: #ff7f00;
+                    }
+                }
+
+                button {
+                    width: 100px;
+                    padding: 2px 0px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1rem;
+                    border-radius: 10px;
+                    background-color: transparent;
+                    border: 2px solid #ff7f00;
+                    color: #ffffff;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        background-color: #ff7f00;
+                        color: #000000;
+                    }
+
+                    svg {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+
+        .comments {
+            width: 100%;
+            margin: 16px 0px;
+
+            .title {
+                display: flex;
+                align-items: center;
+                color: #ffffff;
+                font-style: normal;
+                font-size: 1.1rem;
+
+                svg {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width:1665px) {
@@ -395,6 +527,10 @@
                     max-width: 300px;
                 }
             }
+        }
+
+        .commentcontent {
+            padding: 0px 16px;
         }
     }
 }
@@ -477,18 +613,7 @@
     }
 }
 
-@media only screen and (max-height:719px) {
-    .detail {
-        .banner {
-            .box {
-                display: none;
-            }
-        }
-    }
-}
-
-
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:760px) {
     .detail {
 
         .banner {
@@ -522,6 +647,16 @@
     }
 }
 
+@media only screen and (max-height:570px) {
+    .detail {
+        .banner {
+            .box {
+                display: none;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width:500px) {
     .detail {
         .seasonandedipsode {
@@ -548,6 +683,41 @@
                 }
             }
         }
+
+        .commentcontent {
+
+            .messagebox {
+
+                .title {
+                    font-size: 1rem;
+                }
+
+                textarea {
+                    height: 150px;
+                }
+
+                .other {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .toggle {
+                        margin-right: 5px;
+
+                        .title {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .comments {
+
+                .title {
+                    font-size: 1rem;
+                }
+            }
+        }
+
     }
 }
 

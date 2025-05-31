@@ -207,12 +207,12 @@
   transition: 0.3s;
 }
 .settingcontent .user .toggle .toggle-checkbox:checked + .toggle-switch {
-  background-color: #0075ff;
+  background-color: #ff7f00;
 }
 .settingcontent .user .toggle .toggle-checkbox:checked + .toggle-switch::before {
   content: "";
   left: 50px;
-  color: #0075ff;
+  color: #ff7f00;
 }
 .settingcontent .user .buttons {
   margin-top: 10px;
