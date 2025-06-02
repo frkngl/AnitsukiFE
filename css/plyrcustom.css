@@ -140,6 +140,25 @@ html {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
 }
 
+.plyr__controls {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 10px;
+}
+
+.custom-top-controls {
+    width: 100%;
+}
+
+.custom-bottom-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 @media only screen and (max-width: 600px) {
     .plyr__volume {
         display: none !important;
@@ -237,6 +256,10 @@ html {
     margin-bottom: 12px;
     overflow: hidden;
     border-radius: 8px;
+}
+
+.episodes-list a.active {
+    border: 3px solid #ffffff;
 }
 
 .episodes-list a .box {

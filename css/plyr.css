@@ -105,7 +105,7 @@
 
 .plyr__captions {
     animation: plyr-fade-in .3s ease;
-    bottom: 0;
+    bottom: 16px;
     display: none;
     font-size: 13px;
     font-size: var(--plyr-font-size-small, 13px);
