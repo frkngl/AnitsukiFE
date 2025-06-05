@@ -33,12 +33,18 @@ body,
 html {
     height: 100%;
     background-color: black;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .player-wrapper {
     position: relative;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     overflow: hidden;
 }
 
@@ -52,6 +58,49 @@ html {
     z-index: 9999;
     transition: opacity 0.3s ease;
 }
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    z-index: 9999999999 !important;
+    display: block;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+#start-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    color: #ffffff;
+    background-color: #ff7f00;
+    color: #000000;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    border-radius: 50%;
+}
+
+#start-video svg {
+    width: 50px;
+    height: 50px;
+}
+
+
+#start-video:hover {
+    background-color: #313131;
+    color: #ff7f00;
+}
+
 
 .animedes {
     position: absolute;
@@ -78,7 +127,10 @@ html {
 }
 
 .player-header img {
-    height: 80px;
+    height: 75px;
+    width: 50px;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 #back-button {
@@ -159,8 +211,39 @@ html {
     gap: 10px;
 }
 
+.plyr__progress__container {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
 @media only screen and (max-width: 600px) {
     .plyr__volume {
+        display: none !important;
+    }
+
+    .plyr__controls .plyr__control[data-plyr="captions"] {
+        display: none !important;
+    }
+
+    .plyr__controls .plyr__control[data-plyr="pip"] {
+        display: none !important;
+    }
+
+    .plyr__controls .plyr__control[data-plyr="settings"] {
+        display: none !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .plyr__controls__item:has([data-plyr="settings"]) {
+        display: none !important;
+    }
+
+    .plyr__time--current {
         display: none !important;
     }
 
@@ -294,6 +377,7 @@ html {
     background-color: var(--plyr-color-main);
     color: black;
 }
+
 
 @media only screen and (max-width: 480px) {
     .episodes-toggle-btn {

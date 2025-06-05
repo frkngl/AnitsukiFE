@@ -86,7 +86,7 @@
                                 <div class="text">1.Sezon 1.Bölüm</div>
                             </div>
                         </a>
-                        <a href="#">
+                        <a class="active" href="#">
                             <div class="box">
                                 <img src="webimg/onepiecebanner.jpg">
                                 <div class="text">1.Sezon 1.Bölüm</div>
@@ -116,7 +116,7 @@
                                 <div class="text">1.Sezon 1.Bölüm</div>
                             </div>
                         </a>
-                        <a class="active" href="#">
+                        <a href="#">
                             <div class="box">
                                 <img src="webimg/onepiecebanner.jpg">
                                 <div class="text">1.Sezon 1.Bölüm</div>
@@ -143,7 +143,15 @@
                     </div>
                 </div>
             </div>
-
+            <div class="background">
+                <img src="webimg/aotbanner.jpg">
+                <button id="start-video" class="plyr__control"><svg xmlns="http://www.w3.org/2000/svg" width="50"
+                        height="50" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                        <path
+                            d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
+                    </svg></button>
+            </div>
             <video id="player" preload="metadata" playsinline controls crossorigin>
                 <source src="video/episode720.mp4" size="720" type="video/mp4" />
                 <source src="video/episode360.mp4" size="360" type="video/mp4" />
@@ -153,7 +161,316 @@
     </div>
 
     <script src="js/plyr.js"></script>
-    <script src="js/plyrcustom.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Sabitler (unchanged)
+            const ICONS = {
+                rewind: `<svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 512 512"><path fill="#ffffff" d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"/></svg>`,
+                forward: `<svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 512 512"><path fill="#ffffff" d="M386.3 160L336 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-128c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 51.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0s-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3s163.8-62.5 226.3 0L386.3 160z"/></svg>`,
+                prev: `<svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 512 512"><path fill="#ffffff" d="M459.5 440.6c9.5 7.9 22.8 9.7 34.1 4.4s18.4-16.6 18.4-29l0-320c0-12.4-7.2-23.7-18.4-29s-24.5-3.6-34.1 4.4L288 214.3l0 41.7 0 41.7L459.5 440.6zM256 352l0-96 0-128 0-32c0-12.4-7.2-23.7-18.4-29s-24.5-3.6-34.1 4.4l-192 160C4.2 237.5 0 246.5 0 256s4.2 18.5 11.5 24.6l192 160c9.5 7.9 22.8 9.7 34.1 4.4s18.4-16.6 18.4-29l0-64z"/></svg>`,
+                next: `<svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 512 512"><path fill="#ffffff" d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416L0 96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4L224 214.3l0 41.7 0 41.7L52.5 440.6zM256 352l0-96 0-128 0-32c0-12.4 7.2-23.7 18.4-29s24.5-3.6 34.1 4.4l192 160c7.3 6.1 11.5 15.1 11.5 24.6s-4.2 18.5-11.5 24.6l-192 160c-9.5 7.9-22.8 9.7-34.1 4.4s-18.4-16.6-18.4-29l0-64z"/></svg>`
+            };
+
+            const CONTROLS = [
+                'play-large', 'rewind', 'play', 'fast-forward',
+                'current-time', 'mute', 'volume', 'captions',
+                'settings', 'progress', 'pip', 'fullscreen'
+            ];
+
+            const I18N = {
+                restart: 'Başa sar',
+                rewind: 'Geri sar',
+                play: 'Oynat',
+                pause: 'Duraklat',
+                fastForward: 'İleri sar',
+                seek: 'Ara',
+                seekLabel: '{currentTime} konumuna git',
+                played: 'Oynatıldı',
+                buffered: 'Önbelleğe alındı',
+                currentTime: 'Geçerli süre',
+                duration: 'Toplam süre',
+                volume: 'Ses düzeyi',
+                mute: 'Sesi kapat',
+                unmute: 'Sesi aç',
+                enableCaptions: 'Altyazıyı etkinleştir',
+                disableCaptions: 'Altyazıyı devre dışı bırak',
+                download: 'İndir',
+                enterFullscreen: 'Tam ekrana geç',
+                exitFullscreen: 'Tam ekrandan çık',
+                frameTitle: 'Video için çerçeve',
+                captions: 'Altyazılar',
+                settings: 'Ayarlar',
+                speed: 'Hız',
+                normal: 'Normal',
+                quality: 'Kalite',
+                loop: 'Tekrarla',
+                start: 'Başla',
+                end: 'Bitir',
+                all: 'Tümü',
+                reset: 'Sıfırla',
+                disabled: 'Devre dışı',
+                enabled: 'Etkin',
+                advertisement: 'Reklam',
+                qualityBadge: { 2160: '4K', 1440: 'HD', 1080: 'HD', 720: 'HD', 576: 'SD', 480: 'SD' }
+            };
+
+            // DOM öğeleri
+            const videoEl = document.getElementById('player');
+            const playerHeader = document.querySelector('.player-header');
+            const episodesPanel = document.getElementById('episodes-panel');
+            const toggleButton = document.querySelector('.episodes-toggle-btn');
+            const closeButton = document.querySelector('.episodes-panel .close');
+            const startBtn = document.getElementById('start-video');
+            const background = document.querySelector('.background');
+
+            // Yardımcı fonksiyonlar
+            const isMobileDevice = () => /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+            const isAndroid = () => /Android/i.test(navigator.userAgent);
+
+            const enterFullscreenWithOrientation = async () => {
+                try {
+                    // Önce tam ekran moduna geç
+                    await player.fullscreen.enter();
+
+                    // Eğer Android cihaz ise ve yön kilitleme desteklenmiyorsa, fullscreen butonunu gizle
+                    if (isAndroid() && !(screen.orientation?.lock)) {
+                        const fullscreenBtn = document.querySelector('.plyr__control[data-plyr="fullscreen"]');
+                        if (fullscreenBtn) fullscreenBtn.style.display = 'none';
+                    }
+
+                    // Android'de yön kilidi varsa ve destekliyorsa, yatay moda kilitlemeye çalış
+                    if (isAndroid() && screen.orientation?.lock) {
+                        let attempts = 0;
+                        const maxAttempts = 3;
+                        const retryDelay = 500;
+
+                        const tryLockOrientation = async () => {
+                            try {
+                                await screen.orientation.lock('landscape');
+                                console.log('Yön landscape olarak kilitlendi');
+                            } catch (err) {
+                                attempts++;
+                                if (attempts < maxAttempts) {
+                                    console.warn(`Yön kilidi başarısız (deneme ${attempts}/${maxAttempts}):`, err);
+                                    setTimeout(tryLockOrientation, retryDelay);
+                                } else {
+                                    console.error('Yön kilidi başarısız, maksimum deneme sayısına ulaşıldı:', err);
+                                }
+                            }
+                        };
+
+                        await tryLockOrientation();
+                    }
+                } catch (err) {
+                    console.error('Tam ekran veya yön kilidi hatası:', err);
+                }
+            };
+
+            let lastTouch = 0;
+            let controlsTimeout;
+
+            // Çift dokunma engelle
+            videoEl?.addEventListener('touchend', (e) => {
+                const now = Date.now();
+                if (now - lastTouch <= 20) e.preventDefault();
+                lastTouch = now;
+            });
+
+            // Mobil cihazda episodes butonunu gizle
+            if (isMobileDevice() && toggleButton) {
+                toggleButton.style.display = 'none';
+            }
+
+            // Plyr oynatıcı başlatma
+            const player = new Plyr('#player', {
+                controls: CONTROLS,
+                settings: ['captions', 'quality', 'speed', 'loop'],
+                captions: { active: true, language: 'auto', update: true },
+                autoplay: false,
+                fullscreen: {
+                    enabled: true,
+                    fallback: true,
+                    iosNative: true,
+                    container: '#video-container'
+                },
+                i18n: I18N
+            });
+
+            // Plyr hazır olduğunda kontrol başlat
+            player.on('ready', () => {
+                if (!isAndroid()) return;
+
+                const btn = document.querySelector('.plyr__control[data-plyr="fullscreen"]');
+                if (!btn) return;
+
+                // Butonu her zaman görünür yap
+                btn.style.setProperty('display', '', 'important');
+
+                // Android'de özel tam ekran işlevi ata
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    enterFullscreenWithOrientation();
+                });
+
+                // Tam ekran çıkışında yön kilidini kaldır
+                player.on('exitfullscreen', async () => {
+                    try {
+                        if (screen.orientation?.unlock) {
+                            await screen.orientation.unlock();
+                            console.log('Yön kilidi kaldırıldı');
+                        }
+                    } catch (err) {
+                        console.warn('Yön kilidi kaldırma başarısız:', err);
+                    }
+                });
+            });
+
+            // Başlat butonu
+            startBtn?.addEventListener('click', async () => {
+                try {
+                    await player.play();
+                    startBtn.style.display = 'none';
+                    if (background) background.style.display = 'none';
+                    if (isAndroid()) {
+                        await enterFullscreenWithOrientation();
+                    }
+                } catch (err) {
+                    console.error('Video oynatma veya tam ekran hatası:', err);
+                }
+            });
+
+            // Başlık gösterme/gizleme (unchanged)
+            const showHeader = ({ immediate = false } = {}) => {
+                if (!playerHeader) return;
+                playerHeader.classList.remove('hidden');
+                clearTimeout(controlsTimeout);
+                const delay = immediate ? 100 : isMobileDevice() ? 3000 : 2000;
+                controlsTimeout = setTimeout(() => {
+                    if (player.playing) playerHeader.classList.add('hidden');
+                }, delay);
+            };
+
+            // Altyazı font boyutu güncelleme (unchanged)
+            const updateCaptionFontSize = () => {
+                const captions = document.querySelector('.plyr__captions');
+                if (captions) captions.style.fontSize = isMobileDevice() ? '1rem' : '2rem';
+            };
+
+            // Plyr hazır olduğunda (unchanged)
+            player.on('ready', () => {
+                const controls = document.querySelector('.plyr__controls');
+                const progress = controls?.querySelector('.plyr__progress');
+                if (controls && progress) {
+                    const topBar = document.createElement('div');
+                    const bottomBar = document.createElement('div');
+                    topBar.classList.add('custom-top-controls');
+                    bottomBar.classList.add('custom-bottom-controls');
+                    topBar.appendChild(progress);
+                    [...controls.children].forEach(child => {
+                        if (!child.classList.contains('plyr__progress')) bottomBar.appendChild(child);
+                    });
+                    controls.innerHTML = '';
+                    controls.appendChild(topBar);
+                    controls.appendChild(bottomBar);
+                }
+
+                const rewindButton = document.querySelector('.plyr__control[data-plyr="rewind"]');
+                const forwardButton = document.querySelector('.plyr__control[data-plyr="fast-forward"]');
+                if (rewindButton) rewindButton.innerHTML = ICONS.rewind;
+                if (forwardButton) forwardButton.innerHTML = ICONS.forward;
+
+                const prevButton = document.createElement('button');
+                prevButton.className = 'plyr__control custom-prev';
+                prevButton.innerHTML = ICONS.prev;
+                prevButton.title = 'Önceki bölüm';
+                prevButton.onclick = () => console.log('Önceki bölüme geç');
+
+                const nextButton = document.createElement('button');
+                nextButton.className = 'plyr__control custom-next';
+                nextButton.innerHTML = ICONS.next;
+                nextButton.title = 'Sonraki bölüm';
+                nextButton.onclick = () => console.log('Sonraki bölüme geç');
+
+                if (rewindButton?.parentNode) rewindButton.parentNode.insertBefore(prevButton, rewindButton);
+                if (forwardButton?.parentNode) forwardButton.parentNode.insertBefore(nextButton, forwardButton.nextSibling);
+
+                const list = document.querySelector('.episodes-list');
+                const activeItem = list?.querySelector('.active');
+                if (activeItem) {
+                    activeItem.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+                }
+
+                showHeader();
+                updateCaptionFontSize();
+            });
+
+            // Olay dinleyicileri (unchanged)
+            ['mousemove', 'touchstart'].forEach(evt => document.addEventListener(evt, showHeader));
+            player.on('play', () => showHeader({ immediate: true }));
+            player.on('pause', () => {
+                if (playerHeader) {
+                    playerHeader.classList.remove('hidden');
+                    clearTimeout(controlsTimeout);
+                }
+            });
+            document.querySelector('.plyr')?.addEventListener('click', showHeader);
+            window.addEventListener('resize', updateCaptionFontSize);
+
+            videoEl?.addEventListener('click', () => {
+                if (typeof player.playing !== 'undefined') player.playing ? player.pause() : player.play();
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (!player) return;
+                switch (event.key.toLowerCase()) {
+                    case ' ':
+                        event.preventDefault();
+                        if (background) background.style.display = 'none';
+                        player.playing ? player.pause() : player.play();
+                        break;
+                    case 'm':
+                        player.muted = !player.muted;
+                        break;
+                    case 'f':
+                        player.fullscreen.toggle();
+                        break;
+                    case 'arrowleft':
+                        player.currentTime = Math.max(player.currentTime - 10, 0);
+                        break;
+                    case 'arrowright':
+                        player.currentTime = Math.min(player.currentTime + 10, player.duration);
+                        break;
+                    case 'arrowup':
+                        player.volume = Math.min(player.volume + 0.05, 1);
+                        break;
+                    case 'arrowdown':
+                        player.volume = Math.max(player.volume - 0.05, 0);
+                        break;
+                    case 'c':
+                        player.toggleCaptions();
+                        break;
+                }
+            });
+
+            document.getElementById('back-button')?.addEventListener('click', () => window.history.back());
+
+            const toggleEpisodesPanel = (open = !episodesPanel?.classList.contains('open')) => {
+                if (!episodesPanel || !toggleButton) return;
+                episodesPanel.classList.toggle('open', open);
+                toggleButton.setAttribute('aria-expanded', String(open));
+                episodesPanel.setAttribute('aria-hidden', String(!open));
+            };
+
+            toggleButton?.addEventListener('click', () => toggleEpisodesPanel());
+            closeButton?.addEventListener('click', () => toggleEpisodesPanel(false));
+            document.addEventListener('click', (event) => {
+                if (!episodesPanel?.classList.contains('open')) return;
+                if (!episodesPanel.contains(event.target) && !toggleButton?.contains(event.target)) {
+                    toggleEpisodesPanel(false);
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
