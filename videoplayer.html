@@ -155,7 +155,7 @@
             <video id="player" preload="metadata" playsinline controls crossorigin>
                 <source src="video/episode720.mp4" size="720" type="video/mp4" />
                 <source src="video/episode360.mp4" size="360" type="video/mp4" />
-                <track kind="captions" label="Türkçe" srclang="tr" src="dandadan.vtt" default />
+                <track kind="subtitles" label="Türkçe" srclang="tr" src="dandadan.vtt" default />
             </video>
         </div>
     </div>
@@ -224,7 +224,14 @@
             const background = document.querySelector('.background');
 
             // Yardımcı fonksiyonlar
-            const isMobileDevice = () => /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+            const isMobileDevice = () => {
+                const ua = navigator.userAgent || '';
+
+                const isStandardMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(ua);
+
+                const isModernIpad = navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
+                return isStandardMobile || isModernIpad;
+            };
             const isAndroid = () => /Android/i.test(navigator.userAgent);
 
             const enterFullscreenWithOrientation = async () => {
@@ -277,7 +284,7 @@
             });
 
             // Mobil cihazda episodes butonunu gizle
-            if (isMobileDevice() && toggleButton) {
+            if (isMobileDevice() && toggleButton && !(/iPad/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1))) {
                 toggleButton.style.display = 'none';
             }
 
@@ -353,7 +360,7 @@
             // Altyazı font boyutu güncelleme (unchanged)
             const updateCaptionFontSize = () => {
                 const captions = document.querySelector('.plyr__captions');
-                if (captions) captions.style.fontSize = isMobileDevice() ? '1rem' : '2rem';
+                if (captions) captions.style.fontSize = isMobileDevice() ? '1.3rem' : '2rem';
             };
 
             // Plyr hazır olduğunda (unchanged)
