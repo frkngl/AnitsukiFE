@@ -513,13 +513,14 @@ footer .content .link .links .long {
   }
   header nav {
     position: fixed;
-    flex-direction: column;
-    align-items: start;
-    background-color: #101010;
-    width: 225px;
-    height: 100vh;
+    top: 0;
     right: -225px;
+    width: 225px;
+    height: 100dvh;
     padding: 50px 16px 16px 16px;
+    background-color: #101010;
+    flex-direction: column;
+    align-items: flex-start;
     transition: all 0.3s ease-out;
     z-index: 99 !important;
   }
