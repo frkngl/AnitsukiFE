@@ -8,27 +8,33 @@
     .createandtitle {
         display: flex;
         justify-content: space-between;
-        width: 1050px;
+        width: 100%;
 
         .title {
             color: #fff;
-            font-size: 1.3rem;
+            font-size: 1.7rem;
+            font-weight: 600;
         }
 
         .createbtn {
-            background-color: transparent;
+            background-color: #aaa;
+            border-radius: 20px;
             border: none;
-            color: #ccc;
-            font-size: 1rem;
-            font-weight: 600;
+            color: #000000;
+            font-size: 1.1rem;
             transition: all 0.3s ease-out;
+            padding: 0px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             svg {
-                margin-bottom: 5px;
+                margin-bottom: 3px;
+                margin-right: 3px;
             }
 
             &:hover {
-                color: #ff7f00;
+                background-color: #ff7f00;
             }
         }
     }
@@ -501,7 +507,21 @@
     .contentwatch {
 
         .createandtitle {
-            width: 100%;
+
+            .title {
+                font-size: 1.3rem;
+                font-weight: 100;
+            }
+
+            .createbtn {
+                font-size: 1rem;
+                padding: 0px 5px;
+
+                svg {
+                    margin-bottom: 1px;
+                    margin-right: 2px;
+                }
+            }
         }
     }
 }
