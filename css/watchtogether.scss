@@ -1,0 +1,507 @@
+.contentwatch {
+    padding: 0 10rem;
+    margin: 25px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .createandtitle {
+        display: flex;
+        justify-content: space-between;
+        width: 1050px;
+
+        .title {
+            color: #fff;
+            font-size: 1.3rem;
+        }
+
+        .createbtn {
+            background-color: transparent;
+            border: none;
+            color: #ccc;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+
+            svg {
+                margin-bottom: 5px;
+            }
+
+            &:hover {
+                color: #ff7f00;
+            }
+        }
+    }
+
+    .modal {
+
+        .createcontent {
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0px;
+
+            .selectanime {
+                .title {
+                    color: #ffffff;
+                    font-style: normal;
+                }
+
+                .dropdown {
+
+                    .dropdown-toggle {
+                        background-color: transparent;
+                        border: 2px solid #ff7f00;
+                        border-radius: 10px;
+                        padding: 5px;
+                        width: 100%;
+                        color: #ffffff;
+                        outline: none;
+                    }
+
+                    .dropdown-menu {
+                        width: 100%;
+                        background-color: #313131;
+                        max-height: 225px;
+                        overflow-y: auto;
+
+                        .dropdown-search {
+                            position: relative;
+
+                            input {
+                                background-color: #212121;
+                                color: #fff;
+                                font-size: 1rem;
+                                outline: none;
+                                border: none;
+                                width: 100%;
+                                padding: 5px 0px 5px 30px;
+                                border-radius: 8px;
+                            }
+
+                            svg {
+                                position: absolute;
+                                color: #ffffff;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                left: 16px;
+                            }
+                        }
+
+                        li {
+
+                            a {
+                                color: #ffffff;
+                                transition: all 0.1s;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+
+                                &:hover {
+                                    background-color: #ffffff;
+                                    color: #000000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .roomname {
+                margin-top: 10px;
+
+                .title {
+                    color: #ffffff;
+                    font-style: normal;
+                }
+
+                input {
+                    width: 100%;
+                    background-color: transparent;
+                    border: 2px solid #ff7f00;
+                    outline: none;
+                    border-radius: 10px;
+                    color: #ffffff;
+                    padding: 5px;
+                }
+            }
+
+            .selectperson {
+                margin-top: 10px;
+
+                .title {
+                    color: #ffffff;
+                    font-style: normal;
+                }
+
+                .dropdown {
+
+                    .dropdown-toggle {
+                        background-color: transparent;
+                        border: 2px solid #ff7f00;
+                        border-radius: 10px;
+                        padding: 5px;
+                        width: 100%;
+                        color: #ffffff;
+                        outline: none;
+                    }
+
+                    .dropdown-menu {
+                        width: 100%;
+                        background-color: #313131;
+                        max-height: 150px;
+                        overflow-y: auto;
+
+                        li {
+
+                            a {
+                                color: #ffffff;
+                                transition: all 0.1s;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+
+                                &:hover {
+                                    background-color: #ffffff;
+                                    color: #000000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .toggle {
+                display: flex;
+                align-items: center;
+                margin-right: 16px;
+                margin-top: 10px;
+
+                .title {
+                    color: #ffffff;
+                    font-size: 1rem;
+                    font-style: normal;
+                    margin-right: 5px;
+                }
+
+                /* From Uiverse.io by Muaz-Aldalil */
+                .toggle-checkbox {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    display: none;
+                }
+
+                .toggle-switch {
+                    background-color: gray;
+                    width: 50px;
+                    height: 25px;
+                    border-radius: 16px;
+                    position: relative;
+                    transition: 0.3s;
+                    cursor: pointer;
+                }
+
+                .toggle-switch::before {
+                    content: "";
+                    font-weight: 900;
+                    background-color: white;
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    border-radius: 50%;
+                    top: 4px;
+                    left: 4px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #ddd;
+                    transition: 0.3s;
+                }
+
+                .toggle-checkbox:checked+.toggle-switch {
+                    background-color: #ff7f00;
+                }
+
+                .toggle-checkbox:checked+.toggle-switch::before {
+                    content: "";
+                    left: 30px;
+                    color: #ff7f00;
+                }
+            }
+
+            #passwordField {
+                margin-top: 10px;
+                display: none;
+
+                .title {
+                    color: #ffffff;
+                    font-style: normal;
+                }
+
+                input {
+                    width: 100%;
+                    background-color: transparent;
+                    border: 2px solid #ff7f00;
+                    outline: none;
+                    border-radius: 10px;
+                    color: #ffffff;
+                    padding: 5px;
+                }
+            }
+
+            .button {
+                margin-top: 10px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                button {
+                    width: 100px;
+                    padding: 5px;
+                    border: 2px solid #ff7f00;
+                    background-color: transparent;
+                    border-radius: 10px;
+                    color: #ffffff;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        background-color: #ff7f00;
+                        color: #000000;
+                    }
+                }
+            }
+        }
+    }
+
+    .searchbox {
+        margin-top: 20px;
+        position: relative;
+
+        input {
+            border: none;
+            outline: none;
+            background-color: #313131;
+            color: #ffffff;
+            font-size: 1rem;
+            padding: 6px 8px 6px 33px;
+            border-radius: 10px;
+            width: 250px;
+        }
+
+        svg {
+            position: absolute;
+            color: #ffffff;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 5px;
+        }
+    }
+
+    .liveboxs {
+        margin-top: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        box-sizing: border-box;
+
+        a {
+            text-decoration: none;
+            flex: 1 1 calc(100% /7 - 15px);
+            max-width: 100%;
+            margin-bottom: 20px;
+
+            @media only screen and (max-width: 2000px) {
+                flex: 0 1 calc(100% / 6 - 15px);
+            }
+
+            @media only screen and (max-width: 1850px) {
+                flex: 0 1 calc(100% / 5 - 15px);
+            }
+
+            @media only screen and (max-width: 1300px) {
+                flex: 0 1 calc(100% / 4 - 15px);
+            }
+
+            @media only screen and (max-width: 950px) {
+                flex: 0 1 calc(100% / 3 - 15px);
+            }
+
+            @media only screen and (max-width: 700px) {
+                flex: 0 1 calc(100% / 2 - 15px);
+            }
+
+            @media only screen and (max-width: 425px) {
+                flex: 0 1 100%;
+            }
+
+            .box {
+                width: 100%;
+                height: 220px;
+
+                .img {
+                    width: 100%;
+                    height: 150px;
+                    border-radius: 10px;
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 10px;
+                        filter: brightness(0.6);
+                        transition: all 0.2s ease-in-out;
+                    }
+
+                    .live {
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        background-color: red;
+                        color: #ffffff;
+                        padding: 3px;
+                        font-size: 0.8rem;
+                        border-radius: 10px 0px 10px 0px;
+                        display: flex;
+                        align-items: center;
+
+                        svg {
+                            margin-right: 3px;
+                        }
+                    }
+
+                    .lock {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        border-radius: 0px 10px 0px 10px;
+                        width: 25px;
+                        height: 25px;
+                        background-color: orange;
+                        color: #000000;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .viewer {
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0px;
+                        color: #ffffff;
+                        padding: 3px;
+                        font-size: 0.8rem;
+                        display: flex;
+                        align-items: center;
+
+                        svg {
+                            margin-right: 3px;
+                        }
+                    }
+
+                    .episode {
+                        position: absolute;
+                        bottom: 0px;
+                        right: 0px;
+                        color: #ffffff;
+                        padding: 3px;
+                        font-size: 0.8rem;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+
+                &:hover img {
+                    filter: brightness(0.8);
+                }
+
+                .othertext {
+                    width: 100%;
+                    height: 45px;
+                    display: flex;
+                    margin-top: 5px;
+
+                    .img {
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50%;
+                        margin-right: 5px;
+
+                        img {
+                            border-radius: 50%;
+                            width: 45px;
+                            height: 45px;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .text {
+                        width: calc(100% - 50px);
+                        height: 50px;
+                        line-height: 1.5;
+                        color: #ffffff;
+
+                        .title {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            font-size: 0.9rem;
+                            color: #ff7f00;
+                        }
+
+                        .title2 {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            font-size: 0.9rem;
+                            font-weight: 600;
+                        }
+
+                        .nameanddate {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+
+                            .name {
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                font-size: 0.8rem;
+                                color: #ccc;
+                                font-weight: 600;
+                                width: 55%;
+                            }
+
+                            .date {
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                font-size: 0.8rem;
+                                color: #fff;
+                                width: 45%;
+                                display: flex;
+                                justify-content: end;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1500px) {
+    .contentwatch {
+        padding: 0px 16px;
+    }
+}
+
+@media only screen and (max-width:1080px) {
+    .contentwatch {
+
+        .createandtitle {
+            width: 100%;
+        }
+    }
+}

@@ -234,7 +234,7 @@
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 20px;
   max-height: 600px;
   overflow-y: auto;

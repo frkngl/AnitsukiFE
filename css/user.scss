@@ -246,14 +246,14 @@
                         }
 
                         .users {
-                            height: 435px;
+                            max-height: 435px;
                             width: 100%;
                             color: #ffffff;
                             margin: 15px 0px;
 
                             .user {
                                 text-decoration: none;
-                                margin: 10px 0px;
+                                margin: 16px 0px;
                                 width: 100%;
                                 position: relative;
                                 align-items: center;
@@ -449,7 +449,7 @@
                             }
 
                             .animeler {
-                                height: 445px;
+                                max-height: 445px;
                                 width: 100%;
                                 color: #ffffff;
                                 margin: 10px 0px;

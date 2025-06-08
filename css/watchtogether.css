@@ -1,0 +1,434 @@
+.contentwatch {
+  padding: 0 10rem;
+  margin: 25px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contentwatch .createandtitle {
+  display: flex;
+  justify-content: space-between;
+  width: 1050px;
+}
+.contentwatch .createandtitle .title {
+  color: #fff;
+  font-size: 1.3rem;
+}
+.contentwatch .createandtitle .createbtn {
+  background-color: transparent;
+  border: none;
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease-out;
+}
+.contentwatch .createandtitle .createbtn svg {
+  margin-bottom: 5px;
+}
+.contentwatch .createandtitle .createbtn:hover {
+  color: #ff7f00;
+}
+.contentwatch .modal .createcontent {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+.contentwatch .modal .createcontent .selectanime .title {
+  color: #ffffff;
+  font-style: normal;
+}
+.contentwatch .modal .createcontent .selectanime .dropdown .dropdown-toggle {
+  background-color: transparent;
+  border: 2px solid #ff7f00;
+  border-radius: 10px;
+  padding: 5px;
+  width: 100%;
+  color: #ffffff;
+  outline: none;
+}
+.contentwatch .modal .createcontent .selectanime .dropdown .dropdown-menu {
+  width: 100%;
+  background-color: #313131;
+  max-height: 225px;
+  overflow-y: auto;
+}
+.contentwatch .modal .createcontent .selectanime .dropdown .dropdown-menu .dropdown-search {
+  position: relative;
+}
+.contentwatch .modal .createcontent .selectanime .dropdown .dropdown-menu .dropdown-search input {
+  background-color: #212121;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 5px 0px 5px 30px;
+  border-radius: 8px;
+}
+.contentwatch .modal .createcontent .selectanime .dropdown .dropdown-menu .dropdown-search svg {
+  position: absolute;
+  color: #ffffff;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+}
+.contentwatch .modal .createcontent .selectanime .dropdown .dropdown-menu li a {
+  color: #ffffff;
+  transition: all 0.1s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.contentwatch .modal .createcontent .selectanime .dropdown .dropdown-menu li a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+.contentwatch .modal .createcontent .roomname {
+  margin-top: 10px;
+}
+.contentwatch .modal .createcontent .roomname .title {
+  color: #ffffff;
+  font-style: normal;
+}
+.contentwatch .modal .createcontent .roomname input {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid #ff7f00;
+  outline: none;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 5px;
+}
+.contentwatch .modal .createcontent .selectperson {
+  margin-top: 10px;
+}
+.contentwatch .modal .createcontent .selectperson .title {
+  color: #ffffff;
+  font-style: normal;
+}
+.contentwatch .modal .createcontent .selectperson .dropdown .dropdown-toggle {
+  background-color: transparent;
+  border: 2px solid #ff7f00;
+  border-radius: 10px;
+  padding: 5px;
+  width: 100%;
+  color: #ffffff;
+  outline: none;
+}
+.contentwatch .modal .createcontent .selectperson .dropdown .dropdown-menu {
+  width: 100%;
+  background-color: #313131;
+  max-height: 150px;
+  overflow-y: auto;
+}
+.contentwatch .modal .createcontent .selectperson .dropdown .dropdown-menu li a {
+  color: #ffffff;
+  transition: all 0.1s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.contentwatch .modal .createcontent .selectperson .dropdown .dropdown-menu li a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+.contentwatch .modal .createcontent .toggle {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  margin-top: 10px;
+  /* From Uiverse.io by Muaz-Aldalil */
+}
+.contentwatch .modal .createcontent .toggle .title {
+  color: #ffffff;
+  font-size: 1rem;
+  font-style: normal;
+  margin-right: 5px;
+}
+.contentwatch .modal .createcontent .toggle .toggle-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: none;
+}
+.contentwatch .modal .createcontent .toggle .toggle-switch {
+  background-color: gray;
+  width: 50px;
+  height: 25px;
+  border-radius: 16px;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.contentwatch .modal .createcontent .toggle .toggle-switch::before {
+  content: "";
+  font-weight: 900;
+  background-color: white;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ddd;
+  transition: 0.3s;
+}
+.contentwatch .modal .createcontent .toggle .toggle-checkbox:checked + .toggle-switch {
+  background-color: #ff7f00;
+}
+.contentwatch .modal .createcontent .toggle .toggle-checkbox:checked + .toggle-switch::before {
+  content: "";
+  left: 30px;
+  color: #ff7f00;
+}
+.contentwatch .modal .createcontent #passwordField {
+  margin-top: 10px;
+  display: none;
+}
+.contentwatch .modal .createcontent #passwordField .title {
+  color: #ffffff;
+  font-style: normal;
+}
+.contentwatch .modal .createcontent #passwordField input {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid #ff7f00;
+  outline: none;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 5px;
+}
+.contentwatch .modal .createcontent .button {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.contentwatch .modal .createcontent .button button {
+  width: 100px;
+  padding: 5px;
+  border: 2px solid #ff7f00;
+  background-color: transparent;
+  border-radius: 10px;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+.contentwatch .modal .createcontent .button button:hover {
+  background-color: #ff7f00;
+  color: #000000;
+}
+.contentwatch .searchbox {
+  margin-top: 20px;
+  position: relative;
+}
+.contentwatch .searchbox input {
+  border: none;
+  outline: none;
+  background-color: #313131;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 6px 8px 6px 33px;
+  border-radius: 10px;
+  width: 250px;
+}
+.contentwatch .searchbox svg {
+  position: absolute;
+  color: #ffffff;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+}
+.contentwatch .liveboxs {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.contentwatch .liveboxs a {
+  text-decoration: none;
+  flex: 1 1 calc(14.2857142857% - 15px);
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 2000px) {
+  .contentwatch .liveboxs a {
+    flex: 0 1 calc(16.6666666667% - 15px);
+  }
+}
+@media only screen and (max-width: 1850px) {
+  .contentwatch .liveboxs a {
+    flex: 0 1 calc(20% - 15px);
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .contentwatch .liveboxs a {
+    flex: 0 1 calc(25% - 15px);
+  }
+}
+@media only screen and (max-width: 950px) {
+  .contentwatch .liveboxs a {
+    flex: 0 1 calc(33.3333333333% - 15px);
+  }
+}
+@media only screen and (max-width: 700px) {
+  .contentwatch .liveboxs a {
+    flex: 0 1 calc(50% - 15px);
+  }
+}
+@media only screen and (max-width: 425px) {
+  .contentwatch .liveboxs a {
+    flex: 0 1 100%;
+  }
+}
+.contentwatch .liveboxs a .box {
+  width: 100%;
+  height: 220px;
+}
+.contentwatch .liveboxs a .box .img {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  position: relative;
+}
+.contentwatch .liveboxs a .box .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  filter: brightness(0.6);
+  transition: all 0.2s ease-in-out;
+}
+.contentwatch .liveboxs a .box .img .live {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: red;
+  color: #ffffff;
+  padding: 3px;
+  font-size: 0.8rem;
+  border-radius: 10px 0px 10px 0px;
+  display: flex;
+  align-items: center;
+}
+.contentwatch .liveboxs a .box .img .live svg {
+  margin-right: 3px;
+}
+.contentwatch .liveboxs a .box .img .lock {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0px 10px 0px 10px;
+  width: 25px;
+  height: 25px;
+  background-color: orange;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contentwatch .liveboxs a .box .img .viewer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  color: #ffffff;
+  padding: 3px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+.contentwatch .liveboxs a .box .img .viewer svg {
+  margin-right: 3px;
+}
+.contentwatch .liveboxs a .box .img .episode {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  color: #ffffff;
+  padding: 3px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+.contentwatch .liveboxs a .box:hover img {
+  filter: brightness(0.8);
+}
+.contentwatch .liveboxs a .box .othertext {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  margin-top: 5px;
+}
+.contentwatch .liveboxs a .box .othertext .img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.contentwatch .liveboxs a .box .othertext .img img {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.contentwatch .liveboxs a .box .othertext .text {
+  width: calc(100% - 50px);
+  height: 50px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+.contentwatch .liveboxs a .box .othertext .text .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.9rem;
+  color: #ff7f00;
+}
+.contentwatch .liveboxs a .box .othertext .text .title2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.contentwatch .liveboxs a .box .othertext .text .nameanddate {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.contentwatch .liveboxs a .box .othertext .text .nameanddate .name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.8rem;
+  color: #ccc;
+  font-weight: 600;
+  width: 55%;
+}
+.contentwatch .liveboxs a .box .othertext .text .nameanddate .date {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.8rem;
+  color: #fff;
+  width: 45%;
+  display: flex;
+  justify-content: end;
+}
+
+@media only screen and (max-width: 1500px) {
+  .contentwatch {
+    padding: 0px 16px;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .contentwatch .createandtitle {
+    width: 100%;
+  }
+}/*# sourceMappingURL=watchtogether.css.map */

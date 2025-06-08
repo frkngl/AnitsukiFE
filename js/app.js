@@ -39,3 +39,19 @@ document.querySelectorAll('nav a').forEach(link => {
         link.classList.add('active');
     }
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleCheckbox = document.querySelector(".toggle-checkbox");
+    const passwordField = document.getElementById("passwordField");
+
+    // Sayfa yüklendiğinde varsayılan olarak gizle
+    passwordField.style.display = "none";
+
+    toggleCheckbox.addEventListener("change", function () {
+        if (this.checked) {
+            passwordField.style.display = "block";
+        } else {
+            passwordField.style.display = "none";
+        }
+    });
+});
