@@ -42,7 +42,7 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 999 !important;
+  z-index: 1000000000000000000000 !important;
   background-color: #000000;
 }
 header .logo {
