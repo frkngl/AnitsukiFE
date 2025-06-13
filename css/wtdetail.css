@@ -1,4 +1,3 @@
-/* Genel stiller ve değişkenler */
 :root {
     --plyr-color-main: #ff7f00;
     --primary-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -7,16 +6,21 @@
     --accent-color: #ff7f00;
     --background-dark: #202020;
     --background-darker: #000000;
+    --mal-color: #2e51a2;
+    --imdb-color: #F5C518;
+    --red-color: red;
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 16px;
+    --spacing-lg: 20px;
 }
 
-/* Ana konteyner */
 .watchtogetherdetail {
     display: flex;
     width: 100%;
 }
 
 .watchtogetherdetail .watchanduser {
-    display: flex;
     flex-direction: column;
     width: calc(100% - 350px);
 }
@@ -24,50 +28,49 @@
 .watchtogetherdetail .watchanduser .user {
     min-height: 60px;
     width: 100%;
-    margin: 5px 0;
-    padding: 0 16px;
+    margin: var(--spacing-xs) 0;
+    padding: 0 var(--spacing-md);
     overflow-wrap: break-word;
 }
 
 .watchtogetherdetail .watchanduser .user .title {
     color: var(--text-color);
     font-size: 1.2rem;
-    font-weight: 600;
     line-height: 1;
     display: flex;
     align-items: center;
     overflow-wrap: break-word;
+    font-weight: 600;
 }
 
 .watchtogetherdetail .watchanduser .user .title svg {
     margin-bottom: 3px;
-    margin-right: 5px;
+    margin-right: var(--spacing-xs);
 }
 
 .watchtogetherdetail .watchanduser .user .others {
+    color: var(--text-color);
     display: flex;
     align-items: center;
-    color: var(--text-color);
     overflow-wrap: break-word;
 }
 
 .watchtogetherdetail .watchanduser .user .others .animename {
-    font-weight: 600;
     font-size: 1rem;
-    margin-right: 5px;
+    margin-right: var(--spacing-xs);
+    font-weight: 600;
 }
 
 .watchtogetherdetail .watchanduser .user .others .episode {
-    font-weight: 600;
     font-size: 1rem;
-    margin-left: 5px;
+    margin-left: var(--spacing-xs);
     color: var(--secondary-text-color);
+    font-weight: 600;
 }
 
-/* Anime detayları */
 .watchtogetherdetail .watchanduser .animedetail {
     width: 100%;
-    padding: 16px;
+    padding: var(--spacing-md);
 }
 
 .watchtogetherdetail .watchanduser .animedetail .user {
@@ -87,67 +90,66 @@
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid var(--accent-color);
-    margin-right: 10px;
+    margin-right: var(--spacing-sm);
 }
 
 .watchtogetherdetail .watchanduser .animedetail .user .imgandname .nameanddate {
-    display: flex;
     flex-direction: column;
+    display: flex;
 }
 
 .watchtogetherdetail .watchanduser .animedetail .user .imgandname .nameanddate .name {
     color: var(--text-color);
     font-size: 1.1rem;
-    font-weight: 500;
     line-height: 1;
+    font-weight: 500;
 }
 
 .watchtogetherdetail .watchanduser .animedetail .user .imgandname .nameanddate .date {
     color: var(--secondary-text-color);
     font-size: 0.9rem;
-    font-weight: 500;
     line-height: 1;
-    margin-top: 5px;
+    margin-top: var(--spacing-xs);
+    font-weight: 500;
 }
 
 .watchtogetherdetail .watchanduser .animedetail .user .others {
-    display: flex;
     justify-content: end;
+    display: flex;
 }
 
 .watchtogetherdetail .watchanduser .animedetail .user .others .viewers,
 .watchtogetherdetail .watchanduser .animedetail .user .others .time {
     font-size: 1rem;
     line-height: 1;
+    margin-right: var(--spacing-md);
     display: flex;
     align-items: center;
-    margin-right: 16px;
 }
 
 .watchtogetherdetail .watchanduser .animedetail .user .others .viewers svg,
 .watchtogetherdetail .watchanduser .animedetail .user .others .time svg {
-    margin-right: 5px;
+    margin-right: var(--spacing-xs);
 }
 
 .watchtogetherdetail .watchanduser .animedetail .user .others button {
-    background-color: red;
+    background-color: var(--red-color);
     border: none;
     color: var(--text-color);
-    padding: 5px 10px;
+    padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: 10px;
     font-size: 0.9rem;
-    font-weight: 600;
-    transition: all 0.3s ease-out;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
     cursor: pointer;
+    font-weight: 600;
 }
 
 .watchtogetherdetail .watchanduser .animedetail .user .others button:hover,
 .watchtogetherdetail .watchanduser .animedetail .user .others button:focus {
     background-color: var(--text-color);
-    color: red;
+    color: var(--red-color);
 }
 
-/* Anime bilgileri */
 .watchtogetherdetail .watchanduser .animedetail .anime {
     display: flex;
     margin: 50px 0;
@@ -157,8 +159,8 @@
     width: 230px;
     height: 400px;
     object-fit: cover;
-    border-radius: 20px;
-    margin-right: 16px;
+    border-radius: var(--spacing-lg);
+    margin-right: var(--spacing-md);
 }
 
 .watchtogetherdetail .watchanduser .animedetail .anime .text {
@@ -169,9 +171,9 @@
 .watchtogetherdetail .watchanduser .animedetail .anime .text .title {
     color: var(--accent-color);
     font-size: 2rem;
-    font-weight: 600;
     line-height: 1;
     overflow-wrap: break-word;
+    font-weight: 600;
 }
 
 .watchtogetherdetail .watchanduser .animedetail .anime .text .season,
@@ -180,56 +182,55 @@
 .watchtogetherdetail .watchanduser .animedetail .anime .text .episode {
     color: var(--text-color);
     font-size: 0.9rem;
-    font-weight: 500;
+    line-height: 1.5;
     display: flex;
     align-items: center;
-    line-height: 1.5;
     overflow-wrap: break-word;
+    font-weight: 500;
 }
 
 .watchtogetherdetail .watchanduser .animedetail .anime .text .season svg,
 .watchtogetherdetail .watchanduser .animedetail .anime .text .tur svg,
 .watchtogetherdetail .watchanduser .animedetail .anime .text .year svg,
 .watchtogetherdetail .watchanduser .animedetail .anime .text .episode svg {
-    margin-right: 5px;
+    margin-right: var(--spacing-xs);
 }
 
 .watchtogetherdetail .watchanduser .animedetail .anime .text .des {
     color: var(--text-color);
     font-size: 0.9rem;
-    font-weight: 500;
     max-height: 200px;
     overflow-y: auto;
     line-height: 1.1;
-    margin-top: 5px;
+    margin-top: var(--spacing-xs);
     overflow-wrap: break-word;
+    font-weight: 500;
 }
 
 .watchtogetherdetail .watchanduser .animedetail .anime .text .malandimdb {
     display: flex;
     gap: 8px;
-    margin-top: 10px;
+    margin-top: var(--spacing-sm);
 }
 
 .watchtogetherdetail .watchanduser .animedetail .anime .text .malandimdb .mal {
     color: var(--text-color);
-    background-color: #2e51a2;
-    padding: 5px;
+    background-color: var(--mal-color);
+    padding: var(--spacing-xs);
     font-size: 1rem;
+    border-radius: var(--spacing-xs);
     font-weight: 600;
-    border-radius: 5px;
 }
 
 .watchtogetherdetail .watchanduser .animedetail .anime .text .malandimdb .imdb {
     color: #000000;
-    background-color: #F5C518;
-    padding: 5px;
+    background-color: var(--imdb-color);
+    padding: var(--spacing-xs);
     font-size: 1rem;
+    border-radius: var(--spacing-xs);
     font-weight: 600;
-    border-radius: 5px;
 }
 
-/* Sohbet alanı */
 .watchtogetherdetail .chat {
     width: 350px;
     height: calc(100vh - 60px);
@@ -237,57 +238,57 @@
     position: fixed;
     top: 60px;
     right: 0;
-    padding: 10px;
+    padding: var(--spacing-sm);
 }
 
 .watchtogetherdetail .chat .message {
     height: calc(100% - 60px);
-    margin-bottom: 16px;
+    margin-bottom: var(--spacing-md);
     overflow-y: auto;
 }
 
 .watchtogetherdetail .chat .message .messagebox {
-    padding: 10px;
+    padding: var(--spacing-sm);
     background-color: var(--background-darker);
     color: var(--text-color);
-    margin: 10px 0;
+    margin: var(--spacing-sm) 0;
     border-radius: 10px;
 }
 
 .watchtogetherdetail .chat .message .messagebox .name {
     font-size: 1rem;
-    font-weight: 600;
     line-height: 1;
-    color: #ff7f00;
+    color: var(--accent-color);
+    font-weight: 600;
 }
 
 .watchtogetherdetail .chat .message .messagebox .text {
     font-size: 0.9rem;
-    font-weight: 500;
     line-height: 1;
+    font-weight: 500;
 }
 
 .watchtogetherdetail .chat .comment {
     display: flex;
-    gap: 5px;
+    gap: var(--spacing-xs);
 }
 
 .watchtogetherdetail .chat .comment input {
     flex: 1;
     border: none;
     outline: none;
-    padding: 5px;
-    border-radius: 5px;
+    padding: var(--spacing-xs);
+    border-radius: var(--spacing-xs);
 }
 
 .watchtogetherdetail .chat .comment button {
     padding: 4px 8px;
-    border-radius: 5px;
+    border-radius: var(--spacing-xs);
     border: none;
     background-color: var(--accent-color);
     color: #000000;
     font-size: 1.1rem;
-    transition: all 0.3s ease-out;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
     cursor: pointer;
 }
 
@@ -297,14 +298,13 @@
     color: var(--accent-color);
 }
 
-/* Video oynatıcı */
 .player-wrapper {
     position: relative;
     height: 75vh;
     width: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: center;
+    display: flex;
 }
 
 .background {
@@ -314,7 +314,6 @@
     top: 0;
     left: 0;
     z-index: 10;
-    /* Daha düşük z-index */
 }
 
 .background .brightnessbackground {
@@ -340,10 +339,10 @@
     background-color: var(--background-darker);
     padding: 15px;
     width: 400px;
-    border-radius: 20px;
-    display: flex;
+    border-radius: var(--spacing-lg);
     flex-direction: column;
     align-items: center;
+    display: flex;
 }
 
 .background .box img {
@@ -361,14 +360,14 @@
 .background .box .text .des {
     color: #ddd;
     font-size: 0.9rem;
-    margin-top: 5px;
+    margin-top: var(--spacing-xs);
 }
 
 .background .box .text .title {
     color: var(--text-color);
     font-size: 1rem;
+    margin-top: var(--spacing-xs);
     font-weight: 600;
-    margin-top: 5px;
 }
 
 .background .box .linkbox {
@@ -377,8 +376,8 @@
     width: 100%;
     text-align: center;
     border-radius: 10px;
-    margin-top: 10px;
-    padding: 10px;
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-sm);
 }
 
 .background .box .linkbox .des {
@@ -387,17 +386,17 @@
 }
 
 .background .box .linkbox .title {
-    display: flex;
     justify-content: center;
     align-items: center;
+    display: flex;
 }
 
 .background .box .linkbox .title #roomLink {
     font-size: 1rem;
-    font-weight: 600;
     margin-right: 8px;
     background-color: transparent;
     color: var(--text-color);
+    font-weight: 600;
 }
 
 .background .box .linkbox .title button {
@@ -432,13 +431,13 @@
     background-color: var(--accent-color);
     border: none;
     color: #000000;
-    padding: 5px 10px;
-    margin-top: 10px;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    margin-top: var(--spacing-sm);
     border-radius: 10px;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    transition: all 0.3s ease-out;
-    cursor: pointer;
 }
 
 .background .box button:hover,
@@ -447,7 +446,6 @@
     color: var(--accent-color);
 }
 
-/* Plyr oynatıcı */
 #plyr {
     font-family: var(--primary-font);
 }
@@ -463,10 +461,10 @@
 }
 
 .plyr__controls {
-    display: flex;
     flex-direction: column;
     gap: 8px;
-    padding: 0 10px;
+    padding: 0 var(--spacing-sm);
+    display: flex;
 }
 
 .custom-top-controls {
@@ -474,67 +472,123 @@
 }
 
 .custom-bottom-controls {
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: var(--spacing-sm);
+    display: flex;
 }
 
 .plyr__progress__container {
-    display: none !important;
-    height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    display: none;
+    height: 0;
+    margin: 0;
+    padding: 0;
 }
 
 #collectionModal {
     top: 60px;
 }
 
-@media only screen and (max-width: 1300px) {
+#collectionModal .dropdown {
+    margin: var(--spacing-sm) 0;
+}
 
+#collectionModal .dropdown button {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    outline: none;
+}
+
+#collectionModal .dropdown .dropdown-menu {
+    width: 100%;
+    background-color: #313131;
+}
+
+#collectionModal .dropdown .dropdown-menu a {
+    color: var(--text-color);
+    transition: all 0.1s ease-out;
+}
+
+#collectionModal .dropdown .dropdown-menu a:hover {
+    color: #000000;
+}
+
+#collectionModal .bolumler {
+    height: 200px;
+}
+
+#collectionModal .bolumler a:nth-child(odd) {
+    background-color: #252525;
+    margin-right: var(--spacing-xs);
+    padding: var(--spacing-sm);
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#collectionModal .bolumler a:nth-child(even) {
+    background-color: var(--background-dark);
+    margin-right: var(--spacing-xs);
+    padding: var(--spacing-sm);
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#collectionModal .bolumler a.active {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+}
+
+#collectionModal .bolumler a .episode {
+    margin-right: var(--spacing-xs);
+    font-weight: 600;
+}
+
+#collectionModal .bolumler a .title {
+    width: 85%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media only screen and (max-width: 1300px) {
     .player-wrapper {
-        position: relative;
         height: 100%;
         width: 100%;
-        display: flex;
         flex-direction: column;
         justify-content: center;
+        display: flex;
     }
 
     .background .box {
+        padding: 0;
+        width: 360px;
+        border-radius: var(--spacing-lg);
+        flex-direction: column;
+        align-items: center;
+        display: flex;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: var(--background-darker);
-        padding: 0px;
-        width: 360px;
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
     .watchtogetherdetail .watchanduser {
-        display: flex;
-        flex-direction: column;
         width: calc(100% - 300px);
     }
 
     .watchtogetherdetail .chat {
         width: 300px;
-        height: calc(100vh - 60px);
-        background-color: var(--background-dark);
-        position: fixed;
-        top: 60px;
-        right: 0;
-        padding: 10px;
     }
 }
 
-/* Medya sorguları */
 @media only screen and (max-width: 900px) {
     .watchtogetherdetail {
         flex-direction: column;
@@ -556,25 +610,24 @@
 }
 
 @media only screen and (max-width: 650px) {
-
     .plyr__controls__item.plyr__menu {
-        display: none !important;
+        display: none;
     }
 
     .plyr button[data-plyr="pip"] {
-        display: none !important;
+        display: none;
     }
 
     .watchtogetherdetail .watchanduser .animedetail .user {
-        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
         height: auto;
+        display: flex;
     }
 
     .watchtogetherdetail .watchanduser .animedetail .user .imgandname {
-        margin-bottom: 10px;
+        margin-bottom: var(--spacing-sm);
     }
 
     .watchtogetherdetail .watchanduser .animedetail .user .others .viewers,
@@ -583,7 +636,7 @@
     }
 
     .watchtogetherdetail .watchanduser .animedetail .user .others button {
-        padding: 3px 5px;
+        padding: 3px var(--spacing-xs);
         font-weight: 500;
     }
 

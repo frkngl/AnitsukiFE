@@ -53,7 +53,6 @@
                 }
 
                 .dropdown {
-
                     .dropdown-toggle {
                         background-color: transparent;
                         border: 2px solid #ff7f00;
@@ -69,9 +68,14 @@
                         background-color: #313131;
                         max-height: 225px;
                         overflow-y: auto;
+                        position: relative;
+                        padding: 0;
 
                         .dropdown-search {
-                            position: relative;
+                            position: sticky;
+                            top: 0;
+                            z-index: 10;
+                            background-color: #313131;
 
                             input {
                                 background-color: #212121;
@@ -94,13 +98,16 @@
                         }
 
                         li {
-
                             a {
                                 color: #ffffff;
                                 transition: all 0.1s;
                                 white-space: nowrap;
                                 overflow: hidden;
                                 text-overflow: ellipsis;
+                                display: block;
+                                /* Daha iyi tıklama alanı */
+                                padding: 5px 10px;
+                                /* Görsel tutarlılık için padding */
 
                                 &:hover {
                                     background-color: #ffffff;

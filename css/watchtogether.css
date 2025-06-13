@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .contentwatch {
   padding: 0 10rem;
   margin: 25px 0px;
@@ -57,9 +58,14 @@
   background-color: #313131;
   max-height: 225px;
   overflow-y: auto;
+  position: relative;
+  padding: 0;
 }
 .contentwatch .modal .createcontent .selectanime .dropdown .dropdown-menu .dropdown-search {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #313131;
 }
 .contentwatch .modal .createcontent .selectanime .dropdown .dropdown-menu .dropdown-search input {
   background-color: #212121;
@@ -84,6 +90,10 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: block;
+  /* Daha iyi tıklama alanı */
+  padding: 5px 10px;
+  /* Görsel tutarlılık için padding */
 }
 .contentwatch .modal .createcontent .selectanime .dropdown .dropdown-menu li a:hover {
   background-color: #ffffff;

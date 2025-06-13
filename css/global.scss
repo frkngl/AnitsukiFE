@@ -25,6 +25,11 @@
     color: #000000;
 }
 
+::-moz-selection {
+    background-color: #ff7f00;
+    color: #000000;
+}
+
 body {
     background-color: #000000 !important;
 }

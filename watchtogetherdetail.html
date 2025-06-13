@@ -416,7 +416,7 @@
                         class="bi bi-broadcast" viewBox="0 0 16 16">
                         <path
                             d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707m2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708m5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708m2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0" />
-                    </svg> Luffy adamdır babbaWWWWWW
+                    </svg> Ace yandı ama COOLLLD
                 </div>
                 <div class="others">
                     <div class="animename">
@@ -763,12 +763,23 @@
                 <div style="width: 100%;" class="modal-body">
                     <div style="height: 25px; width: 100%;" class="d-flex justify-content-between">
                         <div style="color: #ffffff; font-size: 1.1rem; font-weight: 500; font-style: normal;">
-                            Anime Bölümleri
+                            Sezon ve Bölüm
                         </div>
                         <div>
                             <button style="filter: invert(100%);" type="button" class="btn-close"
                                 data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            1.Sezon
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">1.Sezon</a></li>
+                            <li><a class="dropdown-item" href="#">2.Sezon</a></li>
+                            <li><a class="dropdown-item" href="#">3.Sezon</a></li>
+                        </ul>
                     </div>
                     <div style="width: 100%;">
                         <div class="search">
@@ -777,10 +788,49 @@
                                 <path
                                     d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                             </svg>
-                            <input type="text" placeholder="Anime ara..." />
+                            <input type="text" id="searchInputt" placeholder="Bölüm Numarası girin" />
                         </div>
-                        <div class="animeler overflow-auto">
-
+                        <div class="bolumler overflow-auto">
+                            <a class="# active" data-episode="1" href="#">
+                                <div class="episode">
+                                    1
+                                </div>
+                                <div class="title">
+                                    Biz nereye geldikdsadsadasdsadsadsadsadsadsads
+                                </div>
+                            </a>
+                            <a href="#" data-episode="2">
+                                <div class="episode">
+                                    2
+                                </div>
+                                <div class="title">
+                                    Biz nereye geldikdadsadsadsadsadsadasdsadasdsa
+                                </div>
+                            </a>
+                            <a href="#" data-episode="3">
+                                <div class="episode">
+                                    3
+                                </div>
+                                <div class="title">
+                                    Biz nereye geldik
+                                </div>
+                            </a>
+                            <a href="#" data-episode="4">
+                                <div class="episode">
+                                    4
+                                </div>
+                                <div class="title">
+                                    Biz nereye geldik
+                                </div>
+                            </a>
+                            <a href="#" data-episode="5">
+                                <div class="episode">
+                                    5
+                                </div>
+                                <div class="title">
+                                    Biz nereye geldik
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -791,18 +841,6 @@
     <script src="js/app.js"></script>
     <script src="js/plyr.js"></script>
     <script>
-        document.getElementById('copyBtn').addEventListener('click', () => {
-            const linkInput = document.getElementById('roomLink');
-            const toast = document.getElementById('toast');
-
-            navigator.clipboard.writeText(linkInput.textContent.trim())
-                .then(() => {
-                    toast.classList.add('show');
-                    setTimeout(() => toast.classList.remove('show'), 1500);
-                })
-                .catch(err => console.error('Kopyalama başarısız:', err));
-        });
-
         document.addEventListener('DOMContentLoaded', () => {
             // Sabitler
             const ICONS = {
@@ -854,19 +892,64 @@
                 collectionPlay: 'Oynatma listesi'
             };
 
-            // DOM öğeleri
+            // DOM öğeleri (önbelleğe alınıyor)
             const videoEl = document.getElementById('plyr');
             const background = document.querySelector('.background');
             const btnPlay = document.querySelector('.btnwtplay');
+            const input = document.getElementById('searchInputt');
+            const bolumlerContainer = document.querySelector('.bolumler');
+            const copyBtn = document.getElementById('copyBtn');
+            const linkInput = document.getElementById('roomLink');
+            const toast = document.getElementById('toast');
 
-            let canControlVideo = false; // Başta kontrol kapalı
+            let canControlVideo = false;
 
-            // Oynatma başlatma (ana buton)
-            btnPlay.addEventListener('click', () => {
-                videoEl.play();
-                background.style.display = 'none';
-                canControlVideo = true; // Artık klavye kontrolleri aktif
-            });
+            // Yardımcı fonksiyon: Buton oluşturma
+            const createButton = (dataPlyr, icon, title, onClick) => {
+                const button = document.createElement('button');
+                button.className = 'plyr__control';
+                button.setAttribute('data-plyr', dataPlyr);
+                button.innerHTML = icon;
+                button.title = title;
+                button.addEventListener('click', onClick);
+                return button;
+            };
+
+            // Arama input işlemi
+            if (input && bolumlerContainer) {
+                input.addEventListener('input', () => {
+                    const value = input.value.trim();
+                    if (!value) return;
+
+                    const target = bolumlerContainer.querySelector(`a[data-episode="${value}"]`);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                });
+            }
+
+            // Kopyalama butonu
+            if (copyBtn && linkInput && toast) {
+                copyBtn.addEventListener('click', () => {
+                    navigator.clipboard.writeText(linkInput.textContent.trim())
+                        .then(() => {
+                            toast.classList.add('show');
+                            setTimeout(() => toast.classList.remove('show'), 1500);
+                        })
+                        .catch(err => console.error('Kopyalama başarısız:', err));
+                });
+            }
+
+            // Oynatma başlatma
+            if (btnPlay) {
+                btnPlay.addEventListener('click', () => {
+                    if (videoEl) {
+                        videoEl.play();
+                        background.style.display = 'none';
+                        canControlVideo = true;
+                    }
+                });
+            }
 
             // Plyr oynatıcı başlatma
             const player = new Plyr('#plyr', {
@@ -879,89 +962,94 @@
 
             // Plyr hazır olduğunda
             player.on('ready', () => {
-                // Kontrol çubuğu düzenleme
                 const controls = document.querySelector('.plyr__controls');
                 const progress = controls?.querySelector('.plyr__progress');
-                if (controls && progress) {
-                    const topBar = document.createElement('div');
-                    const bottomBar = document.createElement('div');
-                    topBar.classList.add('custom-top-controls');
-                    bottomBar.classList.add('custom-bottom-controls');
-                    topBar.appendChild(progress);
-                    [...controls.children].forEach(child => {
-                        if (!child.classList.contains('plyr__progress')) bottomBar.appendChild(child);
-                    });
-                    controls.innerHTML = '';
-                    controls.appendChild(topBar);
-                    controls.appendChild(bottomBar);
-                }
+                if (!controls || !progress) return;
 
-                // Özel ikonlar
+                // Kontrol çubuğu düzenleme
+                const topBar = document.createElement('div');
+                const bottomBar = document.createElement('div');
+                topBar.classList.add('custom-top-controls');
+                bottomBar.classList.add('custom-bottom-controls');
+                topBar.appendChild(progress);
+                [...controls.children].forEach(child => {
+                    if (!child.classList.contains('plyr__progress')) bottomBar.appendChild(child);
+                });
+                controls.innerHTML = '';
+                controls.appendChild(topBar);
+                controls.appendChild(bottomBar);
+
+                // Özel ikonlar ve butonlar
                 const rewindButton = document.querySelector('.plyr__control[data-plyr="rewind"]');
                 const forwardButton = document.querySelector('.plyr__control[data-plyr="fast-forward"]');
                 const volumeButton = document.querySelector('.plyr__control[data-plyr="volume"]');
 
-                // Collection Play butonunu oluştur
-                const collectionButton = document.createElement('button');
-                collectionButton.className = 'plyr__control';
-                collectionButton.setAttribute('data-plyr', 'collection-play');
-                collectionButton.innerHTML = ICONS.collectionPlay;
-                collectionButton.title = I18N.collectionPlay;
-                collectionButton.addEventListener('click', () => {
-                    console.log('Oynatma listesi butonuna tıklandı');
-                    // Bootstrap modalını aç
+                // Özel butonlar
+                const collectionButton = createButton('collection-play', ICONS.collectionPlay, I18N.collectionPlay, () => {
                     const modalElement = document.getElementById('collectionModal');
-                    const modal = new bootstrap.Modal(modalElement);
-                    modal.show();
+                    if (modalElement) {
+                        const modal = new bootstrap.Modal(modalElement);
+                        modal.show();
+                    }
                 });
 
-                // Önceki/Sonraki bölüm butonları
-                const prevButton = document.createElement('button');
-                prevButton.className = 'plyr__control';
-                prevButton.setAttribute('data-plyr', 'prev');
-                prevButton.innerHTML = ICONS.prev;
-                prevButton.title = 'Önceki bölüm';
-                prevButton.onclick = () => console.log('Önceki bölüme geç');
+                const prevButton = createButton('prev', ICONS.prev, 'Önceki bölüm', () => {
+                    // Önceki bölüm işlevselliği buraya eklenebilir
+                });
 
-                const nextButton = document.createElement('button');
-                nextButton.className = 'plyr__control';
-                nextButton.setAttribute('data-plyr', 'next');
-                nextButton.innerHTML = ICONS.next;
-                nextButton.title = 'Sonraki bölüm';
-                nextButton.onclick = () => console.log('Sonraki bölüme geç');
+                const nextButton = createButton('next', ICONS.next, 'Sonraki bölüm', () => {
+                    // Sonraki bölüm işlevselliği buraya eklenebilir
+                });
 
                 // Özel ikonları güncelle
                 if (rewindButton) rewindButton.innerHTML = ICONS.rewind;
                 if (forwardButton) forwardButton.innerHTML = ICONS.forward;
 
                 // Butonları kontrol çubuğuna ekleme
-                const bottomBar = document.querySelector('.custom-bottom-controls');
                 if (bottomBar) {
                     if (rewindButton) bottomBar.insertBefore(prevButton, rewindButton);
                     if (forwardButton) bottomBar.insertBefore(nextButton, forwardButton.nextSibling);
                     if (volumeButton) bottomBar.insertBefore(collectionButton, volumeButton.nextSibling);
-                    else bottomBar.appendChild(collectionButton); // volumeButton yoksa sona ekle
+                    else bottomBar.appendChild(collectionButton);
                 }
+
+                // Fullscreen olayları
+                player.on('enterfullscreen', () => {
+                    const collectionButton = document.querySelector('[data-plyr="collection-play"]');
+                    if (collectionButton) collectionButton.style.display = 'none';
+                });
+
+                player.on('exitfullscreen', () => {
+                    const collectionButton = document.querySelector('[data-plyr="collection-play"]');
+                    if (collectionButton) collectionButton.style.display = '';
+                });
             });
 
             // Klavye kontrolleri
+            const keyActions = {
+                ' ': () => player.playing ? player.pause() : player.play(),
+                'm': () => player.muted = !player.muted,
+                'f': () => player.fullscreen.toggle(),
+                'arrowleft': () => player.currentTime = Math.max(player.currentTime - 10, 0),
+                'arrowright': () => player.currentTime = Math.min(player.currentTime + 10, player.duration),
+                'arrowup': () => player.volume = Math.min(player.volume + 0.05, 1),
+                'arrowdown': () => player.volume = Math.max(player.volume - 0.05, 0)
+            };
+
             document.addEventListener('keydown', (event) => {
-                if (!player || !canControlVideo) return;
+                if (!canControlVideo || !player) return;
+
+                const active = document.activeElement;
+                const isTyping = ['INPUT', 'TEXTAREA'].includes(active.tagName) || active.isContentEditable;
+                if (isTyping) return;
 
                 const key = event.key.toLowerCase();
-
                 if ([' ', 'arrowup', 'arrowdown'].includes(key)) {
                     event.preventDefault();
                 }
 
-                switch (key) {
-                    case ' ': player.playing ? player.pause() : player.play(); break;
-                    case 'm': player.muted = !player.muted; break;
-                    case 'f': player.fullscreen.toggle(); break;
-                    case 'arrowleft': player.currentTime = Math.max(player.currentTime - 10, 0); break;
-                    case 'arrowright': player.currentTime = Math.min(player.currentTime + 10, player.duration); break;
-                    case 'arrowup': player.volume = Math.min(player.volume + 0.05, 1); break;
-                    case 'arrowdown': player.volume = Math.max(player.volume - 0.05, 0); break;
+                if (keyActions[key]) {
+                    keyActions[key]();
                 }
             });
         });
