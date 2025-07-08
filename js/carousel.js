@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
   goToSlide(0);
 
   // Sayfa kapandığında temizlik
-  window.addEventListener('unload', () => {
+  window.addEventListener('pagehide', () => {
     if (animationFrameId) {
       cancelAnimationFrame(animationFrameId);
     }
