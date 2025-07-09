@@ -108,13 +108,13 @@ header .others {
 header .others button {
   border: none;
   background-color: transparent;
-  color: #ff7f00;
+  color: #ffffff;
   margin: 0px 6px;
   cursor: pointer;
   transition: all 0.3s ease-out;
 }
 header .others button:hover {
-  color: #ffffff;
+  color: #ff7f00;
 }
 header .others .dropdown {
   margin: 0px 0px 0px 6px;
@@ -122,11 +122,11 @@ header .others .dropdown {
 header .others .dropdown .dropdown-toggle {
   padding: 0;
   margin: 0;
-  color: #ff7f00;
+  color: #ffffff;
   transition: all 0.3s ease-out;
 }
 header .others .dropdown .dropdown-toggle:hover {
-  color: #ffffff;
+  color: #ff7f00;
 }
 header .others .dropdown .dropdown-toggle img {
   width: 40px;
@@ -208,9 +208,9 @@ header .others .dropdown .dropdown-menu li .dropdown-item:hover {
   padding: 0px 6px;
 }
 .modal .modal-dialog .modal-content .modal-body .animeler .anime .text .title {
-  color: #ff7f00;
+  color: #ffffff;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
   line-height: 1.1;
 }
@@ -276,11 +276,11 @@ header .others .dropdown .dropdown-menu li .dropdown-item:hover {
   width: 70%;
 }
 .user-modal .modal-dialog .modal-content .modal-body .users .user .text .title {
-  color: #ff7f00;
+  color: #ffffff;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
-  line-height: 1;
+  line-height: 1.1;
 }
 .user-modal .modal-dialog .modal-content .modal-body .users .user .text .des {
   font-size: 0.9rem;
@@ -328,11 +328,11 @@ header .others .dropdown .dropdown-menu li .dropdown-item:hover {
   padding: 0px 6px;
 }
 .notication-modal .modal-dialog .modal-content .modal-body .users .user .text .title {
-  color: #ff7f00;
+  color: #ffffff;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
-  line-height: 1;
+  line-height: 1.1;
 }
 .notication-modal .modal-dialog .modal-content .modal-body .users .user .text .date {
   font-size: 0.8rem;
@@ -594,13 +594,13 @@ footer .content .link .links .long {
   header .others button {
     border: none;
     background-color: transparent;
-    color: #ff7f00;
+    color: #ffffff;
     margin: 0px 6px;
     cursor: pointer;
     transition: all 0.3s ease-out;
   }
   header .others button:hover {
-    color: #ffffff;
+    color: #ff7f00;
   }
   header .others .dropdown {
     margin-right: 10px;

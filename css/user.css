@@ -1,12 +1,28 @@
-.usercontent {
-  padding: 1.5rem 10rem;
+.globalcontent {
+  position: relative;
 }
-.usercontent .user .usernameandoption {
+.globalcontent .contentimg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -9999;
+}
+.globalcontent .contentimg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(0.6);
+}
+.globalcontent .usercontent {
+  padding: 2rem 10rem;
+}
+.globalcontent .usercontent .user .usernameandoption {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.usercontent .user .usernameandoption .username {
+.globalcontent .usercontent .user .usernameandoption .username {
   color: #ff7f00;
   font-size: 1.2rem;
   font-weight: 500;
@@ -15,15 +31,15 @@
   display: flex;
   align-items: end;
 }
-.usercontent .user .usernameandoption .username .bi-person-circle {
+.globalcontent .usercontent .user .usernameandoption .username .bi-person-circle {
   margin-right: 3px;
 }
-.usercontent .user .usernameandoption .option {
+.globalcontent .usercontent .user .usernameandoption .option {
   font-size: 1.2rem;
   font-weight: 500;
   font-style: normal;
 }
-.usercontent .user .usernameandoption .option a {
+.globalcontent .usercontent .user .usernameandoption .option a {
   text-decoration: none;
   color: #ffffff;
   transition: all 0.3s ease-in-out;
@@ -31,17 +47,17 @@
   display: flex;
   align-items: end;
 }
-.usercontent .user .usernameandoption .option a:hover {
+.globalcontent .usercontent .user .usernameandoption .option a:hover {
   color: #ff7f00;
 }
-.usercontent .user .usernameandoption .option a .bi-gear {
+.globalcontent .usercontent .user .usernameandoption .option a .bi-gear {
   margin-right: 3px;
 }
-.usercontent .user .userdetail {
+.globalcontent .usercontent .user .userdetail {
   margin-top: 20px;
   display: flex;
 }
-.usercontent .user .userdetail .image {
+.globalcontent .usercontent .user .userdetail .image {
   min-width: 180px;
   min-height: 180px;
   position: relative;
@@ -49,14 +65,14 @@
   align-items: center;
   justify-content: center;
 }
-.usercontent .user .userdetail .image img {
+.globalcontent .usercontent .user .userdetail .image img {
   width: 140px;
   height: 140px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
 }
-.usercontent .user .userdetail .image .addfriend {
+.globalcontent .usercontent .user .userdetail .image .addfriend {
   position: absolute;
   top: 110px;
   left: 115px;
@@ -70,22 +86,22 @@
   justify-content: center;
   transition: all 0.3s ease-in-out;
 }
-.usercontent .user .userdetail .image .addfriend .bi-person-fill-add {
+.globalcontent .usercontent .user .userdetail .image .addfriend .bi-person-fill-add {
   color: #ff7f00;
 }
-.usercontent .user .userdetail .image .addfriend:hover .bi-person-fill-add {
+.globalcontent .usercontent .user .userdetail .image .addfriend:hover .bi-person-fill-add {
   color: #313131;
 }
-.usercontent .user .userdetail .image .addfriend:hover {
+.globalcontent .usercontent .user .userdetail .image .addfriend:hover {
   background-color: #ff7f00;
 }
-.usercontent .user .userdetail .about {
+.globalcontent .usercontent .user .userdetail .about {
   width: 100%;
   display: flex;
   flex-direction: column;
   height: 180px;
 }
-.usercontent .user .userdetail .about .title {
+.globalcontent .usercontent .user .userdetail .about .title {
   display: flex;
   align-items: end;
   color: #ffffff;
@@ -93,10 +109,10 @@
   font-size: 1rem;
   font-weight: 600;
 }
-.usercontent .user .userdetail .about .title .bi-info-circle {
+.globalcontent .usercontent .user .userdetail .about .title .bi-info-circle {
   margin-right: 5px;
 }
-.usercontent .user .userdetail .about .des {
+.globalcontent .usercontent .user .userdetail .about .des {
   color: #ffffff;
   width: 100%;
   min-height: 100px;
@@ -106,29 +122,29 @@
   line-height: 1.2;
   margin: 8px 0px;
 }
-.usercontent .user .userdetail .about .other {
+.globalcontent .usercontent .user .userdetail .about .other {
   width: 100%;
   display: flex;
   height: 18px;
   align-items: center;
   color: #ffffff;
 }
-.usercontent .user .userdetail .about .other .date,
-.usercontent .user .userdetail .about .other .favorite,
-.usercontent .user .userdetail .about .other .watchlater,
-.usercontent .user .userdetail .about .other .takipci {
+.globalcontent .usercontent .user .userdetail .about .other .date,
+.globalcontent .usercontent .user .userdetail .about .other .favorite,
+.globalcontent .usercontent .user .userdetail .about .other .watchlater,
+.globalcontent .usercontent .user .userdetail .about .other .takipci {
   display: flex;
   align-items: end;
   line-height: 1;
   margin-right: 8px;
 }
-.usercontent .user .userdetail .about .other .date svg,
-.usercontent .user .userdetail .about .other .favorite svg,
-.usercontent .user .userdetail .about .other .watchlater svg,
-.usercontent .user .userdetail .about .other .takipci svg {
+.globalcontent .usercontent .user .userdetail .about .other .date svg,
+.globalcontent .usercontent .user .userdetail .about .other .favorite svg,
+.globalcontent .usercontent .user .userdetail .about .other .watchlater svg,
+.globalcontent .usercontent .user .userdetail .about .other .takipci svg {
   margin-right: 2px;
 }
-.usercontent .user .userdetail .about .other .takipci {
+.globalcontent .usercontent .user .userdetail .about .other .takipci {
   background-color: transparent;
   border: none;
   color: #ffffff;
@@ -138,19 +154,19 @@
   line-height: 1;
   transition: all 0.3s ease-in-out;
 }
-.usercontent .user .userdetail .about .other .takipci:hover {
+.globalcontent .usercontent .user .userdetail .about .other .takipci:hover {
   color: #ff7f00;
 }
-.usercontent .user .userdetail .takipci-modal.show .modal-dialog {
+.globalcontent .usercontent .user .userdetail .takipci-modal.show .modal-dialog {
   transform: translateY(0);
   opacity: 1;
 }
-.usercontent .user .userdetail .takipci-modal .modal-dialog {
+.globalcontent .usercontent .user .userdetail .takipci-modal .modal-dialog {
   transition: transform 0.3s ease-out, opacity 0.3s ease;
   transform: translateY(-20px);
   opacity: 0;
 }
-.usercontent .user .userdetail .takipci-modal .modal-dialog .buttons button {
+.globalcontent .usercontent .user .userdetail .takipci-modal .modal-dialog .buttons button {
   background: transparent;
   border: none;
   border-bottom: 2px solid white;
@@ -160,37 +176,37 @@
   cursor: pointer;
   transition: border-color 0.3s ease, color 0.3s ease;
 }
-.usercontent .user .userdetail .takipci-modal .modal-dialog .buttons button:hover {
+.globalcontent .usercontent .user .userdetail .takipci-modal .modal-dialog .buttons button:hover {
   border-bottom: 2px solid #ff7f00;
 }
-.usercontent .user .userdetail .takipci-modal .modal-dialog .buttons button.active {
+.globalcontent .usercontent .user .userdetail .takipci-modal .modal-dialog .buttons button.active {
   border-bottom: 2px solid #ff7f00;
   color: #ff7f00;
 }
-.usercontent .user .userdetail .takipci-modal .modal-dialog .content-textt {
+.globalcontent .usercontent .user .userdetail .takipci-modal .modal-dialog .content-textt {
   display: none;
 }
-.usercontent .user .userdetail .takipci-modal .modal-dialog .content-textt .title {
+.globalcontent .usercontent .user .userdetail .takipci-modal .modal-dialog .content-textt .title {
   font-size: 1.1rem;
   font-weight: 500;
   font-style: normal;
 }
-.usercontent .user .userdetail .takipci-modal .modal-dialog .content-textt.active {
+.globalcontent .usercontent .user .userdetail .takipci-modal .modal-dialog .content-textt.active {
   display: block;
   color: #fff;
 }
-.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .search {
+.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .search {
   position: relative;
   width: 100%;
   margin: 10px 0px;
 }
-.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .search .bi-search {
+.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .search .bi-search {
   position: absolute;
   color: #ffffff;
   top: 7px;
   left: 5px;
 }
-.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .search input {
+.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .search input {
   background-color: #252525;
   outline: none;
   border: none;
@@ -199,63 +215,63 @@
   width: 100%;
   border-radius: 5px;
 }
-.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users {
+.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users {
   max-height: 435px;
   width: 100%;
   color: #ffffff;
   margin: 15px 0px;
 }
-.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user {
+.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user {
   text-decoration: none;
   margin: 16px 0px;
   width: 100%;
   position: relative;
   align-items: center;
 }
-.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user img {
+.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user img {
   height: 50px;
   width: 50px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
 }
-.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user .text {
+.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user .text {
   padding: 0px 6px;
   width: 70%;
 }
-.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user .text .title {
-  color: #ff7f00;
+.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user .text .title {
+  color: #ffffff;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
-  line-height: 1;
+  line-height: 1.1;
 }
-.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user .text .dess {
+.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user .text .dess {
   font-size: 0.9rem;
   font-weight: 400;
   color: #ccc;
 }
-.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user .userfollow {
+.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user .userfollow {
   position: absolute;
   right: 10px;
 }
-.usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user .userfollow .bi-person-fill-add {
+.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user .userfollow .bi-person-fill-add {
   margin-top: 50%;
   transform: translateY(-35%);
   color: #ff7f00;
 }
-.usercontent .user .favoriteandwatch {
+.globalcontent .usercontent .user .favoriteandwatch {
   width: 100%;
   margin-top: 50px;
 }
-.usercontent .user .favoriteandwatch .head {
+.globalcontent .usercontent .user .favoriteandwatch .head {
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 0px 8px;
   margin-bottom: 10px;
 }
-.usercontent .user .favoriteandwatch .head .title {
+.globalcontent .usercontent .user .favoriteandwatch .head .title {
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -263,10 +279,10 @@
   font-style: normal;
   font-weight: 500;
 }
-.usercontent .user .favoriteandwatch .head .title svg {
+.globalcontent .usercontent .user .favoriteandwatch .head .title svg {
   margin-right: 3px;
 }
-.usercontent .user .favoriteandwatch .head .all .allbtn {
+.globalcontent .usercontent .user .favoriteandwatch .head .all .allbtn {
   display: flex;
   align-items: center;
   background-color: transparent;
@@ -278,25 +294,25 @@
   font-weight: 500;
   font-style: normal;
 }
-.usercontent .user .favoriteandwatch .head .all .allbtn:hover {
+.globalcontent .usercontent .user .favoriteandwatch .head .all .allbtn:hover {
   color: #ff7f00;
 }
-.usercontent .user .favoriteandwatch .head .all .allbtn svg {
+.globalcontent .usercontent .user .favoriteandwatch .head .all .allbtn svg {
   margin-right: 3px;
 }
-.usercontent .user .favoriteandwatch .splide {
+.globalcontent .usercontent .user .favoriteandwatch .splide {
   position: relative;
   z-index: 99;
 }
-.usercontent .user .favoriteandwatch .splide .splide__list {
+.globalcontent .usercontent .user .favoriteandwatch .splide .splide__list {
   transition: all 0.3s ease-out;
 }
-.usercontent .user .favoriteandwatch .splide .splide__list .splide__slide {
+.globalcontent .usercontent .user .favoriteandwatch .splide .splide__list .splide__slide {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-.usercontent .user .favoriteandwatch .splide .splide__list .splide__slide .anime {
+.globalcontent .usercontent .user .favoriteandwatch .splide .splide__list .splide__slide .anime {
   text-decoration: none;
   position: relative;
   width: 100%;
@@ -304,10 +320,10 @@
   border-radius: 10px;
   margin: 0px 8px;
 }
-.usercontent .user .favoriteandwatch .splide .splide__list .splide__slide .anime:hover img {
+.globalcontent .usercontent .user .favoriteandwatch .splide .splide__list .splide__slide .anime:hover img {
   filter: brightness(1);
 }
-.usercontent .user .favoriteandwatch .splide .splide__list .splide__slide .anime img {
+.globalcontent .usercontent .user .favoriteandwatch .splide .splide__list .splide__slide .anime img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -316,7 +332,7 @@
   border-radius: 10px;
   transition: all 0.3s ease-out;
 }
-.usercontent .user .favoriteandwatch .splide .splide__list .splide__slide .anime .text {
+.globalcontent .usercontent .user .favoriteandwatch .splide .splide__list .splide__slide .anime .text {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -326,7 +342,7 @@
   display: flex;
   flex-direction: column;
 }
-.usercontent .user .favoriteandwatch .splide .splide__list .splide__slide .anime .text .title {
+.globalcontent .usercontent .user .favoriteandwatch .splide .splide__list .splide__slide .anime .text .title {
   font-size: 1rem;
   font-weight: 500;
   font-style: normal;
@@ -335,27 +351,27 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.usercontent .user .favoriteandwatch .modal-favoriteandwatch.show .modal-dialog {
+.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch.show .modal-dialog {
   transform: translateY(0);
   opacity: 1;
 }
-.usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog {
+.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog {
   transition: transform 0.3s ease-out, opacity 0.3s ease;
   transform: translateY(-20px);
   opacity: 0;
 }
-.usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .search {
+.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .search {
   position: relative;
   width: 100%;
   margin: 10px 0px;
 }
-.usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .search .bi-search {
+.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .search .bi-search {
   position: absolute;
   color: #ffffff;
   top: 7px;
   left: 5px;
 }
-.usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .search input {
+.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .search input {
   background-color: #252525;
   outline: none;
   border: none;
@@ -364,33 +380,33 @@
   width: 100%;
   border-radius: 5px;
 }
-.usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler {
+.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler {
   max-height: 445px;
   width: 100%;
   color: #ffffff;
   margin: 10px 0px;
 }
-.usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler .anime {
+.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler .anime {
   text-decoration: none;
   margin: 0px 0px 15px 0px;
 }
-.usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler .anime img {
+.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler .anime img {
   height: 120px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
 }
-.usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler .anime .text {
+.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler .anime .text {
   padding: 0px 6px;
 }
-.usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler .anime .text .title {
-  color: #ff7f00;
+.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler .anime .text .title {
+  color: #ffffff;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
   line-height: 1.1;
 }
-.usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler .anime .text .des {
+.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler .anime .text .des {
   margin-top: 5px;
   font-size: 0.9rem;
   font-weight: 400;
@@ -399,36 +415,36 @@
 }
 
 @media only screen and (max-width: 1500px) {
-  .usercontent {
+  .globalcontent .usercontent {
     padding: 24px 16px;
   }
 }
 @media only screen and (max-width: 1200px) {
-  .usercontent .user .usernameandoption {
+  .globalcontent .usercontent .user .usernameandoption {
     width: 100%;
     display: flex;
     justify-content: space-between;
   }
-  .usercontent .user .usernameandoption .username {
+  .globalcontent .usercontent .user .usernameandoption .username {
     font-size: 1rem;
     line-height: 1;
   }
-  .usercontent .user .usernameandoption .option {
+  .globalcontent .usercontent .user .usernameandoption .option {
     font-size: 1rem;
   }
-  .usercontent .user .usernameandoption .option a {
+  .globalcontent .usercontent .user .usernameandoption .option a {
     line-height: 1;
   }
 }
 @media only screen and (max-width: 650px) {
-  .usercontent .user .userdetail {
+  .globalcontent .usercontent .user .userdetail {
     display: flex;
     flex-direction: column;
   }
-  .usercontent .user .userdetail .image {
+  .globalcontent .usercontent .user .userdetail .image {
     width: 100%;
   }
-  .usercontent .user .userdetail .image .addfriend {
-    left: 57%;
+  .globalcontent .usercontent .user .userdetail .image .addfriend {
+    left: 55%;
   }
 }/*# sourceMappingURL=user.css.map */

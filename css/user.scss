@@ -1,425 +1,239 @@
-.usercontent {
-    padding: 1.5rem 10rem;
+.globalcontent {
+    position: relative;
 
-    .user {
+    .contentimg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -9999;
 
-        .usernameandoption {
+        img {
             width: 100%;
-            display: flex;
-            justify-content: space-between;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.6);
+        }
+    }
 
-            .username {
-                color: #ff7f00;
-                font-size: 1.2rem;
-                font-weight: 500;
-                font-style: normal;
-                line-height: 0.9;
+    .usercontent {
+        padding: 2rem 10rem;
+
+        .user {
+
+            .usernameandoption {
+                width: 100%;
                 display: flex;
-                align-items: end;
+                justify-content: space-between;
 
-
-                .bi-person-circle {
-                    margin-right: 3px;
-                }
-
-
-            }
-
-            .option {
-                font-size: 1.2rem;
-                font-weight: 500;
-                font-style: normal;
-
-                a {
-                    text-decoration: none;
-                    color: #ffffff;
-                    transition: all 0.3s ease-in-out;
+                .username {
+                    color: #ff7f00;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    font-style: normal;
                     line-height: 0.9;
                     display: flex;
                     align-items: end;
 
-                    &:hover {
-                        color: #ff7f00;
-                    }
 
-                    .bi-gear {
+                    .bi-person-circle {
                         margin-right: 3px;
                     }
-                }
-            }
-        }
 
-        .userdetail {
-            margin-top: 20px;
-            display: flex;
-
-            .image {
-                min-width: 180px;
-                min-height: 180px;
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                img {
-                    width: 140px;
-                    height: 140px;
-                    object-fit: cover;
-                    border-radius: 50%;
-                }
-
-                .addfriend {
-                    position: absolute;
-                    top: 110px;
-                    left: 115px;
-                    border-radius: 50%;
-                    width: 55px;
-                    height: 55px;
-                    background-color: #313131;
-                    border: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    transition: all 0.3s ease-in-out;
-
-                    .bi-person-fill-add {
-                        color: #ff7f00;
-                    }
-
-                    &:hover .bi-person-fill-add {
-                        color: #313131;
-                    }
-
-                    &:hover {
-                        background-color: #ff7f00;
-                    }
-                }
-            }
-
-            .about {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                height: 180px;
-
-                .title {
-                    display: flex;
-                    align-items: end;
-                    color: #ffffff;
-                    line-height: 1.1;
-                    font-size: 1rem;
-                    font-weight: 600;
-
-                    .bi-info-circle {
-                        margin-right: 5px;
-                    }
 
                 }
 
-                .des {
-                    color: #ffffff;
-                    width: 100%;
-                    min-height: 100px;
-                    max-height: 130px;
-                    overflow: auto;
-                    word-break: break-word;
-                    line-height: 1.2;
-                    margin: 8px 0px;
-                }
-
-                .other {
-                    width: 100%;
-                    display: flex;
-                    height: 18px;
-                    align-items: center;
-                    color: #ffffff;
-
-                    .date,
-                    .favorite,
-                    .watchlater,
-                    .takipci {
-                        display: flex;
-                        align-items: end;
-                        line-height: 1;
-                        margin-right: 8px;
-
-                        svg {
-                            margin-right: 2px;
-                        }
-                    }
-
-                    .takipci {
-                        background-color: transparent;
-                        border: none;
-                        color: #ffffff;
-                        transition: all 0.3;
-                        display: flex;
-                        align-items: end;
-                        line-height: 1;
-                        transition: all 0.3s ease-in-out;
-
-                        &:hover {
-                            color: #ff7f00;
-                        }
-                    }
-                }
-            }
-
-
-            .takipci-modal {
-
-                &.show .modal-dialog {
-                    transform: translateY(0);
-                    opacity: 1;
-                }
-
-                .modal-dialog {
-                    transition: transform 0.3s ease-out, opacity 0.3s ease;
-                    transform: translateY(-20px);
-                    opacity: 0;
-
-                    .buttons {
-
-                        button {
-                            background: transparent;
-                            border: none;
-                            border-bottom: 2px solid white;
-                            color: white;
-                            margin: 0px 5px;
-                            font-size: 16px;
-                            cursor: pointer;
-                            transition: border-color 0.3s ease, color 0.3s ease;
-
-                            &:hover {
-                                border-bottom: 2px solid #ff7f00;
-                            }
-
-                            &.active {
-                                border-bottom: 2px solid #ff7f00;
-                                color: #ff7f00;
-                            }
-                        }
-
-                    }
-
-                    .content-textt {
-                        display: none;
-
-                        .title {
-                            font-size: 1.1rem;
-                            font-weight: 500;
-                            font-style: normal;
-                        }
-
-                        &.active {
-                            display: block;
-                            color: #fff;
-                        }
-                    }
-                }
-
-                .modal-content {
-
-                    .modal-body {
-
-                        .search {
-                            position: relative;
-                            width: 100%;
-                            margin: 10px 0px;
-
-                            .bi-search {
-                                position: absolute;
-                                color: #ffffff;
-                                top: 7px;
-                                left: 5px;
-                            }
-
-                            input {
-                                background-color: #252525;
-                                outline: none;
-                                border: none;
-                                padding: 7px 7px 7px 35px;
-                                color: #ffffff;
-                                width: 100%;
-                                border-radius: 5px;
-                            }
-                        }
-
-                        .users {
-                            max-height: 435px;
-                            width: 100%;
-                            color: #ffffff;
-                            margin: 15px 0px;
-
-                            .user {
-                                text-decoration: none;
-                                margin: 16px 0px;
-                                width: 100%;
-                                position: relative;
-                                align-items: center;
-
-                                img {
-                                    height: 50px;
-                                    width: 50px;
-                                    object-fit: cover;
-                                    border-radius: 50%;
-                                }
-
-                                .text {
-                                    padding: 0px 6px;
-                                    width: 70%;
-
-                                    .title {
-                                        color: #ff7f00;
-                                        font-size: 1rem;
-                                        font-weight: 500;
-                                        font-style: normal;
-                                        line-height: 1;
-                                    }
-
-                                    .dess {
-                                        font-size: 0.9rem;
-                                        font-weight: 400;
-                                        color: #ccc;
-                                    }
-                                }
-
-                                .userfollow {
-                                    position: absolute;
-                                    right: 10px;
-
-                                    .bi-person-fill-add {
-                                        margin-top: 50%;
-                                        transform: translateY(-35%);
-                                        color: #ff7f00;
-                                    }
-                                }
-                            }
-
-                        }
-                    }
-                }
-            }
-        }
-
-        .favoriteandwatch {
-            width: 100%;
-            margin-top: 50px;
-
-            .head {
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                padding: 0px 8px;
-                margin-bottom: 10px;
-
-                .title {
-                    color: #ffffff;
-                    display: flex;
-                    align-items: center;
-                    font-size: 1rem;
-                    font-style: normal;
+                .option {
+                    font-size: 1.2rem;
                     font-weight: 500;
+                    font-style: normal;
 
-                    svg {
-                        margin-right: 3px;
-                    }
-                }
-
-                .all {
-
-                    .allbtn {
-                        display: flex;
-                        align-items: center;
-                        background-color: transparent;
-                        border: none;
-                        outline: none;
+                    a {
+                        text-decoration: none;
                         color: #ffffff;
                         transition: all 0.3s ease-in-out;
-                        font-size: 1rem;
-                        font-weight: 500;
-                        font-style: normal;
+                        line-height: 0.9;
+                        display: flex;
+                        align-items: end;
 
                         &:hover {
                             color: #ff7f00;
                         }
 
-                        svg {
+                        .bi-gear {
                             margin-right: 3px;
                         }
                     }
                 }
             }
 
-            .splide {
-                position: relative;
-                z-index: 99;
+            .userdetail {
+                margin-top: 20px;
+                display: flex;
 
-                .splide__list {
-                    transition: all 0.3s ease-out;
+                .image {
+                    min-width: 180px;
+                    min-height: 180px;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
 
-                    .splide__slide {
+                    img {
+                        width: 140px;
+                        height: 140px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+
+                    .addfriend {
+                        position: absolute;
+                        top: 110px;
+                        left: 115px;
+                        border-radius: 50%;
+                        width: 55px;
+                        height: 55px;
+                        background-color: #313131;
+                        border: none;
                         display: flex;
+                        align-items: center;
                         justify-content: center;
+                        transition: all 0.3s ease-in-out;
+
+                        .bi-person-fill-add {
+                            color: #ff7f00;
+                        }
+
+                        &:hover .bi-person-fill-add {
+                            color: #313131;
+                        }
+
+                        &:hover {
+                            background-color: #ff7f00;
+                        }
+                    }
+                }
+
+                .about {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    height: 180px;
+
+                    .title {
+                        display: flex;
+                        align-items: end;
+                        color: #ffffff;
+                        line-height: 1.1;
+                        font-size: 1rem;
+                        font-weight: 600;
+
+                        .bi-info-circle {
+                            margin-right: 5px;
+                        }
+
+                    }
+
+                    .des {
+                        color: #ffffff;
                         width: 100%;
+                        min-height: 100px;
+                        max-height: 130px;
+                        overflow: auto;
+                        word-break: break-word;
+                        line-height: 1.2;
+                        margin: 8px 0px;
+                    }
 
-                        .anime {
-                            text-decoration: none;
-                            position: relative;
-                            width: 100%;
-                            height: auto;
-                            border-radius: 10px;
-                            margin: 0px 8px;
+                    .other {
+                        width: 100%;
+                        display: flex;
+                        height: 18px;
+                        align-items: center;
+                        color: #ffffff;
 
-                            &:hover img {
-                                filter: brightness(1);
+                        .date,
+                        .favorite,
+                        .watchlater,
+                        .takipci {
+                            display: flex;
+                            align-items: end;
+                            line-height: 1;
+                            margin-right: 8px;
+
+                            svg {
+                                margin-right: 2px;
                             }
+                        }
 
-                            img {
-                                object-fit: cover;
-                                width: 100%;
-                                height: auto;
-                                filter: brightness(0.6);
-                                border-radius: 10px;
-                                transition: all 0.3s ease-out;
-                            }
+                        .takipci {
+                            background-color: transparent;
+                            border: none;
+                            color: #ffffff;
+                            transition: all 0.3;
+                            display: flex;
+                            align-items: end;
+                            line-height: 1;
+                            transition: all 0.3s ease-in-out;
 
-                            .text {
-                                position: absolute;
-                                left: 0;
-                                bottom: 0;
-                                color: #fff;
-                                padding: 0px 5px 5px 5px;
-                                width: 100%;
-                                display: flex;
-                                flex-direction: column;
-
-                                .title {
-                                    font-size: 1rem;
-                                    font-weight: 500;
-                                    font-style: normal;
-                                    width: 100%;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
+                            &:hover {
+                                color: #ff7f00;
                             }
                         }
                     }
                 }
-            }
 
-            .modal-favoriteandwatch {
 
-                &.show .modal-dialog {
-                    transform: translateY(0);
-                    opacity: 1;
-                }
+                .takipci-modal {
 
-                .modal-dialog {
-                    transition: transform 0.3s ease-out, opacity 0.3s ease;
-                    transform: translateY(-20px);
-                    opacity: 0;
+                    &.show .modal-dialog {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+
+                    .modal-dialog {
+                        transition: transform 0.3s ease-out, opacity 0.3s ease;
+                        transform: translateY(-20px);
+                        opacity: 0;
+
+                        .buttons {
+
+                            button {
+                                background: transparent;
+                                border: none;
+                                border-bottom: 2px solid white;
+                                color: white;
+                                margin: 0px 5px;
+                                font-size: 16px;
+                                cursor: pointer;
+                                transition: border-color 0.3s ease, color 0.3s ease;
+
+                                &:hover {
+                                    border-bottom: 2px solid #ff7f00;
+                                }
+
+                                &.active {
+                                    border-bottom: 2px solid #ff7f00;
+                                    color: #ff7f00;
+                                }
+                            }
+
+                        }
+
+                        .content-textt {
+                            display: none;
+
+                            .title {
+                                font-size: 1.1rem;
+                                font-weight: 500;
+                                font-style: normal;
+                            }
+
+                            &.active {
+                                display: block;
+                                color: #fff;
+                            }
+                        }
+                    }
 
                     .modal-content {
 
@@ -448,43 +262,247 @@
                                 }
                             }
 
-                            .animeler {
-                                max-height: 445px;
+                            .users {
+                                max-height: 435px;
                                 width: 100%;
                                 color: #ffffff;
-                                margin: 10px 0px;
+                                margin: 15px 0px;
 
-                                .anime {
+                                .user {
                                     text-decoration: none;
-                                    margin: 0px 0px 15px 0px;
+                                    margin: 16px 0px;
+                                    width: 100%;
+                                    position: relative;
+                                    align-items: center;
 
                                     img {
-                                        height: 120px;
+                                        height: 50px;
+                                        width: 50px;
                                         object-fit: cover;
-                                        border-radius: 5px;
+                                        border-radius: 50%;
                                     }
 
                                     .text {
                                         padding: 0px 6px;
+                                        width: 70%;
 
                                         .title {
-                                            color: #ff7f00;
+                                            color: #ffffff;
                                             font-size: 1rem;
-                                            font-weight: 500;
+                                            font-weight: 600;
                                             font-style: normal;
                                             line-height: 1.1;
                                         }
 
-                                        .des {
-                                            margin-top: 5px;
+                                        .dess {
                                             font-size: 0.9rem;
                                             font-weight: 400;
                                             color: #ccc;
-                                            line-height: 1;
+                                        }
+                                    }
+
+                                    .userfollow {
+                                        position: absolute;
+                                        right: 10px;
+
+                                        .bi-person-fill-add {
+                                            margin-top: 50%;
+                                            transform: translateY(-35%);
+                                            color: #ff7f00;
                                         }
                                     }
                                 }
 
+                            }
+                        }
+                    }
+                }
+            }
+
+            .favoriteandwatch {
+                width: 100%;
+                margin-top: 50px;
+
+                .head {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0px 8px;
+                    margin-bottom: 10px;
+
+                    .title {
+                        color: #ffffff;
+                        display: flex;
+                        align-items: center;
+                        font-size: 1rem;
+                        font-style: normal;
+                        font-weight: 500;
+
+                        svg {
+                            margin-right: 3px;
+                        }
+                    }
+
+                    .all {
+
+                        .allbtn {
+                            display: flex;
+                            align-items: center;
+                            background-color: transparent;
+                            border: none;
+                            outline: none;
+                            color: #ffffff;
+                            transition: all 0.3s ease-in-out;
+                            font-size: 1rem;
+                            font-weight: 500;
+                            font-style: normal;
+
+                            &:hover {
+                                color: #ff7f00;
+                            }
+
+                            svg {
+                                margin-right: 3px;
+                            }
+                        }
+                    }
+                }
+
+                .splide {
+                    position: relative;
+                    z-index: 99;
+
+                    .splide__list {
+                        transition: all 0.3s ease-out;
+
+                        .splide__slide {
+                            display: flex;
+                            justify-content: center;
+                            width: 100%;
+
+                            .anime {
+                                text-decoration: none;
+                                position: relative;
+                                width: 100%;
+                                height: auto;
+                                border-radius: 10px;
+                                margin: 0px 8px;
+
+                                &:hover img {
+                                    filter: brightness(1);
+                                }
+
+                                img {
+                                    object-fit: cover;
+                                    width: 100%;
+                                    height: auto;
+                                    filter: brightness(0.6);
+                                    border-radius: 10px;
+                                    transition: all 0.3s ease-out;
+                                }
+
+                                .text {
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: 0;
+                                    color: #fff;
+                                    padding: 0px 5px 5px 5px;
+                                    width: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    .title {
+                                        font-size: 1rem;
+                                        font-weight: 500;
+                                        font-style: normal;
+                                        width: 100%;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .modal-favoriteandwatch {
+
+                    &.show .modal-dialog {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+
+                    .modal-dialog {
+                        transition: transform 0.3s ease-out, opacity 0.3s ease;
+                        transform: translateY(-20px);
+                        opacity: 0;
+
+                        .modal-content {
+
+                            .modal-body {
+
+                                .search {
+                                    position: relative;
+                                    width: 100%;
+                                    margin: 10px 0px;
+
+                                    .bi-search {
+                                        position: absolute;
+                                        color: #ffffff;
+                                        top: 7px;
+                                        left: 5px;
+                                    }
+
+                                    input {
+                                        background-color: #252525;
+                                        outline: none;
+                                        border: none;
+                                        padding: 7px 7px 7px 35px;
+                                        color: #ffffff;
+                                        width: 100%;
+                                        border-radius: 5px;
+                                    }
+                                }
+
+                                .animeler {
+                                    max-height: 445px;
+                                    width: 100%;
+                                    color: #ffffff;
+                                    margin: 10px 0px;
+
+                                    .anime {
+                                        text-decoration: none;
+                                        margin: 0px 0px 15px 0px;
+
+                                        img {
+                                            height: 120px;
+                                            object-fit: cover;
+                                            border-radius: 5px;
+                                        }
+
+                                        .text {
+                                            padding: 0px 6px;
+
+                                            .title {
+                                                color: #ffffff;
+                                                font-size: 1rem;
+                                                font-weight: 600;
+                                                font-style: normal;
+                                                line-height: 1.1;
+                                            }
+
+                                            .des {
+                                                margin-top: 5px;
+                                                font-size: 0.9rem;
+                                                font-weight: 400;
+                                                color: #ccc;
+                                                line-height: 1;
+                                            }
+                                        }
+                                    }
+
+                                }
                             }
                         }
                     }
@@ -495,32 +513,41 @@
 }
 
 
+
 @media only screen and (max-width:1500px) {
-    .usercontent {
-        padding: 24px 16px;
+    .globalcontent {
+
+        .usercontent {
+            padding: 24px 16px;
+        }
+
     }
+
 }
 
 @media only screen and (max-width:1200px) {
-    .usercontent {
+    .globalcontent {
 
-        .user {
+        .usercontent {
 
-            .usernameandoption {
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
+            .user {
 
-                .username {
-                    font-size: 1rem;
-                    line-height: 1;
-                }
+                .usernameandoption {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
 
-                .option {
-                    font-size: 1rem;
-
-                    a {
+                    .username {
+                        font-size: 1rem;
                         line-height: 1;
+                    }
+
+                    .option {
+                        font-size: 1rem;
+
+                        a {
+                            line-height: 1;
+                        }
                     }
                 }
             }
@@ -529,22 +556,26 @@
 }
 
 @media only screen and (max-width:650px) {
-    .usercontent {
+    .globalcontent {
 
-        .user {
+        .usercontent {
 
-            .userdetail {
-                display: flex;
-                flex-direction: column;
+            .user {
 
-                .image {
-                    width: 100%;
+                .userdetail {
+                    display: flex;
+                    flex-direction: column;
 
-                    .addfriend {
-                        left: 57%;
+                    .image {
+                        width: 100%;
+
+                        .addfriend {
+                            left: 55%;
+                        }
                     }
                 }
             }
         }
     }
+
 }

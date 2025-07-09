@@ -112,13 +112,13 @@ header {
         button {
             border: none;
             background-color: transparent;
-            color: #ff7f00;
+            color: #ffffff;
             margin: 0px 6px;
             cursor: pointer;
             transition: all 0.3s ease-out;
 
             &:hover {
-                color: #ffffff;
+                color: #ff7f00;
             }
         }
 
@@ -128,11 +128,11 @@ header {
             .dropdown-toggle {
                 padding: 0;
                 margin: 0;
-                color: #ff7f00;
+                color: #ffffff;
                 transition: all 0.3s ease-out;
 
                 &:hover {
-                    color: #ffffff;
+                    color: #ff7f00;
                 }
 
                 img {
@@ -236,9 +236,9 @@ header {
                             padding: 0px 6px;
 
                             .title {
-                                color: #ff7f00;
+                                color: #ffffff;
                                 font-size: 1rem;
-                                font-weight: 500;
+                                font-weight: 600;
                                 font-style: normal;
                                 line-height: 1.1;
                             }
@@ -323,11 +323,11 @@ header {
                             width: 70%;
 
                             .title {
-                                color: #ff7f00;
+                                color: #ffffff;
                                 font-size: 1rem;
-                                font-weight: 500;
+                                font-weight: 600;
                                 font-style: normal;
-                                line-height: 1;
+                                line-height: 1.1;
                             }
 
                             .des {
@@ -394,11 +394,11 @@ header {
                             padding: 0px 6px;
 
                             .title {
-                                color: #ff7f00;
+                                color: #ffffff;
                                 font-size: 1rem;
-                                font-weight: 500;
+                                font-weight: 600;
                                 font-style: normal;
-                                line-height: 1;
+                                line-height: 1.1;
                             }
 
                             .date {
@@ -724,13 +724,13 @@ footer {
             button {
                 border: none;
                 background-color: transparent;
-                color: #ff7f00;
+                color: #ffffff;
                 margin: 0px 6px;
                 cursor: pointer;
                 transition: all 0.3s ease-out;
 
                 &:hover {
-                    color: #ffffff;
+                    color: #ff7f00;
                 }
             }
 
