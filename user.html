@@ -414,7 +414,7 @@
       <img id="coverImage" src="webimg/animefoto.jpg" crossorigin="anonymous">
     </div>
     <div class="usercontent">
-      <div class="user">
+      <div id="user" class="userr">
         <div class="usernameandoption">
           <div class="username">
             <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor"
@@ -1580,6 +1580,7 @@
         if (image.complete && image.naturalHeight !== 0) {
           const [r, g, b] = colorThief.getColor(image);
           const rgb = `rgb(${r}, ${g}, ${b})`;
+          const rgba = `rgba(${r}, ${g}, ${b}, 0.4)`;
 
           ['header', 'footer', 'nav', 'dropdown-menu'].forEach(id => {
             const el = document.getElementById(id);
@@ -1588,9 +1589,16 @@
             }
           });
 
+          // modal-content class'ına tam opak renk
           document.querySelectorAll('.modal-content').forEach(el => {
             el.style.backgroundColor = rgb;
           });
+
+          // #user için saydam arka plan rengi
+          const userEl = document.getElementById('user');
+          if (userEl) {
+            userEl.style.backgroundColor = rgba;
+          }
         }
       }
 

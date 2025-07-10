@@ -1,24 +1,38 @@
 .globalcontent {
     position: relative;
+    height: auto;
 
     .contentimg {
         position: absolute;
-        width: 100%;
-        height: 100%;
         z-index: -9999;
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: brightness(0.6);
+            filter: brightness(0.7);
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, #000000 100%);
         }
     }
 
     .usercontent {
         padding: 2rem 10rem;
 
-        .user {
+        .userr {
+            padding: 10px;
+            border-radius: 10px;
+            height: 150vh;
 
             .usernameandoption {
                 width: 100%;
@@ -530,7 +544,7 @@
 
         .usercontent {
 
-            .user {
+            .userr {
 
                 .usernameandoption {
                     width: 100%;
@@ -560,7 +574,8 @@
 
         .usercontent {
 
-            .user {
+            .userr {
+                padding: 0px;
 
                 .userdetail {
                     display: flex;

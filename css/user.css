@@ -1,10 +1,9 @@
 .globalcontent {
   position: relative;
+  height: auto;
 }
 .globalcontent .contentimg {
   position: absolute;
-  width: 100%;
-  height: 100%;
   z-index: -9999;
 }
 .globalcontent .contentimg img {
@@ -12,17 +11,33 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  filter: brightness(0.6);
+  filter: brightness(0.7);
+}
+.globalcontent .contentimg::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, #000000 100%);
 }
 .globalcontent .usercontent {
   padding: 2rem 10rem;
 }
-.globalcontent .usercontent .user .usernameandoption {
+.globalcontent .usercontent .userr {
+  padding: 10px;
+  border-radius: 10px;
+  height: 150vh;
+}
+.globalcontent .usercontent .userr .usernameandoption {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.globalcontent .usercontent .user .usernameandoption .username {
+.globalcontent .usercontent .userr .usernameandoption .username {
   color: #ff7f00;
   font-size: 1.2rem;
   font-weight: 500;
@@ -31,15 +46,15 @@
   display: flex;
   align-items: end;
 }
-.globalcontent .usercontent .user .usernameandoption .username .bi-person-circle {
+.globalcontent .usercontent .userr .usernameandoption .username .bi-person-circle {
   margin-right: 3px;
 }
-.globalcontent .usercontent .user .usernameandoption .option {
+.globalcontent .usercontent .userr .usernameandoption .option {
   font-size: 1.2rem;
   font-weight: 500;
   font-style: normal;
 }
-.globalcontent .usercontent .user .usernameandoption .option a {
+.globalcontent .usercontent .userr .usernameandoption .option a {
   text-decoration: none;
   color: #ffffff;
   transition: all 0.3s ease-in-out;
@@ -47,17 +62,17 @@
   display: flex;
   align-items: end;
 }
-.globalcontent .usercontent .user .usernameandoption .option a:hover {
+.globalcontent .usercontent .userr .usernameandoption .option a:hover {
   color: #ff7f00;
 }
-.globalcontent .usercontent .user .usernameandoption .option a .bi-gear {
+.globalcontent .usercontent .userr .usernameandoption .option a .bi-gear {
   margin-right: 3px;
 }
-.globalcontent .usercontent .user .userdetail {
+.globalcontent .usercontent .userr .userdetail {
   margin-top: 20px;
   display: flex;
 }
-.globalcontent .usercontent .user .userdetail .image {
+.globalcontent .usercontent .userr .userdetail .image {
   min-width: 180px;
   min-height: 180px;
   position: relative;
@@ -65,14 +80,14 @@
   align-items: center;
   justify-content: center;
 }
-.globalcontent .usercontent .user .userdetail .image img {
+.globalcontent .usercontent .userr .userdetail .image img {
   width: 140px;
   height: 140px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
 }
-.globalcontent .usercontent .user .userdetail .image .addfriend {
+.globalcontent .usercontent .userr .userdetail .image .addfriend {
   position: absolute;
   top: 110px;
   left: 115px;
@@ -86,22 +101,22 @@
   justify-content: center;
   transition: all 0.3s ease-in-out;
 }
-.globalcontent .usercontent .user .userdetail .image .addfriend .bi-person-fill-add {
+.globalcontent .usercontent .userr .userdetail .image .addfriend .bi-person-fill-add {
   color: #ff7f00;
 }
-.globalcontent .usercontent .user .userdetail .image .addfriend:hover .bi-person-fill-add {
+.globalcontent .usercontent .userr .userdetail .image .addfriend:hover .bi-person-fill-add {
   color: #313131;
 }
-.globalcontent .usercontent .user .userdetail .image .addfriend:hover {
+.globalcontent .usercontent .userr .userdetail .image .addfriend:hover {
   background-color: #ff7f00;
 }
-.globalcontent .usercontent .user .userdetail .about {
+.globalcontent .usercontent .userr .userdetail .about {
   width: 100%;
   display: flex;
   flex-direction: column;
   height: 180px;
 }
-.globalcontent .usercontent .user .userdetail .about .title {
+.globalcontent .usercontent .userr .userdetail .about .title {
   display: flex;
   align-items: end;
   color: #ffffff;
@@ -109,10 +124,10 @@
   font-size: 1rem;
   font-weight: 600;
 }
-.globalcontent .usercontent .user .userdetail .about .title .bi-info-circle {
+.globalcontent .usercontent .userr .userdetail .about .title .bi-info-circle {
   margin-right: 5px;
 }
-.globalcontent .usercontent .user .userdetail .about .des {
+.globalcontent .usercontent .userr .userdetail .about .des {
   color: #ffffff;
   width: 100%;
   min-height: 100px;
@@ -122,29 +137,29 @@
   line-height: 1.2;
   margin: 8px 0px;
 }
-.globalcontent .usercontent .user .userdetail .about .other {
+.globalcontent .usercontent .userr .userdetail .about .other {
   width: 100%;
   display: flex;
   height: 18px;
   align-items: center;
   color: #ffffff;
 }
-.globalcontent .usercontent .user .userdetail .about .other .date,
-.globalcontent .usercontent .user .userdetail .about .other .favorite,
-.globalcontent .usercontent .user .userdetail .about .other .watchlater,
-.globalcontent .usercontent .user .userdetail .about .other .takipci {
+.globalcontent .usercontent .userr .userdetail .about .other .date,
+.globalcontent .usercontent .userr .userdetail .about .other .favorite,
+.globalcontent .usercontent .userr .userdetail .about .other .watchlater,
+.globalcontent .usercontent .userr .userdetail .about .other .takipci {
   display: flex;
   align-items: end;
   line-height: 1;
   margin-right: 8px;
 }
-.globalcontent .usercontent .user .userdetail .about .other .date svg,
-.globalcontent .usercontent .user .userdetail .about .other .favorite svg,
-.globalcontent .usercontent .user .userdetail .about .other .watchlater svg,
-.globalcontent .usercontent .user .userdetail .about .other .takipci svg {
+.globalcontent .usercontent .userr .userdetail .about .other .date svg,
+.globalcontent .usercontent .userr .userdetail .about .other .favorite svg,
+.globalcontent .usercontent .userr .userdetail .about .other .watchlater svg,
+.globalcontent .usercontent .userr .userdetail .about .other .takipci svg {
   margin-right: 2px;
 }
-.globalcontent .usercontent .user .userdetail .about .other .takipci {
+.globalcontent .usercontent .userr .userdetail .about .other .takipci {
   background-color: transparent;
   border: none;
   color: #ffffff;
@@ -154,19 +169,19 @@
   line-height: 1;
   transition: all 0.3s ease-in-out;
 }
-.globalcontent .usercontent .user .userdetail .about .other .takipci:hover {
+.globalcontent .usercontent .userr .userdetail .about .other .takipci:hover {
   color: #ff7f00;
 }
-.globalcontent .usercontent .user .userdetail .takipci-modal.show .modal-dialog {
+.globalcontent .usercontent .userr .userdetail .takipci-modal.show .modal-dialog {
   transform: translateY(0);
   opacity: 1;
 }
-.globalcontent .usercontent .user .userdetail .takipci-modal .modal-dialog {
+.globalcontent .usercontent .userr .userdetail .takipci-modal .modal-dialog {
   transition: transform 0.3s ease-out, opacity 0.3s ease;
   transform: translateY(-20px);
   opacity: 0;
 }
-.globalcontent .usercontent .user .userdetail .takipci-modal .modal-dialog .buttons button {
+.globalcontent .usercontent .userr .userdetail .takipci-modal .modal-dialog .buttons button {
   background: transparent;
   border: none;
   border-bottom: 2px solid white;
@@ -176,37 +191,37 @@
   cursor: pointer;
   transition: border-color 0.3s ease, color 0.3s ease;
 }
-.globalcontent .usercontent .user .userdetail .takipci-modal .modal-dialog .buttons button:hover {
+.globalcontent .usercontent .userr .userdetail .takipci-modal .modal-dialog .buttons button:hover {
   border-bottom: 2px solid #ff7f00;
 }
-.globalcontent .usercontent .user .userdetail .takipci-modal .modal-dialog .buttons button.active {
+.globalcontent .usercontent .userr .userdetail .takipci-modal .modal-dialog .buttons button.active {
   border-bottom: 2px solid #ff7f00;
   color: #ff7f00;
 }
-.globalcontent .usercontent .user .userdetail .takipci-modal .modal-dialog .content-textt {
+.globalcontent .usercontent .userr .userdetail .takipci-modal .modal-dialog .content-textt {
   display: none;
 }
-.globalcontent .usercontent .user .userdetail .takipci-modal .modal-dialog .content-textt .title {
+.globalcontent .usercontent .userr .userdetail .takipci-modal .modal-dialog .content-textt .title {
   font-size: 1.1rem;
   font-weight: 500;
   font-style: normal;
 }
-.globalcontent .usercontent .user .userdetail .takipci-modal .modal-dialog .content-textt.active {
+.globalcontent .usercontent .userr .userdetail .takipci-modal .modal-dialog .content-textt.active {
   display: block;
   color: #fff;
 }
-.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .search {
+.globalcontent .usercontent .userr .userdetail .takipci-modal .modal-content .modal-body .search {
   position: relative;
   width: 100%;
   margin: 10px 0px;
 }
-.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .search .bi-search {
+.globalcontent .usercontent .userr .userdetail .takipci-modal .modal-content .modal-body .search .bi-search {
   position: absolute;
   color: #ffffff;
   top: 7px;
   left: 5px;
 }
-.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .search input {
+.globalcontent .usercontent .userr .userdetail .takipci-modal .modal-content .modal-body .search input {
   background-color: #252525;
   outline: none;
   border: none;
@@ -215,63 +230,63 @@
   width: 100%;
   border-radius: 5px;
 }
-.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users {
+.globalcontent .usercontent .userr .userdetail .takipci-modal .modal-content .modal-body .users {
   max-height: 435px;
   width: 100%;
   color: #ffffff;
   margin: 15px 0px;
 }
-.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user {
+.globalcontent .usercontent .userr .userdetail .takipci-modal .modal-content .modal-body .users .user {
   text-decoration: none;
   margin: 16px 0px;
   width: 100%;
   position: relative;
   align-items: center;
 }
-.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user img {
+.globalcontent .usercontent .userr .userdetail .takipci-modal .modal-content .modal-body .users .user img {
   height: 50px;
   width: 50px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
 }
-.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user .text {
+.globalcontent .usercontent .userr .userdetail .takipci-modal .modal-content .modal-body .users .user .text {
   padding: 0px 6px;
   width: 70%;
 }
-.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user .text .title {
+.globalcontent .usercontent .userr .userdetail .takipci-modal .modal-content .modal-body .users .user .text .title {
   color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
   font-style: normal;
   line-height: 1.1;
 }
-.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user .text .dess {
+.globalcontent .usercontent .userr .userdetail .takipci-modal .modal-content .modal-body .users .user .text .dess {
   font-size: 0.9rem;
   font-weight: 400;
   color: #ccc;
 }
-.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user .userfollow {
+.globalcontent .usercontent .userr .userdetail .takipci-modal .modal-content .modal-body .users .user .userfollow {
   position: absolute;
   right: 10px;
 }
-.globalcontent .usercontent .user .userdetail .takipci-modal .modal-content .modal-body .users .user .userfollow .bi-person-fill-add {
+.globalcontent .usercontent .userr .userdetail .takipci-modal .modal-content .modal-body .users .user .userfollow .bi-person-fill-add {
   margin-top: 50%;
   transform: translateY(-35%);
   color: #ff7f00;
 }
-.globalcontent .usercontent .user .favoriteandwatch {
+.globalcontent .usercontent .userr .favoriteandwatch {
   width: 100%;
   margin-top: 50px;
 }
-.globalcontent .usercontent .user .favoriteandwatch .head {
+.globalcontent .usercontent .userr .favoriteandwatch .head {
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 0px 8px;
   margin-bottom: 10px;
 }
-.globalcontent .usercontent .user .favoriteandwatch .head .title {
+.globalcontent .usercontent .userr .favoriteandwatch .head .title {
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -279,10 +294,10 @@
   font-style: normal;
   font-weight: 500;
 }
-.globalcontent .usercontent .user .favoriteandwatch .head .title svg {
+.globalcontent .usercontent .userr .favoriteandwatch .head .title svg {
   margin-right: 3px;
 }
-.globalcontent .usercontent .user .favoriteandwatch .head .all .allbtn {
+.globalcontent .usercontent .userr .favoriteandwatch .head .all .allbtn {
   display: flex;
   align-items: center;
   background-color: transparent;
@@ -294,25 +309,25 @@
   font-weight: 500;
   font-style: normal;
 }
-.globalcontent .usercontent .user .favoriteandwatch .head .all .allbtn:hover {
+.globalcontent .usercontent .userr .favoriteandwatch .head .all .allbtn:hover {
   color: #ff7f00;
 }
-.globalcontent .usercontent .user .favoriteandwatch .head .all .allbtn svg {
+.globalcontent .usercontent .userr .favoriteandwatch .head .all .allbtn svg {
   margin-right: 3px;
 }
-.globalcontent .usercontent .user .favoriteandwatch .splide {
+.globalcontent .usercontent .userr .favoriteandwatch .splide {
   position: relative;
   z-index: 99;
 }
-.globalcontent .usercontent .user .favoriteandwatch .splide .splide__list {
+.globalcontent .usercontent .userr .favoriteandwatch .splide .splide__list {
   transition: all 0.3s ease-out;
 }
-.globalcontent .usercontent .user .favoriteandwatch .splide .splide__list .splide__slide {
+.globalcontent .usercontent .userr .favoriteandwatch .splide .splide__list .splide__slide {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-.globalcontent .usercontent .user .favoriteandwatch .splide .splide__list .splide__slide .anime {
+.globalcontent .usercontent .userr .favoriteandwatch .splide .splide__list .splide__slide .anime {
   text-decoration: none;
   position: relative;
   width: 100%;
@@ -320,10 +335,10 @@
   border-radius: 10px;
   margin: 0px 8px;
 }
-.globalcontent .usercontent .user .favoriteandwatch .splide .splide__list .splide__slide .anime:hover img {
+.globalcontent .usercontent .userr .favoriteandwatch .splide .splide__list .splide__slide .anime:hover img {
   filter: brightness(1);
 }
-.globalcontent .usercontent .user .favoriteandwatch .splide .splide__list .splide__slide .anime img {
+.globalcontent .usercontent .userr .favoriteandwatch .splide .splide__list .splide__slide .anime img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -332,7 +347,7 @@
   border-radius: 10px;
   transition: all 0.3s ease-out;
 }
-.globalcontent .usercontent .user .favoriteandwatch .splide .splide__list .splide__slide .anime .text {
+.globalcontent .usercontent .userr .favoriteandwatch .splide .splide__list .splide__slide .anime .text {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -342,7 +357,7 @@
   display: flex;
   flex-direction: column;
 }
-.globalcontent .usercontent .user .favoriteandwatch .splide .splide__list .splide__slide .anime .text .title {
+.globalcontent .usercontent .userr .favoriteandwatch .splide .splide__list .splide__slide .anime .text .title {
   font-size: 1rem;
   font-weight: 500;
   font-style: normal;
@@ -351,27 +366,27 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch.show .modal-dialog {
+.globalcontent .usercontent .userr .favoriteandwatch .modal-favoriteandwatch.show .modal-dialog {
   transform: translateY(0);
   opacity: 1;
 }
-.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog {
+.globalcontent .usercontent .userr .favoriteandwatch .modal-favoriteandwatch .modal-dialog {
   transition: transform 0.3s ease-out, opacity 0.3s ease;
   transform: translateY(-20px);
   opacity: 0;
 }
-.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .search {
+.globalcontent .usercontent .userr .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .search {
   position: relative;
   width: 100%;
   margin: 10px 0px;
 }
-.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .search .bi-search {
+.globalcontent .usercontent .userr .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .search .bi-search {
   position: absolute;
   color: #ffffff;
   top: 7px;
   left: 5px;
 }
-.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .search input {
+.globalcontent .usercontent .userr .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .search input {
   background-color: #252525;
   outline: none;
   border: none;
@@ -380,33 +395,33 @@
   width: 100%;
   border-radius: 5px;
 }
-.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler {
+.globalcontent .usercontent .userr .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler {
   max-height: 445px;
   width: 100%;
   color: #ffffff;
   margin: 10px 0px;
 }
-.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler .anime {
+.globalcontent .usercontent .userr .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler .anime {
   text-decoration: none;
   margin: 0px 0px 15px 0px;
 }
-.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler .anime img {
+.globalcontent .usercontent .userr .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler .anime img {
   height: 120px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
 }
-.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler .anime .text {
+.globalcontent .usercontent .userr .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler .anime .text {
   padding: 0px 6px;
 }
-.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler .anime .text .title {
+.globalcontent .usercontent .userr .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler .anime .text .title {
   color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
   font-style: normal;
   line-height: 1.1;
 }
-.globalcontent .usercontent .user .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler .anime .text .des {
+.globalcontent .usercontent .userr .favoriteandwatch .modal-favoriteandwatch .modal-dialog .modal-content .modal-body .animeler .anime .text .des {
   margin-top: 5px;
   font-size: 0.9rem;
   font-weight: 400;
@@ -420,31 +435,34 @@
   }
 }
 @media only screen and (max-width: 1200px) {
-  .globalcontent .usercontent .user .usernameandoption {
+  .globalcontent .usercontent .userr .usernameandoption {
     width: 100%;
     display: flex;
     justify-content: space-between;
   }
-  .globalcontent .usercontent .user .usernameandoption .username {
+  .globalcontent .usercontent .userr .usernameandoption .username {
     font-size: 1rem;
     line-height: 1;
   }
-  .globalcontent .usercontent .user .usernameandoption .option {
+  .globalcontent .usercontent .userr .usernameandoption .option {
     font-size: 1rem;
   }
-  .globalcontent .usercontent .user .usernameandoption .option a {
+  .globalcontent .usercontent .userr .usernameandoption .option a {
     line-height: 1;
   }
 }
 @media only screen and (max-width: 650px) {
-  .globalcontent .usercontent .user .userdetail {
+  .globalcontent .usercontent .userr {
+    padding: 0px;
+  }
+  .globalcontent .usercontent .userr .userdetail {
     display: flex;
     flex-direction: column;
   }
-  .globalcontent .usercontent .user .userdetail .image {
+  .globalcontent .usercontent .userr .userdetail .image {
     width: 100%;
   }
-  .globalcontent .usercontent .user .userdetail .image .addfriend {
+  .globalcontent .usercontent .userr .userdetail .image .addfriend {
     left: 55%;
   }
 }/*# sourceMappingURL=user.css.map */
