@@ -411,7 +411,7 @@
   </div>
   <div class="globalcontent">
     <div class="contentimg">
-      <img id="coverImage" src="webimg/animefoto.jpg" crossorigin="anonymous">
+      <img id="coverImage" src="webimg/animefoto2.jpg" crossorigin="anonymous">
     </div>
     <div class="usercontent">
       <div id="user" class="userr">
@@ -425,13 +425,186 @@
             </svg> Furkan Gül
           </div>
           <div class="option">
-            <a href="setting.html"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor"
-                class="bi bi-gear" viewBox="0 0 16 16">
+            <button type="button" class="position-relative" data-bs-toggle="modal" data-bs-target="#exampleModal7">
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-gear"
+                viewBox="0 0 16 16">
                 <path
                   d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0" />
                 <path
                   d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z" />
-              </svg> Ayarlar</a>
+              </svg>Ayarlar
+            </button>
+          </div>
+        </div>
+        <div class="modal" style="backdrop-filter: blur(3px);" id="exampleModal7" tabindex="-1"
+          aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div style="margin-top: 80px" class="modal-dialog">
+            <div style="background-color: #151515;" class="modal-content">
+              <div style="width: 100%; height: 550px;" class="modal-body">
+                <div style="height: 25px; width: 100%;" class="d-flex justify-content-between">
+                  <div class="buttons">
+                    <button class="tab-btnnn active" data-target="setting">Profil Ayarları</button>
+                    <button class="tab-btnnn" data-target="reported">Engel Listesi</button>
+                  </div>
+                  <div>
+                    <button style="filter: invert(100%);" type="button" class="btn-close" data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+                  </div>
+                </div>
+                <div>
+                  <!-- İçerikler -->
+                  <div id="setting" class="content-texttt active">
+                    <div style="height: 440px; overflow: auto; width: 100%; margin-top: 15px;">
+                      <div class="user">
+                        <div class="pictureandabout">
+                          <div class="picture">
+                            <img class="image" src="webimg/sukunavsgojo.gif" />
+                            <div class="buttons">
+                              <button class="updatebtn">Güncelle</button>
+                              <button class="deletebtn">Sil</button>
+                            </div>
+                            <input type="file" id="fileUpload">
+                          </div>
+                          <div class="background">
+                            <img class="image" src="webimg/animefoto2.jpg" />
+                            <div class="buttons">
+                              <button class="updatebtn">Güncelle</button>
+                              <button class="deletebtn">Sil</button>
+                            </div>
+                            <input type="file" id="fileUpload">
+                          </div>
+                          <div class="text">
+                            <div class="title">
+                              Hakkımda
+                            </div>
+                            <textarea placeholder="Hakkında yazısını buraya yazabilirsin..."></textarea>
+                          </div>
+                        </div>
+                        <div class="otherdata">
+                          <div class="box">
+                            <div class="title">
+                              Kullanıcı Adı
+                            </div>
+                            <input type="text" placeholder="Kullanıcı Adı Giriniz..." />
+                          </div>
+                          <div class="box">
+                            <div class="title">Şifre</div>
+                            <div class="password-wrapper">
+                              <input type="password" id="password" placeholder="Şifre Giriniz..." />
+                              <button type="button" class="toggle-password"
+                                onclick="togglePassword('password', this)">👁️</button>
+                            </div>
+                          </div>
+
+                          <div class="box">
+                            <div class="title">Şifre Tekrar</div>
+                            <div class="password-wrapper">
+                              <input type="password" id="password2" placeholder="Şifre Tekrar Giriniz..." />
+                              <button type="button" class="toggle-password"
+                                onclick="togglePassword('password2', this)">👁️</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="toggle">
+                          <div class="title">
+                            Hesabın Gizli Kalsın mı?
+                          </div>
+                          <label>
+                            <input type="checkbox" class="toggle-checkbox">
+                            <div class="toggle-switch"></div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="buttonw d-flex justify-content-center">
+                      <button class="save">Kaydet</button>
+                    </div>
+                  </div>
+                  <div style="height: 475px; overflow: auto; width: 100%; margin-top: 15px;" class="content-texttt"
+                    id="reported">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, dolorum, cupiditate totam
+                    praesentium eum quidem voluptas cumque libero quisquam mollitia nulla accusantium, veniam facere.
+                    Cum suscipit minima tempore commodi numquam, consectetur error ab dolores non impedit nobis neque
+                    dicta repudiandae aut? Magnam voluptatibus, ratione tempora a neque natus, recusandae saepe quam
+                    excepturi maxime odio reprehenderit quia consectetur mollitia vero! Tenetur harum non rerum
+                    aspernatur recusandae consequuntur blanditiis ipsum repellendus, architecto iusto corporis veniam!
+                    Deleniti perspiciatis reiciendis veritatis pariatur unde, accusantium explicabo. Recusandae,
+                    excepturi dolorum atque iste beatae quos, dolores harum culpa minima aspernatur eaque facere ut
+                    ipsam sit quo cupiditate exercitationem! Nulla, commodi vel, maxime, in sint quasi eligendi quo
+                    distinctio minima ex voluptas. Temporibus eos, cupiditate veritatis incidunt accusamus non delectus
+                    quaerat molestiae omnis veniam perspiciatis neque exercitationem esse maxime amet magni nam.
+                    Corporis dolores ipsam labore explicabo at quae voluptatum, non, earum quam esse nemo maiores cumque
+                    incidunt reprehenderit nulla blanditiis necessitatibus enim maxime eum adipisci itaque dignissimos
+                    laudantium nisi ipsa? Ut accusamus voluptatibus velit quasi doloribus reprehenderit eos sint
+                    voluptate ea ex. Id quasi sed in delectus autem accusantium debitis ad nesciunt magnam eveniet at
+                    expedita perspiciatis, modi officiis cum animi aperiam dignissimos unde quae saepe nulla rem. Earum
+                    harum cumque architecto aut quisquam optio tempore illo atque aliquid! Praesentium sunt aspernatur
+                    laborum ratione facere illo saepe nobis consectetur eos amet tempora tenetur id, tempore fuga ea
+                    ipsa suscipit alias iusto. Assumenda ipsa itaque dolorem quo reprehenderit facilis dolore autem
+                    repudiandae unde voluptate, architecto deserunt asperiores blanditiis. Exercitationem animi error
+                    quae dignissimos fugit, qui nihil ipsum sed pariatur rem quia, optio repellendus, dolor corporis
+                    iure. Harum a porro repellat voluptatum. Ratione cumque aliquid iure est incidunt amet rerum hic
+                    laborum eaque. Facere ut atque nulla ab cumque molestias hic minima, obcaecati beatae autem ad
+                    quaerat doloribus qui iste corporis debitis molestiae quae sed nesciunt sint deserunt amet inventore
+                    in vel? Incidunt hic eius dolore recusandae fugit quisquam repellendus, ratione praesentium earum
+                    accusantium voluptatem adipisci saepe explicabo porro ea, eveniet nihil? Corrupti placeat, ipsam
+                    harum odit facilis aut rem nihil hic eveniet sequi reprehenderit. In sint explicabo exercitationem
+                    tempore eligendi amet expedita, nobis et eaque fuga, voluptate vero repellendus! Voluptatem
+                    laudantium quam omnis earum nostrum laborum enim! Velit sequi autem, iste eos sint commodi
+                    voluptatem tenetur aspernatur magnam eveniet, impedit doloribus ratione, facilis cumque vero dicta.
+                    Laudantium totam atque dicta nulla maiores asperiores laborum, ratione sapiente! Quos vel laborum
+                    voluptates doloribus quas, quasi explicabo quo sint vero eligendi molestiae possimus. Asperiores
+                    soluta error mollitia iusto, eum esse est quidem blanditiis temporibus, voluptatibus unde ea
+                    quibusdam vel id modi ut numquam beatae assumenda eius nemo! Tenetur quam quod praesentium dolor
+                    suscipit eveniet odio officiis vero! Amet libero voluptatum architecto perferendis vero. Rerum
+                    quisquam maxime ea hic, commodi non in, minima molestias, illo corporis itaque ducimus magnam enim.
+                    Quia provident unde delectus eligendi quibusdam, necessitatibus dignissimos nulla enim sed dolorum
+                    illum voluptate earum corrupti deserunt culpa in consequuntur assumenda repudiandae fugit deleniti
+                    ea eos ullam? Debitis accusamus eius unde dolorem quaerat perspiciatis animi ratione! Aperiam
+                    aliquam culpa, eveniet voluptatibus adipisci necessitatibus voluptatem expedita provident, tempora
+                    quis atque mollitia. Doloribus eligendi, voluptas illum ducimus asperiores tempora consequatur at
+                    nesciunt corporis quam amet iusto enim minus. Voluptas sint dolores error dicta, laudantium, odio
+                    sunt aut accusamus minus distinctio, nam excepturi reiciendis? Ipsam nostrum minus, a incidunt
+                    aliquam enim, iure minima aspernatur animi nisi repudiandae ullam possimus unde dolor! Voluptatibus
+                    amet delectus vitae sunt quis velit, impedit quo asperiores. Fugiat corporis veritatis quibusdam
+                    velit quasi nihil impedit, unde et. Aut magni adipisci voluptate fuga enim blanditiis explicabo nemo
+                    corporis magnam nesciunt! Voluptatibus, sed! Rerum asperiores eligendi voluptatem amet adipisci
+                    voluptas dolores sapiente architecto quas, laboriosam quos deserunt voluptate sunt molestias quaerat
+                    ducimus. Quam consequatur inventore officia totam, modi dolore quas reiciendis! Mollitia nulla
+                    consectetur architecto vitae facilis quos voluptatem eius, aliquid laboriosam quam ipsam, aut enim
+                    voluptas rem debitis cum ipsum voluptate itaque similique illo ea fugit impedit accusantium omnis?
+                    Autem, id. Id ratione quibusdam laboriosam corporis adipisci nulla voluptatibus rem libero eum! Quia
+                    illo laboriosam, earum voluptatum repellat aliquid ea reprehenderit eaque placeat. Debitis quibusdam
+                    assumenda eaque corrupti saepe animi obcaecati quas itaque nihil laboriosam, accusantium ex
+                    voluptatibus eligendi molestiae eveniet delectus. Sed nulla possimus impedit saepe voluptatibus,
+                    nemo in dolor atque neque obcaecati, odio dicta inventore delectus libero unde, maxime magni hic
+                    molestiae itaque veritatis. Amet eaque provident vitae! Quae odio quas non perferendis tenetur
+                    quaerat officia iste recusandae? Corrupti aliquam magni voluptate autem non blanditiis nostrum
+                    tempore quod iste eius fuga a ad est reprehenderit, explicabo, magnam vitae sed possimus repellat
+                    accusamus reiciendis. Accusamus laborum maxime earum voluptatum quasi corporis error voluptates
+                    perspiciatis nostrum, libero, alias temporibus nulla. Quasi iste, non earum quidem culpa illo, quia
+                    temporibus perspiciatis error magni minus delectus soluta ratione quibusdam. Unde et, aliquam ipsa
+                    error ipsum quibusdam cupiditate dignissimos accusamus architecto provident aut possimus
+                    consequatur, nostrum molestias eveniet. Illum nihil non explicabo, vitae possimus, nisi eos maiores
+                    vero minus reprehenderit voluptas necessitatibus obcaecati quis provident libero. Laboriosam dolores
+                    maiores molestias magni optio consectetur tempora quod suscipit commodi, dicta exercitationem. Optio
+                    consequatur voluptate explicabo obcaecati iusto, ab cumque dolor doloremque. Alias harum laudantium
+                    eos nemo! Facilis rem unde ad consectetur eius nobis omnis quis natus eum nesciunt accusamus, a
+                    nihil voluptatibus officiis minima blanditiis quasi dolorum quod quo ducimus est quisquam totam
+                    sequi. Eius pariatur, inventore quam accusamus enim quod tempore eligendi voluptate, nostrum eveniet
+                    nihil exercitationem itaque voluptatibus similique perspiciatis quasi tenetur neque consequuntur
+                    reprehenderit! Assumenda inventore, distinctio libero itaque blanditiis saepe impedit quos
+                    voluptatem hic voluptas corporis exercitationem voluptate atque natus magni explicabo minima
+                    quibusdam repellat facere dicta. Optio, mollitia repellat aut natus expedita quo excepturi modi
+                    temporibus deserunt! Maiores, deleniti natus! Sit veritatis harum, adipisci ad optio quas. Provident
+                    alias rem, dignissimos recusandae consequatur rerum, magnam cumque officiis tenetur officia, vitae
+                    nam saepe facere nostrum. Ea fugit possimus delectus iure iste doloribus ipsum temporibus illo neque
+                    aperiam atque nobis, odio ullam cumque, sequi asperiores harum non enim. Quam officia magnam
+                    pariatur recusandae ipsum?
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="userdetail">
@@ -503,10 +676,8 @@
                     <div style="width: 100%;" class="modal-body">
                       <div style="height: 25px; width: 100%;" class="d-flex justify-content-between">
                         <div class="buttons">
-                          <div class="buttons">
-                            <button class="tab-btnn active" data-target="takipci">Takipçi 999</button>
-                            <button class="tab-btnn" data-target="takip">Takip 999</button>
-                          </div>
+                          <button class="tab-btnn active" data-target="takipci">Takipçi 999</button>
+                          <button class="tab-btnn" data-target="takip">Takip 999</button>
                         </div>
                         <div>
                           <button style="filter: invert(100%);" type="button" class="btn-close" data-bs-dismiss="modal"
@@ -1371,10 +1542,8 @@
             <div style="height: 25px; width: 100%;" class="d-flex justify-content-between">
               <img src="webimg/aylogo.png" width="50" height="50" style="object-fit: cover;margin-top: -12.5px;" />
               <div class="buttons">
-                <div class="buttons">
-                  <button class="tab-btn active" data-target="biz-kimiz">Biz Kimiz?</button>
-                  <button class="tab-btn" data-target="gizlilik-politikasi">Gizlilik Politikası</button>
-                </div>
+                <button class="tab-btn active" data-target="biz-kimiz">Biz Kimiz?</button>
+                <button class="tab-btn" data-target="gizlilik-politikasi">Gizlilik Politikası</button>
               </div>
               <div>
                 <button style="filter: invert(100%);" type="button" class="btn-close" data-bs-dismiss="modal"
@@ -1576,11 +1745,29 @@
       const image = document.getElementById('coverImage');
       const colorThief = new ColorThief();
 
+      function averageColors(palette) {
+        let total = [0, 0, 0];
+        palette.forEach(([r, g, b]) => {
+          total[0] += r;
+          total[1] += g;
+          total[2] += b;
+        });
+
+        const count = palette.length;
+        return [
+          Math.round(total[0] / count),
+          Math.round(total[1] / count),
+          Math.round(total[2] / count)
+        ];
+      }
+
       function applyColor() {
         if (image.complete && image.naturalHeight !== 0) {
-          const [r, g, b] = colorThief.getColor(image);
+          const palette = colorThief.getPalette(image, 10);
+          const [r, g, b] = averageColors(palette);
+
           const rgb = `rgb(${r}, ${g}, ${b})`;
-          const rgba = `rgba(${r}, ${g}, ${b}, 0.4)`;
+          const rgba = `rgba(${r}, ${g}, ${b}, 0.3)`;
 
           ['header', 'footer', 'nav', 'dropdown-menu'].forEach(id => {
             const el = document.getElementById(id);
@@ -1589,12 +1776,11 @@
             }
           });
 
-          // modal-content class'ına tam opak renk
           document.querySelectorAll('.modal-content').forEach(el => {
             el.style.backgroundColor = rgb;
           });
 
-          // #user için saydam arka plan rengi
+          // #user → saydam kalsın
           const userEl = document.getElementById('user');
           if (userEl) {
             userEl.style.backgroundColor = rgba;
@@ -1608,6 +1794,14 @@
         image.addEventListener('load', applyColor);
       }
     });
+  </script>
+  <script>
+    function togglePassword(inputId, button) {
+      const input = document.getElementById(inputId);
+      const isPassword = input.type === "password";
+      input.type = isPassword ? "text" : "password";
+      button.textContent = isPassword ? "🙈" : "👁️";
+    }
   </script>
 </body>
 

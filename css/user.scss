@@ -10,7 +10,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: brightness(0.7);
+            filter: brightness(0.8);
         }
 
         &::after {
@@ -32,7 +32,6 @@
         .userr {
             padding: 10px;
             border-radius: 10px;
-            height: 150vh;
 
             .usernameandoption {
                 width: 100%;
@@ -61,9 +60,11 @@
                     font-weight: 500;
                     font-style: normal;
 
-                    a {
-                        text-decoration: none;
+                    button {
                         color: #ffffff;
+                        background-color: transparent;
+                        border: none;
+                        outline: none;
                         transition: all 0.3s ease-in-out;
                         line-height: 0.9;
                         display: flex;
@@ -75,6 +76,372 @@
 
                         .bi-gear {
                             margin-right: 3px;
+                        }
+                    }
+                }
+            }
+
+            .modal {
+
+                &.show .modal-dialog {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+
+                .modal-dialog {
+                    transition: transform 0.3s ease-out, opacity 0.3s ease;
+                    transform: translateY(-20px);
+                    opacity: 0;
+
+                    .buttons {
+
+                        button {
+                            background: transparent;
+                            border: none;
+                            border-bottom: 2px solid white;
+                            color: white;
+                            margin: 0px 5px;
+                            font-size: 16px;
+                            cursor: pointer;
+                            transition: border-color 0.3s ease, color 0.3s ease;
+
+                            &:hover {
+                                border-bottom: 2px solid #ff7f00;
+                            }
+
+                            &.active {
+                                border-bottom: 2px solid #ff7f00;
+                                color: #ff7f00;
+                            }
+                        }
+
+                    }
+
+                    .content-texttt {
+                        display: none;
+
+                        &.active {
+                            display: block;
+                            color: #fff;
+                        }
+
+                        .user {
+                            padding: 10px;
+
+                            .pictureandabout {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+
+                                .picture {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+
+                                    .image {
+                                        width: 220px;
+                                        height: 220px;
+                                        object-fit: cover;
+                                        border-radius: 50%;
+                                        border: 2px solid #ff7f00;
+                                    }
+
+                                    .buttons {
+                                        margin: 10px 0px;
+                                        display: flex;
+                                        justify-content: center;
+
+                                        .updatebtn {
+                                            padding: 5px;
+                                            border: 2px solid #ff7f00;
+                                            background: transparent;
+                                            border-radius: 10px;
+                                            width: 108px;
+                                            color: #ffffff;
+                                            transition: all 0.2s ease-in-out;
+
+                                            &:hover {
+                                                background-color: #ff7f00;
+                                                color: #000000;
+                                            }
+                                        }
+
+                                        .deletebtn {
+                                            padding: 5px;
+                                            border: 2px solid #ff7f00;
+                                            background: transparent;
+                                            border-radius: 10px;
+                                            width: 108px;
+                                            color: #ffffff;
+                                            transition: all 0.2s ease-in-out;
+
+                                            &:hover {
+                                                background-color: #ff7f00;
+                                                color: #000000;
+                                            }
+                                        }
+                                    }
+
+
+
+                                    input[type="file"] {
+                                        border: 2px solid #ff7f00;
+                                        border-radius: 10px;
+                                        background-color: transparent;
+                                        color: #ffffff;
+                                        max-width: 240px;
+                                    }
+
+                                    input[type="file"]::-webkit-file-upload-button {
+                                        background-color: #ff7f00;
+                                        color: #000000;
+                                        border: none;
+                                        cursor: pointer;
+                                        width: 220px;
+                                    }
+
+                                    input[type="file"]::file-selector-button {
+                                        background-color: #ff7f00;
+                                        color: #000000;
+                                        padding: 5px;
+                                        border: none;
+                                        cursor: pointer;
+                                    }
+                                }
+
+                                .background {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    margin-top: 10px;
+
+                                    .image {
+                                        width: 100%;
+                                        height: auto;
+                                        object-fit: cover;
+                                        border-radius: 10px;
+                                        border: 2px solid #ff7f00;
+                                    }
+
+                                    .buttons {
+                                        margin: 10px 0px;
+                                        display: flex;
+                                        justify-content: center;
+
+                                        .updatebtn {
+                                            padding: 5px;
+                                            border: 2px solid #ff7f00;
+                                            background: transparent;
+                                            border-radius: 10px;
+                                            width: 108px;
+                                            color: #ffffff;
+                                            transition: all 0.2s ease-in-out;
+
+                                            &:hover {
+                                                background-color: #ff7f00;
+                                                color: #000000;
+                                            }
+                                        }
+
+                                        .deletebtn {
+                                            padding: 5px;
+                                            border: 2px solid #ff7f00;
+                                            background: transparent;
+                                            border-radius: 10px;
+                                            width: 108px;
+                                            color: #ffffff;
+                                            transition: all 0.2s ease-in-out;
+
+                                            &:hover {
+                                                background-color: #ff7f00;
+                                                color: #000000;
+                                            }
+                                        }
+                                    }
+
+
+
+                                    input[type="file"] {
+                                        border: 2px solid #ff7f00;
+                                        border-radius: 10px;
+                                        background-color: transparent;
+                                        color: #ffffff;
+                                        max-width: 240px;
+                                    }
+
+                                    input[type="file"]::-webkit-file-upload-button {
+                                        background-color: #ff7f00;
+                                        color: #000000;
+                                        border: none;
+                                        cursor: pointer;
+                                        width: 220px;
+                                    }
+
+                                    input[type="file"]::file-selector-button {
+                                        background-color: #ff7f00;
+                                        color: #000000;
+                                        padding: 5px;
+                                        border: none;
+                                        cursor: pointer;
+                                    }
+                                }
+
+                                .text {
+                                    width: 100%;
+                                    margin-top: 10px;
+
+                                    .title {
+                                        color: #ffffff;
+                                        font-size: 1rem;
+                                        font-weight: 500;
+                                        font-style: normal;
+                                    }
+
+                                    textarea {
+                                        background-color: transparent;
+                                        border: 2px solid #ff7f00;
+                                        border-radius: 10px;
+                                        color: #ffffff;
+                                        outline: none;
+                                        padding: 5px;
+                                        width: 100%;
+                                        height: 150px;
+                                        resize: vertical;
+                                    }
+                                }
+                            }
+
+                            .otherdata {
+                                display: flex;
+                                flex-direction: column;
+                                width: 100%;
+                                margin-top: 5px;
+
+                                .box {
+                                    width: 100%;
+                                    margin: 10px 0px;
+
+                                    .title {
+                                        color: #ffffff;
+                                        font-size: 1rem;
+                                        font-weight: 500;
+                                        font-style: normal;
+                                    }
+
+                                    input {
+                                        width: 100%;
+                                        background-color: transparent;
+                                        border: 2px solid #ff7f00;
+                                        padding: 5px;
+                                        border-radius: 10px;
+                                        color: #ffffff;
+                                        outline: none;
+                                    }
+
+                                    .password-wrapper {
+                                        position: relative;
+                                        display: flex;
+                                        align-items: center;
+
+                                        input {
+                                            flex: 1;
+                                            padding-right: 40px;
+                                            width: 100%;
+                                            background-color: transparent;
+                                            border: 2px solid #ff7f00;
+                                            padding: 5px;
+                                            border-radius: 10px;
+                                            color: #ffffff;
+                                            outline: none;
+                                        }
+
+                                        .toggle-password {
+                                            position: absolute;
+                                            right: 10px;
+                                            background: transparent;
+                                            border: none;
+                                            cursor: pointer;
+                                            color: #ff7f00;
+                                            font-size: 18px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .toggle {
+                                margin-top: 5px;
+
+                                .title {
+                                    color: #ffffff;
+                                    font-size: 1rem;
+                                    font-weight: 500;
+                                    font-style: normal;
+                                }
+
+                                /* From Uiverse.io by Muaz-Aldalil */
+                                .toggle-checkbox {
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    display: none;
+                                }
+
+                                .toggle-switch {
+                                    background-color: gray;
+                                    width: 78px;
+                                    height: 32px;
+                                    border-radius: 16px;
+                                    position: relative;
+                                    transition: 0.3s;
+                                    cursor: pointer;
+                                }
+
+                                .toggle-switch::before {
+                                    content: "";
+                                    font-weight: 900;
+                                    background-color: white;
+                                    width: 24px;
+                                    height: 24px;
+                                    position: absolute;
+                                    border-radius: 50%;
+                                    top: 4px;
+                                    left: 4px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    color: #ddd;
+                                    transition: 0.3s;
+                                }
+
+                                .toggle-checkbox:checked+.toggle-switch {
+                                    background-color: #ff7f00;
+                                }
+
+                                .toggle-checkbox:checked+.toggle-switch::before {
+                                    content: "";
+                                    left: 50px;
+                                    color: #ff7f00;
+                                }
+                            }
+                        }
+
+                        .buttonw {
+                            margin-top: 10px;
+
+                            .save {
+                                padding: 5px;
+                                border: 2px solid #ff7f00;
+                                background-color: transparent;
+                                color: #ffffff;
+                                border-radius: 10px;
+                                width: 100px;
+                                transition: all 0.2s ease-in-out;
+
+                                &:hover {
+                                    background-color: #ff7f00;
+                                    color: #000000;
+                                }
+                            }
                         }
                     }
                 }

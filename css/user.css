@@ -11,7 +11,7 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  filter: brightness(0.7);
+  filter: brightness(0.8);
 }
 .globalcontent .contentimg::after {
   content: "";
@@ -30,7 +30,6 @@
 .globalcontent .usercontent .userr {
   padding: 10px;
   border-radius: 10px;
-  height: 150vh;
 }
 .globalcontent .usercontent .userr .usernameandoption {
   width: 100%;
@@ -54,19 +53,315 @@
   font-weight: 500;
   font-style: normal;
 }
-.globalcontent .usercontent .userr .usernameandoption .option a {
-  text-decoration: none;
+.globalcontent .usercontent .userr .usernameandoption .option button {
   color: #ffffff;
+  background-color: transparent;
+  border: none;
+  outline: none;
   transition: all 0.3s ease-in-out;
   line-height: 0.9;
   display: flex;
   align-items: end;
 }
-.globalcontent .usercontent .userr .usernameandoption .option a:hover {
+.globalcontent .usercontent .userr .usernameandoption .option button:hover {
   color: #ff7f00;
 }
-.globalcontent .usercontent .userr .usernameandoption .option a .bi-gear {
+.globalcontent .usercontent .userr .usernameandoption .option button .bi-gear {
   margin-right: 3px;
+}
+.globalcontent .usercontent .userr .modal.show .modal-dialog {
+  transform: translateY(0);
+  opacity: 1;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog {
+  transition: transform 0.3s ease-out, opacity 0.3s ease;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .buttons button {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  margin: 0px 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .buttons button:hover {
+  border-bottom: 2px solid #ff7f00;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .buttons button.active {
+  border-bottom: 2px solid #ff7f00;
+  color: #ff7f00;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt {
+  display: none;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt.active {
+  display: block;
+  color: #fff;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user {
+  padding: 10px;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .picture .image {
+  width: 220px;
+  height: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ff7f00;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .picture .buttons {
+  margin: 10px 0px;
+  display: flex;
+  justify-content: center;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .picture .buttons .updatebtn {
+  padding: 5px;
+  border: 2px solid #ff7f00;
+  background: transparent;
+  border-radius: 10px;
+  width: 108px;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .picture .buttons .updatebtn:hover {
+  background-color: #ff7f00;
+  color: #000000;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .picture .buttons .deletebtn {
+  padding: 5px;
+  border: 2px solid #ff7f00;
+  background: transparent;
+  border-radius: 10px;
+  width: 108px;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .picture .buttons .deletebtn:hover {
+  background-color: #ff7f00;
+  color: #000000;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .picture input[type=file] {
+  border: 2px solid #ff7f00;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #ffffff;
+  max-width: 240px;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .picture input[type=file]::file-selector-button {
+  background-color: #ff7f00;
+  color: #000000;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .background .image {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #ff7f00;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .background .buttons {
+  margin: 10px 0px;
+  display: flex;
+  justify-content: center;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .background .buttons .updatebtn {
+  padding: 5px;
+  border: 2px solid #ff7f00;
+  background: transparent;
+  border-radius: 10px;
+  width: 108px;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .background .buttons .updatebtn:hover {
+  background-color: #ff7f00;
+  color: #000000;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .background .buttons .deletebtn {
+  padding: 5px;
+  border: 2px solid #ff7f00;
+  background: transparent;
+  border-radius: 10px;
+  width: 108px;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .background .buttons .deletebtn:hover {
+  background-color: #ff7f00;
+  color: #000000;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .background input[type=file] {
+  border: 2px solid #ff7f00;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #ffffff;
+  max-width: 240px;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .background input[type=file]::file-selector-button {
+  background-color: #ff7f00;
+  color: #000000;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .text {
+  width: 100%;
+  margin-top: 10px;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .text .title {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .text textarea {
+  background-color: transparent;
+  border: 2px solid #ff7f00;
+  border-radius: 10px;
+  color: #ffffff;
+  outline: none;
+  padding: 5px;
+  width: 100%;
+  height: 150px;
+  resize: vertical;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .otherdata {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 5px;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .otherdata .box {
+  width: 100%;
+  margin: 10px 0px;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .otherdata .box .title {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .otherdata .box input {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid #ff7f00;
+  padding: 5px;
+  border-radius: 10px;
+  color: #ffffff;
+  outline: none;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .otherdata .box .password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .otherdata .box .password-wrapper input {
+  flex: 1;
+  padding-right: 40px;
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid #ff7f00;
+  padding: 5px;
+  border-radius: 10px;
+  color: #ffffff;
+  outline: none;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .otherdata .box .password-wrapper .toggle-password {
+  position: absolute;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ff7f00;
+  font-size: 18px;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .toggle {
+  margin-top: 5px;
+  /* From Uiverse.io by Muaz-Aldalil */
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .toggle .title {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .toggle .toggle-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: none;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .toggle .toggle-switch {
+  background-color: gray;
+  width: 78px;
+  height: 32px;
+  border-radius: 16px;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .toggle .toggle-switch::before {
+  content: "";
+  font-weight: 900;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ddd;
+  transition: 0.3s;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .toggle .toggle-checkbox:checked + .toggle-switch {
+  background-color: #ff7f00;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .toggle .toggle-checkbox:checked + .toggle-switch::before {
+  content: "";
+  left: 50px;
+  color: #ff7f00;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .buttonw {
+  margin-top: 10px;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .buttonw .save {
+  padding: 5px;
+  border: 2px solid #ff7f00;
+  background-color: transparent;
+  color: #ffffff;
+  border-radius: 10px;
+  width: 100px;
+  transition: all 0.2s ease-in-out;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .buttonw .save:hover {
+  background-color: #ff7f00;
+  color: #000000;
 }
 .globalcontent .usercontent .userr .userdetail {
   margin-top: 20px;
