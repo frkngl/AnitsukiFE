@@ -121,7 +121,7 @@
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #ff7f00;
+  border: 2px solid #ffffff;
 }
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .picture .buttons {
   margin: 10px 0px;
@@ -130,7 +130,7 @@
 }
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .picture .buttons .updatebtn {
   padding: 5px;
-  border: 2px solid #ff7f00;
+  border: 2px solid #ffffff;
   background: transparent;
   border-radius: 10px;
   width: 108px;
@@ -138,12 +138,12 @@
   transition: all 0.2s ease-in-out;
 }
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .picture .buttons .updatebtn:hover {
-  background-color: #ff7f00;
+  background-color: #ffffff;
   color: #000000;
 }
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .picture .buttons .deletebtn {
   padding: 5px;
-  border: 2px solid #ff7f00;
+  border: 2px solid #ffffff;
   background: transparent;
   border-radius: 10px;
   width: 108px;
@@ -151,18 +151,18 @@
   transition: all 0.2s ease-in-out;
 }
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .picture .buttons .deletebtn:hover {
-  background-color: #ff7f00;
+  background-color: #ffffff;
   color: #000000;
 }
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .picture input[type=file] {
-  border: 2px solid #ff7f00;
+  border: 2px solid #ffffff;
   border-radius: 10px;
   background-color: transparent;
   color: #ffffff;
   max-width: 240px;
 }
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .picture input[type=file]::file-selector-button {
-  background-color: #ff7f00;
+  background-color: #ffffff;
   color: #000000;
   padding: 5px;
   border: none;
@@ -180,7 +180,7 @@
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
-  border: 2px solid #ff7f00;
+  border: 2px solid #ffffff;
 }
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .background .buttons {
   margin: 10px 0px;
@@ -189,7 +189,7 @@
 }
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .background .buttons .updatebtn {
   padding: 5px;
-  border: 2px solid #ff7f00;
+  border: 2px solid #ffffff;
   background: transparent;
   border-radius: 10px;
   width: 108px;
@@ -197,12 +197,12 @@
   transition: all 0.2s ease-in-out;
 }
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .background .buttons .updatebtn:hover {
-  background-color: #ff7f00;
+  background-color: #ffffff;
   color: #000000;
 }
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .background .buttons .deletebtn {
   padding: 5px;
-  border: 2px solid #ff7f00;
+  border: 2px solid #ffffff;
   background: transparent;
   border-radius: 10px;
   width: 108px;
@@ -210,18 +210,18 @@
   transition: all 0.2s ease-in-out;
 }
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .background .buttons .deletebtn:hover {
-  background-color: #ff7f00;
+  background-color: #ffffff;
   color: #000000;
 }
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .background input[type=file] {
-  border: 2px solid #ff7f00;
+  border: 2px solid #ffffff;
   border-radius: 10px;
   background-color: transparent;
   color: #ffffff;
   max-width: 240px;
 }
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .background input[type=file]::file-selector-button {
-  background-color: #ff7f00;
+  background-color: #ffffff;
   color: #000000;
   padding: 5px;
   border: none;
@@ -239,7 +239,7 @@
 }
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .pictureandabout .text textarea {
   background-color: transparent;
-  border: 2px solid #ff7f00;
+  border: 2px solid #ffffff;
   border-radius: 10px;
   color: #ffffff;
   outline: none;
@@ -267,7 +267,7 @@
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .otherdata .box input {
   width: 100%;
   background-color: transparent;
-  border: 2px solid #ff7f00;
+  border: 2px solid #ffffff;
   padding: 5px;
   border-radius: 10px;
   color: #ffffff;
@@ -283,7 +283,7 @@
   padding-right: 40px;
   width: 100%;
   background-color: transparent;
-  border: 2px solid #ff7f00;
+  border: 2px solid #ffffff;
   padding: 5px;
   border-radius: 10px;
   color: #ffffff;
@@ -326,7 +326,7 @@
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .toggle .toggle-switch::before {
   content: "";
   font-weight: 900;
-  background-color: white;
+  background-color: #000000;
   width: 24px;
   height: 24px;
   position: absolute;
@@ -336,23 +336,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ddd;
+  color: #000000;
   transition: 0.3s;
 }
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .toggle .toggle-checkbox:checked + .toggle-switch {
-  background-color: #ff7f00;
+  background-color: #ffffff;
 }
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .user .toggle .toggle-checkbox:checked + .toggle-switch::before {
   content: "";
   left: 50px;
-  color: #ff7f00;
+  color: #ffffff;
 }
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .buttonw {
   margin-top: 10px;
 }
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .buttonw .save {
   padding: 5px;
-  border: 2px solid #ff7f00;
+  border: 2px solid #ffffff;
   background-color: transparent;
   color: #ffffff;
   border-radius: 10px;
@@ -360,8 +360,74 @@
   transition: all 0.2s ease-in-out;
 }
 .globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .buttonw .save:hover {
-  background-color: #ff7f00;
+  background-color: #ffffff;
   color: #000000;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .search {
+  position: relative;
+  width: 100%;
+  margin: 0px;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .search .bi-search {
+  position: absolute;
+  color: #ffffff;
+  top: 7px;
+  left: 5px;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .search input {
+  background-color: #252525;
+  outline: none;
+  border: none;
+  padding: 7px 7px 7px 35px;
+  color: #ffffff;
+  width: 100%;
+  border-radius: 5px;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .users {
+  max-height: 410px;
+  width: 100%;
+  color: #ffffff;
+  margin-top: 15px;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .users .user {
+  text-decoration: none;
+  margin: 16px 0px;
+  padding: 0px;
+  width: 100%;
+  position: relative;
+  align-items: center;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .users .user img {
+  height: 50px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .users .user .text {
+  padding: 0px 6px;
+  width: 70%;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .users .user .text .title {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.1;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .users .user .text .des {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #ccc;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .users .user .userfollow {
+  position: absolute;
+  right: 10px;
+}
+.globalcontent .usercontent .userr .modal .modal-dialog .content-texttt .users .user .userfollow .bi-person-slash {
+  margin-top: 50%;
+  transform: translateY(-35%);
+  color: #ff7f00;
 }
 .globalcontent .usercontent .userr .userdetail {
   margin-top: 20px;
